@@ -3,12 +3,122 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Year 12 Business Studies — Marketing Scaffold</title>
-  <meta name="description" content="Year 12 Business Studies 2026 Trial Exam Preparation: Marketing Role and Influences research scaffold."/>
+  <title>Year 12 Business Studies — Complete HSC Trial Scaffold</title>
+  <meta name="description" content="Year 12 Business Studies 2026 Trial Exam Preparation: Marketing, Operations, Finance, and Human Resources scaffold."/>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css"/>
+  <style>
+    /* Custom Styling for T-Charts and Venn layouts */
+    .ratio-calc-box {
+      background: var(--bg-card2);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.2rem;
+      margin-bottom: 1rem;
+    }
+    .ratio-formula {
+      font-family: monospace;
+      font-size: 0.9rem;
+      color: #93c5fd;
+      background: rgba(59,130,246,0.1);
+      padding: 0.2rem 0.5rem;
+      border-radius: 4px;
+      display: inline-block;
+      margin-bottom: 0.8rem;
+    }
+    .finance-statement {
+      background: #0f172a;
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius);
+      padding: 1.2rem;
+      font-family: monospace;
+      font-size: 0.85rem;
+      margin-bottom: 1.5rem;
+      line-height: 1.5;
+    }
+    .fs-row {
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 1px dashed rgba(255,255,255,0.07);
+      padding: 0.35rem 0;
+    }
+    .fs-row.bold {
+      font-weight: bold;
+      color: #fff;
+      border-bottom: 1px solid var(--border-light);
+    }
+    .ratio-inputs {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.8rem;
+      margin-bottom: 0.8rem;
+    }
+    .calc-feedback {
+      font-size: 0.8rem;
+      font-weight: 600;
+      margin-top: 0.3rem;
+    }
+    .calc-feedback.correct { color: var(--green); }
+    .calc-feedback.incorrect { color: var(--amber); }
+
+    /* WALT & WILF Banners */
+    .goals-banner {
+      background: linear-gradient(135deg, rgba(79, 70, 229, 0.15) 0%, rgba(168, 85, 247, 0.1) 100%);
+      border: 1px solid rgba(79, 70, 229, 0.3);
+      border-left: 4px solid #4f46e5;
+      border-radius: var(--radius);
+      padding: 1.2rem;
+      margin-bottom: 1.5rem;
+    }
+    .goals-title {
+      font-family: var(--font-head);
+      font-weight: 700;
+      font-size: 0.95rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: #c7d2fe;
+      margin-bottom: 0.6rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .goals-list {
+      margin-left: 1.2rem;
+      font-size: 0.85rem;
+      color: #a5b4fc;
+      line-height: 1.5;
+    }
+    .goals-list li { margin-bottom: 0.3rem; }
+
+    /* T-Chart Layout */
+    .tchart {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1px;
+      background: var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+      margin-bottom: 1.5rem;
+    }
+    .tchart-col {
+      background: var(--bg-card2);
+      padding: 1.2rem;
+    }
+    .tchart-header {
+      font-family: var(--font-head);
+      font-weight: 700;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: #fff;
+      border-bottom: 2px solid var(--border-light);
+      padding-bottom: 0.6rem;
+      margin-bottom: 0.8rem;
+      text-align: center;
+    }
+  </style>
 </head>
 <body>
 
@@ -17,7 +127,7 @@
     <div class="submit-modal" id="submit-modal">
       <div class="submit-spinner" id="submit-spinner">
         <div class="spinner"></div>
-        <p>Submitting your scaffold answers…</p>
+        <p>Submitting your trial scaffold answers…</p>
       </div>
       <div class="submit-success" id="submit-success" style="display:none">
         <div class="success-icon">✅</div>
@@ -47,11 +157,12 @@
         </div>
       </div>
       <h1 class="header-title">Year 12 Business <span class="accent">Studies</span></h1>
-      <p class="header-subtitle">Marketing Topic: Role &amp; Influences — Research Scaffold</p>
+      <p class="header-subtitle">HSC Trial Preparation — Complete Core Scaffold</p>
       <div class="header-meta">
         <div class="meta-chip"><span class="meta-icon">📅</span><span id="due-date-meta">Due: Monday Term 3</span></div>
-        <div class="meta-chip"><span class="meta-icon">⏱</span><span>Watch Atomi videos first</span></div>
-        <div class="meta-chip"><span class="meta-icon">📘</span><span>Use textbook for definitions</span></div>
+        <div class="meta-chip"><span class="meta-icon">⏱</span><span>Complete all 4 Core Units</span></div>
+        <div class="meta-chip"><span class="meta-icon">🍟</span><span>Case Study: McDonald's</span></div>
+        <div class="meta-chip"><span class="meta-icon">📱</span><span>Atomi, Textbook &amp; LearnStudio App</span></div>
       </div>
       <div class="countdown-wrapper">
         <div class="countdown-label">Time Remaining</div>
@@ -64,243 +175,393 @@
 
     <!-- OVERVIEW CARDS -->
     <section class="section">
-      <h2 class="section-title">Homework Portfolio Overview</h2>
+      <h2 class="section-title">HSC Trial Scaffold Overview</h2>
       <div class="overview-grid">
         <div class="overview-card card-blue">
-          <div class="ov-icon">🎥</div>
-          <div class="ov-label">Atomi Integration</div>
-          <div class="ov-marks">Role &amp; Influences</div>
-          <p class="ov-desc">Watch the recommended Atomi video lessons and complete quick quizzes to unlock the core theory.</p>
+          <div class="ov-icon">📘</div>
+          <div class="ov-label">Complete Core Syllabus</div>
+          <div class="ov-marks">4 Core Units Covered</div>
+          <p class="ov-desc">Integrates Operations, Marketing, Finance, and Human Resources revision sheets into one portfolio.</p>
         </div>
         <div class="overview-card card-purple">
           <div class="ov-icon">✍️</div>
           <div class="ov-label">Writing Practice</div>
-          <div class="ov-marks">Section II &amp; IV Scaffold</div>
-          <p class="ov-desc">Practise structured paragraph writing using our customized business PEEL scaffold models.</p>
+          <div class="ov-marks">PEEL Exam Scaffolding</div>
+          <p class="ov-desc">Draft structured short answers and report skeletons using case study data from McDonald's.</p>
         </div>
         <div class="overview-card card-green">
           <div class="ov-icon">💾</div>
-          <div class="ov-label">Auto-Save Protection</div>
-          <div class="ov-marks">Saves Locally</div>
-          <p class="ov-desc">Your draft response saves as you type. Submit to upload your final answers to the teacher dashboard.</p>
+          <div class="ov-label">Local Autosave</div>
+          <div class="ov-marks">Auto-Saved to Device</div>
+          <p class="ov-desc">Your answers save locally on your device as you type. Submit to send your final draft to your teacher.</p>
         </div>
       </div>
     </section>
 
     <!-- TABS -->
     <section class="section">
-      <h2 class="section-title">Marketing Scaffold Workspace</h2>
-      <p class="section-sub">Navigate the tabs to complete your work. Hit <strong>Submit Work</strong> when ready.</p>
+      <h2 class="section-title">Study Workspace</h2>
+      <p class="section-sub">Navigate the tabs to complete each unit. Use your Atomi notes, textbook, and the **LearnStudio App** resources to answer the questions. Click <strong>Submit Work</strong> at the bottom when done.</p>
 
       <div class="tabs">
-        <button class="tab-btn active" data-tab="role" id="tab-role">📢 Role of Marketing</button>
-        <button class="tab-btn" data-tab="choice" id="tab-choice">🧠 Customer Choice</button>
-        <button class="tab-btn" data-tab="laws" id="tab-laws">⚖️ Laws &amp; Ethics</button>
-        <button class="tab-btn" data-tab="writing" id="tab-writing">✍️ HSC Exam Writing</button>
+        <button class="tab-btn active" data-tab="marketing" id="tab-marketing">📢 Marketing</button>
+        <button class="tab-btn" data-tab="operations" id="tab-operations">⚙️ Operations</button>
+        <button class="tab-btn" data-tab="finance" id="tab-finance">💰 Finance</button>
+        <button class="tab-btn" data-tab="hr" id="tab-hr">👷 Human Resources</button>
+        <button class="tab-btn" data-tab="writing" id="tab-writing">✍️ Exam Writing</button>
       </div>
 
-      <!-- =================== ROLE OF MARKETING =================== -->
-      <div class="tab-content active" id="tab-content-role">
-        <div class="info-banner"><strong>Focus:</strong> Strategic role of marketing, interdependence, production/selling/marketing approaches, and types of markets.</div>
+      <!-- =================== MARKETING TAB =================== -->
+      <div class="tab-content active" id="tab-content-marketing">
+        <!-- WALT & WILF -->
+        <div class="goals-banner">
+          <div class="goals-title">💡 WALT &amp; WILF (Role of Marketing)</div>
+          <ul class="goals-list">
+            <li><strong>WALT:</strong> Understand the strategic role of marketing management and explain how marketing activities contribute to achieving profit maximization.</li>
+            <li><strong>WILF:</strong> You can define the 'strategic role', explain how specific McDonald's campaigns (like consistent global branding) achieve profit maximization, and identify factors shaping customer choice.</li>
+          </ul>
+        </div>
 
         <div class="scaffold-card">
           <div class="sc-header">
-            <span class="sc-num">R1</span>
+            <span class="sc-num">M1</span>
             <div>
               <h3 class="sc-title">Strategic Role of Marketing</h3>
-              <p class="sc-hint">What is the strategic role of marketing within a modern business? Explain how it translates business goals into reality.</p>
+              <p class="sc-hint">How does marketing assist a business to generate sales, grow market share, and develop a strategic competitive advantage?</p>
             </div>
           </div>
           <div class="field-row">
             <label for="strategic-role-def">Definition / Explanation (in your own words)</label>
-            <textarea id="strategic-role-def" class="field-textarea" rows="4" placeholder="Explain how marketing helps a business generate profit, grow sales, and achieve its long-term objectives..."></textarea>
+            <textarea id="strategic-role-def" class="field-textarea" rows="3" placeholder="Explain the role of marketing plan, customer loyalty, and how these map to profit maximization..."></textarea>
           </div>
           <div class="field-row">
-            <label for="strategic-role-case">Application (Case Study - Apple or similar)</label>
-            <textarea id="strategic-role-case" class="field-textarea" rows="3" placeholder="How does Apple use marketing to build a strategic competitive advantage over competitors?"></textarea>
+            <label for="strategic-role-case">Application (Case Study - McDonald's)</label>
+            <textarea id="strategic-role-case" class="field-textarea" rows="3" placeholder="Explain how McDonald's marketing strategies (e.g. global branding, 'I'm Lovin' It' campaign) protect its ~$191B brand value and maximize profits."></textarea>
           </div>
         </div>
 
         <div class="scaffold-card">
           <div class="sc-header">
-            <span class="sc-num">R2</span>
+            <span class="sc-num">M2</span>
             <div>
-              <h3 class="sc-title">Interdependence of Business Functions</h3>
-              <p class="sc-hint">Explain how marketing interacts with Operations, Finance, and Human Resources (HR).</p>
+              <h3 class="sc-title">Factors Influencing Customer Choice</h3>
+              <p class="sc-hint">Analyse how each factor shapes consumer decisions at McDonald's.</p>
+            </div>
+          </div>
+          <div class="trend-row">
+            <div class="trend-label">Psychological (Perception, Motives, Attitude, Personality, Self-image)</div>
+            <textarea id="choice-psych" class="field-textarea" rows="2" placeholder="How do psychological factors (e.g. Happy Meal children motives, perception of value/cravings) influence choice?"></textarea>
+          </div>
+          <div class="trend-row">
+            <div class="trend-label">Sociocultural (Social Class, Culture, Reference Groups, Family)</div>
+            <textarea id="choice-socio" class="field-textarea" rows="2" placeholder="How do sociocultural factors (e.g. family dinner reference groups, cultural menu changes like Halal items) shape buying choices?"></textarea>
+          </div>
+          <div class="trend-row">
+            <div class="trend-label">Economic (Boom vs. Contraction / Inflation)</div>
+            <textarea id="choice-econ" class="field-textarea" rows="2" placeholder="How do economic conditions affect choice? (e.g. how does McDonald's 'Loose Change Menu' perform during inflation/contraction?)"></textarea>
+          </div>
+          <div class="trend-row">
+            <div class="trend-label">Government (Taxes, Regulations, Health Policy)</div>
+            <textarea id="choice-govt" class="field-textarea" rows="2" placeholder="How do government actions influence choice? (e.g. mandatory calorie labeling, fat/sugar advertisement regulations)."></textarea>
+          </div>
+        </div>
+
+        <div class="scaffold-card">
+          <div class="sc-header">
+            <span class="sc-num">M3</span>
+            <div>
+              <h3 class="sc-title">Consumer Laws (ACL) &amp; Ethics</h3>
+              <p class="sc-hint">Outline the legal and moral rules that McDonald's must follow in its advertising.</p>
+            </div>
+          </div>
+          <div class="institutions-list">
+            <div class="institution-row">
+              <span class="inst-label">Deceptive Advertising</span>
+              <textarea id="law-deceptive" class="field-textarea inst-area" rows="2" placeholder="Ensuring advertisements display accurate product matches (actual burger matches photo) and prices are transparent."></textarea>
+            </div>
+            <div class="institution-row">
+              <span class="inst-label">Implied Conditions</span>
+              <textarea id="law-implied" class="field-textarea inst-area" rows="2" placeholder="ACL requirements: Food must be fit for human consumption and match descriptions on the menu board."></textarea>
+            </div>
+            <div class="institution-row">
+              <span class="inst-label">Ethics: Children's Health</span>
+              <textarea id="ethics-health" class="field-textarea inst-area" rows="2" placeholder="Discuss the ethical pressures on McDonald's regarding advertising high-fat/high-sugar meals directly to children."></textarea>
+            </div>
+            <div class="institution-row">
+              <span class="inst-label">Ethics: Sugging</span>
+              <textarea id="ethics-sugging" class="field-textarea inst-area" rows="2" placeholder="What is sugging (selling under guise of survey) and why is it unethical for a business?"></textarea>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- =================== OPERATIONS TAB =================== -->
+      <div class="tab-content" id="tab-content-operations">
+        <!-- WALT & WILF -->
+        <div class="goals-banner">
+          <div class="goals-title">💡 WALT &amp; WILF (Role &amp; Strategies of Operations)</div>
+          <ul class="goals-list">
+            <li><strong>WALT:</strong> Understand the strategic role of operations (Cost Leadership &amp; Differentiation), the hybrid features of a tertiary service, and operational technology/quality strategies.</li>
+            <li><strong>WILF:</strong> You can distinguish between established and leading-edge technology, categorize standardized goods vs. services at McDonald's, and explain interdependence.</li>
+          </ul>
+        </div>
+
+        <div class="scaffold-card">
+          <div class="sc-header">
+            <span class="sc-num">O1</span>
+            <div>
+              <h3 class="sc-title">Venn Diagram: Standardised Goods vs. Perishable Services</h3>
+              <p class="sc-hint">McDonald's is a hybrid (tertiary) industry business. Compare the characteristics of its goods and services.</p>
+            </div>
+          </div>
+          <div class="field-row">
+            <label for="ops-hybrid-goods">Tangible / Standardised Goods Features</label>
+            <textarea id="ops-hybrid-goods" class="field-textarea" rows="2" placeholder="Describe the physical elements (burgers, fries). How does standardization ensure consistency across Sydney, London, and New York?"></textarea>
+          </div>
+          <div class="field-row">
+            <label for="ops-hybrid-services">Intangible / Perishable Services Features</label>
+            <textarea id="ops-hybrid-services" class="field-textarea" rows="2" placeholder="Describe the customer experience elements (speed of drive-thru, friendliness, cleanliness, table service)."></textarea>
+          </div>
+          <div class="field-row">
+            <label for="ops-hybrid-overlap">The Overlap: How Operations coordinates both</label>
+            <textarea id="ops-hybrid-overlap" class="field-textarea" rows="2" placeholder="How does McDonald's manage the perishability of physical food (holding times, waste) alongside labor planning (busy vs. quiet hours)?"></textarea>
+          </div>
+        </div>
+
+        <div class="scaffold-card">
+          <div class="sc-header">
+            <span class="sc-num">O2</span>
+            <div>
+              <h3 class="sc-title">T-Chart: Technology Strategies (Established vs. Leading-Edge)</h3>
+              <p class="sc-hint">Categorise and analyse McDonald's technology usage to achieve operational objectives.</p>
+            </div>
+          </div>
+          <div class="tchart">
+            <div class="tchart-col">
+              <div class="tchart-header">Established Technology</div>
+              <textarea id="ops-tech-est" class="field-textarea" rows="4" placeholder="Explain the use of proven, widely-used tech (e.g., drive-thru sensors, automated beverage dispensers, EFTPOS). What operational benefits do they offer?"></textarea>
+            </div>
+            <div class="tchart-col">
+              <div class="tchart-header">Leading-Edge Technology</div>
+              <textarea id="ops-tech-lead" class="field-textarea" rows="4" placeholder="Explain the use of advanced, state-of-the-art tech (e.g. self-service kiosks, MyMaccas mobile ordering app, AI-driven menu boards [Dynamic Yield])."></textarea>
+            </div>
+          </div>
+        </div>
+
+        <div class="scaffold-card">
+          <div class="sc-header">
+            <span class="sc-num">O3</span>
+            <div>
+              <h3 class="sc-title">Interdependence Scenario: Launching the McPlant Burger</h3>
+              <p class="sc-hint">Operations cannot function in isolation. Analyze the interdependence between operations and other key functions when launching a new menu item.</p>
             </div>
           </div>
           <div class="institutions-list">
             <div class="institution-row">
               <span class="inst-label">Marketing &amp; Operations</span>
-              <textarea id="inter-ops" class="field-textarea inst-area" rows="3" placeholder="Operations transforms inputs to outputs. How does Marketing influence what Operations produces? How does Operations constrain what Marketing can promise?"></textarea>
+              <textarea id="ops-inter-mkt" class="field-textarea inst-area" rows="2" placeholder="Marketing research identifies the plant-based trend and runs ads. How does this shape what Operations must produce?"></textarea>
             </div>
             <div class="institution-row">
-              <span class="inst-label">Marketing &amp; Finance</span>
-              <textarea id="inter-fin" class="field-textarea inst-area" rows="3" placeholder="Finance manages budgets and pricing. How does Finance determine Marketing's advertising budget? How does Marketing generate the sales revenue Finance needs?"></textarea>
+              <span class="inst-label">Finance &amp; Operations</span>
+              <textarea id="ops-inter-fin" class="field-textarea inst-area" rows="2" placeholder="Finance allocates capital (e.g., for purchasing new dedicated plant-based cooking grills). How does this affect Operations capacity?"></textarea>
             </div>
             <div class="institution-row">
-              <span class="inst-label">Marketing &amp; HR</span>
-              <textarea id="inter-hr" class="field-textarea inst-area" rows="3" placeholder="HR manages staff and skills. How does Marketing require specialized sales staff? How does HR recruit and train employees to deliver excellent customer service?"></textarea>
-            </div>
-          </div>
-        </div>
-
-        <div class="scaffold-card">
-          <div class="sc-header">
-            <span class="sc-num">R3</span>
-            <div>
-              <h3 class="sc-title">Types of Markets</h3>
-              <p class="sc-hint">Briefly define who the buyers are in each of these syllabus market categories.</p>
-            </div>
-          </div>
-          <div class="market-types-grid">
-            <div class="market-type-card">
-              <div class="mt-icon">🌾</div>
-              <h4>Resource Market</h4>
-              <textarea id="market-resource" class="field-textarea" rows="3" placeholder="Definition and key buyers (e.g. mining, agriculture)..."></textarea>
-            </div>
-            <div class="market-type-card">
-              <div class="mt-icon">🏭</div>
-              <h4>Industrial Market</h4>
-              <textarea id="market-industrial" class="field-textarea" rows="3" placeholder="Definition and key buyers (e.g. manufacturing, assembly)..."></textarea>
-            </div>
-            <div class="market-type-card">
-              <div class="mt-icon">🏪</div>
-              <h4>Intermediate Market</h4>
-              <textarea id="market-intermediate" class="field-textarea" rows="3" placeholder="Definition and key buyers (e.g. wholesalers, retailers)..."></textarea>
-            </div>
-            <div class="market-type-card">
-              <div class="mt-icon">👤</div>
-              <h4>Consumer Market</h4>
-              <textarea id="market-consumer" class="field-textarea" rows="3" placeholder="Definition and key buyers (individuals, households)..."></textarea>
-            </div>
-          </div>
-          <div class="market-types-grid" style="margin-top: 1rem;">
-            <div style="flex:1" class="market-type-card">
-              <div class="mt-icon">📢</div>
-              <h4>Mass Market</h4>
-              <textarea id="market-mass" class="field-textarea" rows="3" placeholder="Definition (undifferentiated products for all consumers)..."></textarea>
-            </div>
-            <div style="flex:1" class="market-type-card">
-              <div class="mt-icon">🎯</div>
-              <h4>Niche Market</h4>
-              <textarea id="market-niche" class="field-textarea" rows="3" placeholder="Definition (highly targeted, specific segment of a larger market)..."></textarea>
+              <span class="inst-label">HR &amp; Operations</span>
+              <textarea id="ops-inter-hr" class="field-textarea inst-area" rows="2" placeholder="HR must write training modules for kitchen staff (avoiding cross-contamination) and schedule staff for launch week."></textarea>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- =================== CUSTOMER CHOICE =================== -->
-      <div class="tab-content" id="tab-content-choice">
-        <div class="info-banner"><strong>Focus:</strong> Factors influencing customer choice (why do people buy what they buy?).</div>
+      <!-- =================== FINANCE TAB =================== -->
+      <div class="tab-content" id="tab-content-finance">
+        <!-- WALT & WILF -->
+        <div class="goals-banner">
+          <div class="goals-title">💡 WALT &amp; WILF (Financial Management)</div>
+          <ul class="goals-list">
+            <li><strong>WALT:</strong> Compare external debt vs. internal equity funding, and analyze profitability, liquidity, and solvency using ratios.</li>
+            <li><strong>WILF:</strong> You can define the pros/cons of debt and equity, calculate three ratios using mock financial data, and evaluate solvency risk.</li>
+          </ul>
+        </div>
 
         <div class="scaffold-card">
           <div class="sc-header">
-            <span class="sc-num">C1</span>
+            <span class="sc-num">F1</span>
             <div>
-              <h3 class="sc-title">Factors Influencing Choice</h3>
-              <p class="sc-hint">Analyse how each factor shapes consumer decisions. Give a real-world example for each.</p>
+              <h3 class="sc-title">Sourcing Funds: Debt vs. Equity</h3>
+              <p class="sc-hint">Compare the advantages and disadvantages of using borrowed funds (debt) vs. using owner's funds (equity) to expand a business.</p>
             </div>
           </div>
-          
-          <div class="trend-row">
-            <div class="trend-label">1. Psychological Influences (Perception, Motives, Attitude, Personality, Self-image)</div>
-            <textarea id="choice-psych" class="field-textarea" rows="3" placeholder="Explain the concept..."></textarea>
-            <input type="text" id="choice-psych-ex" class="field-input" placeholder="Real-world example (e.g. buying Nike to feel athletic/successful)" style="margin-top:0.5rem;"/>
+          <div class="two-col">
+            <div class="two-col-item">
+              <h4 class="mini-heading">Debt Financing (Loans, Mortgages)</h4>
+              <textarea id="fin-debt" class="field-textarea" rows="4" placeholder="Pros: Keep ownership, tax-deductible interest.
+Cons: Interest payments mandatory, increases risk..."></textarea>
+            </div>
+            <div class="two-col-item">
+              <h4 class="mini-heading">Equity Financing (Retained Profits, Share Issues)</h4>
+              <textarea id="fin-equity" class="field-textarea" rows="4" placeholder="Pros: No interest repayment, lower risk.
+Cons: Share ownership/profits diluted, takes time to accumulate..."></textarea>
+            </div>
+          </div>
+        </div>
+
+        <div class="scaffold-card">
+          <div class="sc-header">
+            <span class="sc-num">F2</span>
+            <div>
+              <h3 class="sc-title">Interactive Ratio Practice</h3>
+              <p class="sc-hint">Use the financial statement below to calculate key ratios. Enter your answers in the inputs to check correctness.</p>
+            </div>
           </div>
 
-          <div class="trend-row">
-            <div class="trend-label">2. Sociocultural Influences (Social Class, Culture/Subculture, Peer/Reference Groups, Family)</div>
-            <textarea id="choice-socio" class="field-textarea" rows="3" placeholder="Explain the concept..."></textarea>
-            <input type="text" id="choice-socio-ex" class="field-input" placeholder="Real-world example (e.g. buying organic food due to family preferences)" style="margin-top:0.5rem;"/>
+          <!-- MOCK FINANCIAL STATEMENT -->
+          <div class="finance-statement">
+            <div class="fs-row bold"><span>MCDONALD'S FRANCHISE MOCK STATEMENT</span><span>$ AUD</span></div>
+            <div class="fs-row"><span>Total Sales Revenue</span><span>$1,000,000</span></div>
+            <div class="fs-row"><span>Cost of Goods Sold (COGS)</span><span>$600,000</span></div>
+            <div class="fs-row bold"><span>Gross Profit</span><span>$400,000</span></div>
+            <div class="fs-row"><span>Current Assets (Cash, Inventory)</span><span>$150,000</span></div>
+            <div class="fs-row"><span>Current Liabilities (Short-term debt, Accounts payable)</span><span>$50,000</span></div>
+            <div class="fs-row"><span>Total Liabilities (Total Debt)</span><span>$200,000</span></div>
+            <div class="fs-row"><span>Total Equity (Owner's funds)</span><span>$200,000</span></div>
           </div>
 
-          <div class="trend-row">
-            <div class="trend-label">3. Economic Influences (Boom vs. Contraction / Recession)</div>
-            <textarea id="choice-econ" class="field-textarea" rows="3" placeholder="Explain the concept..."></textarea>
-            <input type="text" id="choice-econ-ex" class="field-input" placeholder="Real-world example (e.g. switching to home brands during high inflation/recession)" style="margin-top:0.5rem;"/>
+          <!-- RATIO CALCULATOR 1 -->
+          <div class="ratio-calc-box">
+            <h4>1. Liquidity Ratio (Current Ratio)</h4>
+            <div class="ratio-formula">Current Assets ÷ Current Liabilities</div>
+            <div class="ratio-inputs">
+              <div>
+                <label for="ratio-curr-ans">Your Calculation Result</label>
+                <input type="text" id="ratio-curr-ans" class="field-input" placeholder="e.g. 3.0" oninput="checkRatio('curr')"/>
+                <div class="calc-feedback" id="feedback-curr"></div>
+              </div>
+              <div>
+                <label for="ratio-curr-state">State: Satisfactory? (Benchmark: 2:1)</label>
+                <input type="text" id="ratio-curr-state" class="field-input" placeholder="Is it safe?"/>
+              </div>
+            </div>
+            <textarea id="ratio-curr-expl" class="field-textarea" rows="2" placeholder="Explain what this indicates about the business's ability to pay its short-term debts..."></textarea>
           </div>
 
-          <div class="trend-row">
-            <div class="trend-label">4. Government Influences (Regulations, Taxes, Interest Rates)</div>
-            <textarea id="choice-govt" class="field-textarea" rows="3" placeholder="Explain the concept..."></textarea>
-            <input type="text" id="choice-govt-ex" class="field-input" placeholder="Real-world example (e.g. buying an electric vehicle due to government rebate policy)" style="margin-top:0.5rem;"/>
+          <!-- RATIO CALCULATOR 2 -->
+          <div class="ratio-calc-box">
+            <h4>2. Solvency / Gearing Ratio (Debt-to-Equity)</h4>
+            <div class="ratio-formula">Total Liabilities ÷ Total Equity</div>
+            <div class="ratio-inputs">
+              <div>
+                <label for="ratio-gear-ans">Your Calculation Result</label>
+                <input type="text" id="ratio-gear-ans" class="field-input" placeholder="e.g. 1.0" oninput="checkRatio('gear')"/>
+                <div class="calc-feedback" id="feedback-gear"></div>
+              </div>
+              <div>
+                <label for="ratio-gear-state">State: Risk Level? (Benchmark: &lt; 100%)</label>
+                <input type="text" id="ratio-gear-state" class="field-input" placeholder="Low, Medium, or High?"/>
+              </div>
+            </div>
+            <textarea id="ratio-gear-expl" class="field-textarea" rows="2" placeholder="Explain how this ratio describes the business's solvency and long-term financial risk..."></textarea>
+          </div>
+
+          <!-- RATIO CALCULATOR 3 -->
+          <div class="ratio-calc-box">
+            <h4>3. Profitability Ratio (Gross Profit Ratio)</h4>
+            <div class="ratio-formula">(Gross Profit ÷ Sales) × 100</div>
+            <div class="ratio-inputs">
+              <div>
+                <label for="ratio-prof-ans">Your Calculation Result (%)</label>
+                <input type="text" id="ratio-prof-ans" class="field-input" placeholder="e.g. 40" oninput="checkRatio('prof')"/>
+                <div class="calc-feedback" id="feedback-prof"></div>
+              </div>
+              <div>
+                <label for="ratio-prof-state">State: Pricing mark-up strength?</label>
+                <input type="text" id="ratio-prof-state" class="field-input" placeholder="Strong or Weak?"/>
+              </div>
+            </div>
+            <textarea id="ratio-prof-expl" class="field-textarea" rows="2" placeholder="Explain how this profitability ratio reflects the business's pricing markup and direct cost management..."></textarea>
           </div>
         </div>
       </div>
 
-      <!-- =================== LAWS & ETHICS =================== -->
-      <div class="tab-content" id="tab-content-laws">
-        <div class="info-banner warning-banner">⚠️ <strong>Laws vs. Ethics:</strong> Consumer laws are strictly legal constraints (enforced by the ACCC). Ethical influences represent moral expectations from society (truth, good taste). You must distinguish between them in exam answers.</div>
+      <!-- =================== HUMAN RESOURCES TAB =================== -->
+      <div class="tab-content" id="tab-content-hr">
+        <!-- WALT & WILF -->
+        <div class="goals-banner">
+          <div class="goals-title">💡 WALT &amp; WILF (Human Resources Cycle)</div>
+          <ul class="goals-list">
+            <li><strong>WALT:</strong> Analyse the four stages of the HR cycle (Acquisition, Development, Maintenance, Separation) and trace cascading organizational failures.</li>
+            <li><strong>WILF:</strong> You can apply McDonald's-specific examples to each stage of the cycle and describe the Fair Work dispute resolution steps.</li>
+          </ul>
+        </div>
 
         <div class="scaffold-card">
           <div class="sc-header">
-            <span class="sc-num">L1</span>
+            <span class="sc-num">H1</span>
             <div>
-              <h3 class="sc-title">Consumer Laws (ACL)</h3>
-              <p class="sc-hint">For each legal constraint, define the concept and explain what businesses are prohibited from doing.</p>
+              <h3 class="sc-title">The Human Resources Cycle</h3>
+              <p class="sc-hint">Describe how McDonald's manages its staff at each stage of the employment cycle.</p>
             </div>
           </div>
-          
+          <div class="trend-row">
+            <div class="trend-label">1. Acquisition (Recruitment and hiring)</div>
+            <textarea id="hr-acquisition" class="field-textarea" rows="2" placeholder="How does McDonald's target youth and hire casual store workers? (e.g. video applications, online portals)."></textarea>
+          </div>
+          <div class="trend-row">
+            <div class="trend-label">2. Development (Training and skills)</div>
+            <textarea id="hr-development" class="field-textarea" rows="2" placeholder="How does McDonald's train crew members in standardized processes (e.g. Hamburger University, structured training modules)?"></textarea>
+          </div>
+          <div class="trend-row">
+            <div class="trend-label">3. Maintenance (Motivation, rewards, employee benefits)</div>
+            <textarea id="hr-maintenance" class="field-textarea" rows="2" placeholder="How does McDonald's retain staff and keep them motivated? (e.g. employee discounts, employee of the month rewards, flexible shifts)."></textarea>
+          </div>
+          <div class="trend-row">
+            <div class="trend-label">4. Separation (Voluntary or Involuntary departure)</div>
+            <textarea id="hr-separation" class="field-textarea" rows="2" placeholder="How does McDonald's handle high staff turnover rates, resignations, or redundancies?"></textarea>
+          </div>
+        </div>
+
+        <div class="scaffold-card">
+          <div class="sc-header">
+            <span class="sc-num">H2</span>
+            <div>
+              <h3 class="sc-title">Extension Challenge: Cascading Failure Analysis</h3>
+              <p class="sc-hint">Analyze how a breakdown in one function cascades to impact the rest of the business.</p>
+            </div>
+          </div>
+          <div class="field-row">
+            <label for="hr-cascading">HR Strike Scenario</label>
+            <textarea id="hr-cascading" class="field-textarea" rows="4" placeholder="If a massive staff strike occurred at McDonald's distribution centers (HR breakdown), explain the cascading operational and financial impacts this would have, and how it would affect a current Marketing campaign..."></textarea>
+          </div>
+        </div>
+
+        <div class="scaffold-card">
+          <div class="sc-header">
+            <span class="sc-num">H3</span>
+            <div>
+              <h3 class="sc-title">Dispute Resolution</h3>
+              <p class="sc-hint">Distinguish between the key legal steps in resolving workplace conflict between managers and employees.</p>
+            </div>
+          </div>
           <div class="institutions-list">
             <div class="institution-row">
-              <span class="inst-label">Deceptive &amp; Misleading Advertising</span>
-              <textarea id="law-deceptive" class="field-textarea inst-area" rows="3" placeholder="Explain ACL rules on deceptive claims, bait-and-switch, fine-print traps..."></textarea>
+              <span class="inst-label">Grievance Procedures</span>
+              <textarea id="hr-dispute-grievance" class="field-textarea inst-area" rows="2" placeholder="Explain the formal internal steps an employee can take inside the company to report a complaint..."></textarea>
             </div>
             <div class="institution-row">
-              <span class="inst-label">Price Discrimination</span>
-              <textarea id="law-discrimination" class="field-textarea inst-area" rows="3" placeholder="Explain the law regarding setting different prices for the same product in different markets..."></textarea>
+              <span class="inst-label">Mediation / Conciliation</span>
+              <textarea id="hr-dispute-mediation" class="field-textarea inst-area" rows="2" placeholder="Explain how an independent third party assists the disputing parties to reach their own agreement..."></textarea>
             </div>
             <div class="institution-row">
-              <span class="inst-label">Implied Conditions</span>
-              <textarea id="law-implied" class="field-textarea inst-area" rows="3" placeholder="Explain consumer guarantees (products must be of acceptable quality and fit for purpose)..."></textarea>
+              <span class="inst-label">Arbitration (FWC)</span>
+              <textarea id="hr-dispute-arbitration" class="field-textarea inst-area" rows="2" placeholder="Explain how the Fair Work Commission makes a legally binding decision to resolve the dispute..."></textarea>
             </div>
-            <div class="institution-row">
-              <span class="inst-label">Warranties</span>
-              <textarea id="law-warranties" class="field-textarea inst-area" rows="3" placeholder="Explain what obligations a business has regarding refunds, exchanges, or repairs..."></textarea>
-            </div>
-          </div>
-        </div>
-
-        <div class="scaffold-card">
-          <div class="sc-header">
-            <span class="sc-num">L2</span>
-            <div>
-              <h3 class="sc-title">Ethical Influences</h3>
-              <p class="sc-hint">Describe how ethical expectations impact marketing activities, with an example of what is considered good/bad practice.</p>
-            </div>
-          </div>
-
-          <div class="trend-row">
-            <div class="trend-label">Truth and Accuracy (Avoiding exaggeration, hidden costs, or false impressions)</div>
-            <textarea id="ethics-truth" class="field-textarea" rows="3" placeholder="Describe the ethical standard and potential issues..."></textarea>
-          </div>
-
-          <div class="trend-row">
-            <div class="trend-label">Good Taste in Advertising (Sensitivity to community standards, culture, gender roles)</div>
-            <textarea id="ethics-taste" class="field-textarea" rows="3" placeholder="Describe the ethical standard and potential issues..."></textarea>
-          </div>
-
-          <div class="trend-row">
-            <div class="trend-label">Products that Damage Health (Marketing fast food, alcohol, gaming to vulnerable groups)</div>
-            <textarea id="ethics-health" class="field-textarea" rows="3" placeholder="Describe the ethical standard and potential issues..."></textarea>
-          </div>
-
-          <div class="trend-row">
-            <div class="trend-label">Engaging in Fair Competition (Avoiding predatory practices, collusive pricing)</div>
-            <textarea id="ethics-competition" class="field-textarea" rows="3" placeholder="Describe the ethical standard and potential issues..."></textarea>
-          </div>
-
-          <div class="trend-row">
-            <div class="trend-label">Sugging (Selling Under the Guise of a Survey)</div>
-            <textarea id="ethics-sugging" class="field-textarea" rows="3" placeholder="Explain why sugging is considered unethical, even if not strictly illegal in all contexts..."></textarea>
           </div>
         </div>
       </div>
 
-      <!-- =================== HSC EXAM WRITING =================== -->
+      <!-- =================== EXAM WRITING TAB =================== -->
       <div class="tab-content" id="tab-content-writing">
-        <div class="info-banner">✍️ <strong>Trial Exam Preparation.</strong> Select one of the practice questions below and write a scaffolded draft using business terminology.</div>
+        <div class="info-banner">✍️ <strong>HSC Writing Practice.</strong> Select a Trial Exam question and draft your paragraph. The tracker checks business terminology usage.</div>
 
         <!-- QUESTION SELECTOR -->
         <div class="scaffold-card" id="question-selector-card">
@@ -308,7 +569,7 @@
             <span class="sc-num">❓</span>
             <div>
               <h3 class="sc-title">Select Practice Question</h3>
-              <p class="sc-hint">Choose one question to focus your writing practice. The tracker will count your key terms.</p>
+              <p class="sc-hint">Select a question to practice your writing. Terms will light up below as you write.</p>
             </div>
           </div>
           <div class="question-list">
@@ -330,7 +591,7 @@
               <input type="radio" name="selected-question" value="3"/>
               <div class="qopt-body">
                 <div class="qopt-num">Q3</div>
-                <div class="qopt-text">Assess the impact of ethical influences on marketing strategies. (8 Marks)</div>
+                <div class="qopt-text">Assess how McDonald's utilizes operations strategies (such as technology) to gain a competitive advantage. (8 Marks)</div>
               </div>
             </label>
           </div>
@@ -340,16 +601,16 @@
         <div class="selected-q-banner" id="selected-q-banner" style="display:none">
           <div class="sq-label">Your Active Writing Task</div>
           <div class="sq-text" id="sq-text"></div>
-          <div class="sq-marks">Aim for highly structured, syllabus-aligned paragraphs.</div>
+          <div class="sq-marks">Focus on the PEEL structure: Point, Explain, Evidence, Link.</div>
         </div>
 
-        <!-- WRITING SCAFFOLDS -->
+        <!-- PEEL GUIDE -->
         <div class="scaffold-card">
           <div class="sc-header">
             <span class="sc-num">📖</span>
             <div>
               <h3 class="sc-title">Paragraph Structure: Business PEEL Model</h3>
-              <p class="sc-hint">To score top marks, use this structural format for your body paragraphs:</p>
+              <p class="sc-hint">Follow this template structure for a Band 6 response:</p>
             </div>
           </div>
           <div class="model-answer">
@@ -363,22 +624,22 @@
             <div class="model-para">
               <div class="mp-label body1">Explain (E)</div>
               <div class="mp-content">
-                <div class="mp-what">Detailed Analysis:</div>
-                <p>Analyse the cause-and-effect relationship. How or why does this occur? (e.g. transmission mechanism of consumer choice, or the cost of compliance).</p>
+                <div class="mp-what">Case Study Application:</div>
+                <p>Detail the cause-and-effect relationship. Explain *why* or *how* it occurs inside a firm.</p>
               </div>
             </div>
             <div class="model-para">
               <div class="mp-label body2">Evidence (E)</div>
               <div class="mp-content">
                 <div class="mp-what">Case Study Application:</div>
-                <p>Provide a concrete, real-world example of a business (e.g., Apple, McDonald's) applying this strategy or encountering this influence.</p>
+                <p>Provide a concrete, real-world example from McDonald's (e.g. standardized menu, Happy Meals, Hamburger University, automated beverage systems) to prove your argument.</p>
               </div>
             </div>
             <div class="model-para">
               <div class="mp-label conclusion">Link (L)</div>
               <div class="mp-content">
-                <div class="mp-what">Business Outcome:</div>
-                <p>Link back to the question and state the ultimate effect on the business's goals (profitability, competitive advantage, sales volume, market share).</p>
+                <div class="mp-what">Business Link:</div>
+                <p>Connect back to the question and state the ultimate effect on the business's goals (profitability, cost reduction, sales growth, brand image).</p>
               </div>
             </div>
           </div>
@@ -397,19 +658,19 @@
             <span class="term-chip" data-term="interdependence">interdependence</span>
             <span class="term-chip" data-term="strategic role">strategic role</span>
             <span class="term-chip" data-term="consumer laws">consumer laws</span>
-            <span class="term-chip" data-term="deceptive">deceptive and misleading</span>
             <span class="term-chip" data-term="implied conditions">implied conditions</span>
             <span class="term-chip" data-term="warranties">warranties</span>
             <span class="term-chip" data-term="ethical">ethical influences</span>
             <span class="term-chip" data-term="psychological">psychological</span>
             <span class="term-chip" data-term="sociocultural">sociocultural</span>
             <span class="term-chip" data-term="economic">economic</span>
-            <span class="term-chip" data-term="government">government</span>
+            <span class="term-chip" data-term="operations">operations</span>
+            <span class="term-chip" data-term="transformation">transformation</span>
             <span class="term-chip" data-term="competitive advantage">competitive advantage</span>
             <span class="term-chip" data-term="profitability">profitability</span>
-            <span class="term-chip" data-term="niche">niche market</span>
-            <span class="term-chip" data-term="sugging">sugging</span>
-            <span class="term-chip" data-term="brand image">brand image</span>
+            <span class="term-chip" data-term="liquidity">liquidity</span>
+            <span class="term-chip" data-term="solvency">solvency</span>
+            <span class="term-chip" data-term="retention">retention</span>
           </div>
           <div class="terms-progress">
             <div class="tp-bar-wrap"><div class="tp-bar" id="terms-bar"></div></div>
@@ -428,7 +689,7 @@
           </div>
           <div class="writing-toolbar">
             <span class="wc-display">Words: <strong id="word-count">0</strong></span>
-            <span class="wc-target">Aim for 150 - 300 words</span>
+            <span class="wc-target">Aim for 150 - 350 words</span>
           </div>
           <textarea id="partb-response" class="field-textarea writing-area" rows="18" placeholder="Start writing your paragraph here. Remember to follow the PEEL structure (Point, Explain, Evidence, Link)..."></textarea>
         </div>
@@ -450,7 +711,7 @@
               <span>Uses precise Business Studies terminology</span>
               <label class="rb"><input type="radio" name="rb1" value="1"/> Basic</label>
               <label class="rb"><input type="radio" name="rb1" value="2"/> Good</label>
-              <label class="rb"><input type="radio" name="rb1" value="3"/> precise</label>
+              <label class="rb"><input type="radio" name="rb1" value="3"/> Precise</label>
             </div>
             <div class="rubric-row">
               <span>Explains the connection between theory and business outcomes</span>
@@ -459,7 +720,7 @@
               <label class="rb"><input type="radio" name="rb2" value="3"/> Detailed</label>
             </div>
             <div class="rubric-row">
-              <span>Integrates a case study or real-world business example</span>
+              <span>Integrates McDonald's case study data as evidence</span>
               <label class="rb"><input type="radio" name="rb3" value="1"/> None</label>
               <label class="rb"><input type="radio" name="rb3" value="2"/> Named only</label>
               <label class="rb"><input type="radio" name="rb3" value="3"/> Detailed</label>
@@ -480,11 +741,11 @@
       <h2 class="section-title">Marking Criteria &amp; Final Checklist</h2>
       <p class="section-sub">Ensure you meet all expectations before submitting.</p>
       <div class="checklist">
-        <label class="check-item"><input type="checkbox" id="chk1"/><span class="check-box"></span><div><strong>Syllabus Knowledge (Marketing)</strong><p>I have accurately defined the strategic role of marketing, interdependence, and types of markets.</p></div></label>
-        <label class="check-item"><input type="checkbox" id="chk2"/><span class="check-box"></span><div><strong>Influences Mastery</strong><p>I can clearly explain the 4 factors of customer choice, consumer laws, and ethical issues.</p></div></label>
-        <label class="check-item"><input type="checkbox" id="chk3"/><span class="check-box"></span><div><strong>Case Study Integration</strong><p>I have applied real-world business examples (like Apple) to explain the syllabus concepts.</p></div></label>
-        <label class="check-item"><input type="checkbox" id="chk4"/><span class="check-box"></span><div><strong>PEEL Paragraphing</strong><p>My practice writing response uses clear Topic Sentences (P), economic reasoning (E), facts/data (E), and a business link (L).</p></div></label>
-        <label class="check-item"><input type="checkbox" id="chk5"/><span class="check-box"></span><div><strong>Atomi Watch Target</strong><p>I have watched the designated Marketing videos on Atomi to back up my written answers.</p></div></label>
+        <label class="check-item"><input type="checkbox" id="chk1"/><span class="check-box"></span><div><strong>Syllabus Knowledge (All Core Units)</strong><p>I have answered key questions for Marketing, Operations, Finance, and Human Resources.</p></div></label>
+        <label class="check-item"><input type="checkbox" id="chk2"/><span class="check-box"></span><div><strong>Ratio Calculations</strong><p>I have calculated Liquidity (Current Ratio), Gearing (Debt-to-Equity), and Profitability (Gross Profit Ratio) correctly.</p></div></label>
+        <label class="check-item"><input type="checkbox" id="chk3"/><span class="check-box"></span><div><strong>Case Study Integration (McDonald's)</strong><p>I have used McDonald's examples (Happy Meals, Hamburger University, standardised menu) to backup my answers.</p></div></label>
+        <label class="check-item"><input type="checkbox" id="chk4"/><span class="check-box"></span><div><strong>PEEL Paragraphing</strong><p>My writing response uses clear Topic Sentences (P), economic reasoning (E), facts/data (E), and a business link (L).</p></div></label>
+        <label class="check-item"><input type="checkbox" id="chk5"/><span class="check-box"></span><div><strong>Atomi Watch Target</strong><p>I have watched the designated holiday videos on Atomi for all units.</p></div></label>
       </div>
     </section>
 
@@ -493,7 +754,7 @@
       <div class="submit-card">
         <div class="submit-card-left">
           <h2 class="submit-heading">Submit to Teacher</h2>
-          <p class="submit-desc">Clicking submit will upload all of your answers to your teacher's dashboard on **LearnStudio.com.au**.</p>
+          <p class="submit-desc">Clicking submit will upload all of your answers to your teacher's database on **LearnStudio.com.au**.</p>
           <div class="submit-save-note" id="save-indicator">💾 Auto-saved to this device</div>
         </div>
         <div class="submit-card-right">
@@ -510,12 +771,40 @@
 
   <footer class="site-footer">
     <div class="footer-inner">
-      <p>Year 12 Business Studies 2026 · Holiday Homework · Marketing Topic</p>
+      <p>Year 12 Business Studies 2026 · Holiday Homework · Complete Trial Preparation</p>
       <p class="footer-sub" id="footer-due-date-sub">Due: Monday Term 3 · Weighting: Trial Prep</p>
     </div>
   </footer>
 
   <script src="config.js"></script>
+  <script>
+    // In-page ratio checker helper
+    function checkRatio(type) {
+      const answers = {
+        'curr': '3',
+        'gear': '1',
+        'prof': '40'
+      };
+      
+      const input = document.getElementById(`ratio-${type}-ans`);
+      const feedback = document.getElementById(`feedback-${type}`);
+      if (!input || !feedback) return;
+      
+      const val = input.value.trim().replace('%', '');
+      if (val === '') {
+        feedback.textContent = '';
+        return;
+      }
+      
+      if (val === answers[type]) {
+        feedback.textContent = '✅ Correct!';
+        feedback.className = 'calc-feedback correct';
+      } else {
+        feedback.textContent = '❌ Try again... check your division.';
+        feedback.className = 'calc-feedback incorrect';
+      }
+    }
+  </script>
   <script src="app.js"></script>
 </body>
 </html>

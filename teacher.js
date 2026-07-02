@@ -149,12 +149,11 @@ function studentCard(s, idx) {
 
   // Completion tags
   const fields = [
-    { key: 'strategic-role-def', label: 'R1: Strategic Role' },
-    { key: 'inter-ops',          label: 'R2: Interdependence' },
-    { key: 'market-resource',    label: 'R3: Markets' },
-    { key: 'choice-psych',       label: 'C1: Choice Factors' },
-    { key: 'law-deceptive',      label: 'L1: Consumer Laws' },
-    { key: 'ethics-truth',       label: 'L2: Ethics' },
+    { key: 'strategic-role-def', label: 'Marketing Core' },
+    { key: 'ops-tech-est',       label: 'Operations Tech' },
+    { key: 'ops-inter-mkt',      label: 'Interdependence' },
+    { key: 'ratio-curr-ans',     label: 'Finance Ratios' },
+    { key: 'hr-cascading',       label: 'HR Cascading' },
     { key: 'partb-response',     label: 'Practice Essay' }
   ];
 
@@ -185,46 +184,60 @@ function toggleCard(idx) {
 function renderDetail(s) {
   const sections = [
     {
-      title: '📢 Role of Marketing',
+      title: '📢 Marketing Management',
       fields: [
         { label: 'Strategic Role Explanation', key: 'strategic-role-def' },
         { label: 'Strategic Role Case Study', key: 'strategic-role-case' },
-        { label: 'Interdependence: Operations', key: 'inter-ops' },
-        { label: 'Interdependence: Finance', key: 'inter-fin' },
-        { label: 'Interdependence: HR', key: 'inter-hr' },
-        { label: 'Resource Market', key: 'market-resource' },
-        { label: 'Industrial Market', key: 'market-industrial' },
-        { label: 'Intermediate Market', key: 'market-intermediate' },
-        { label: 'Consumer Market', key: 'market-consumer' },
-        { label: 'Mass Market', key: 'market-mass' },
-        { label: 'Niche Market', key: 'market-niche' }
-      ]
-    },
-    {
-      title: '🧠 Customer Choice Factors',
-      fields: [
         { label: 'Psychological Factors', key: 'choice-psych' },
-        { label: 'Psychological Example', key: 'choice-psych-ex' },
         { label: 'Sociocultural Factors', key: 'choice-socio' },
-        { label: 'Sociocultural Example', key: 'choice-socio-ex' },
         { label: 'Economic Factors', key: 'choice-econ' },
-        { label: 'Economic Example', key: 'choice-econ-ex' },
         { label: 'Government Factors', key: 'choice-govt' },
-        { label: 'Government Example', key: 'choice-govt-ex' }
+        { label: 'Deceptive & Misleading Law', key: 'law-deceptive' },
+        { label: 'Implied Conditions Law', key: 'law-implied' },
+        { label: 'Ethics: Products & Health', key: 'ethics-health' },
+        { label: 'Ethics: Sugging', key: 'ethics-sugging' }
       ]
     },
     {
-      title: '⚖️ Consumer Laws & Ethical Influences',
+      title: '⚙️ Operations Management',
       fields: [
-        { label: 'Deceptive & Misleading', key: 'law-deceptive' },
-        { label: 'Price Discrimination', key: 'law-discrimination' },
-        { label: 'Implied Conditions', key: 'law-implied' },
-        { label: 'Warranties', key: 'law-warranties' },
-        { label: 'Ethics: Truth & Accuracy', key: 'ethics-truth' },
-        { label: 'Ethics: Good Taste', key: 'ethics-taste' },
-        { label: 'Ethics: Products & Health', key: 'ethics-health' },
-        { label: 'Ethics: Fair Competition', key: 'ethics-competition' },
-        { label: 'Ethics: Sugging', key: 'ethics-sugging' }
+        { label: 'O1: Goods Features', key: 'ops-hybrid-goods' },
+        { label: 'O1: Service Features', key: 'ops-hybrid-services' },
+        { label: 'O1: Hybrid Overlap', key: 'ops-hybrid-overlap' },
+        { label: 'O2: Established Tech', key: 'ops-tech-est' },
+        { label: 'O2: Leading-Edge Tech', key: 'ops-tech-lead' },
+        { label: 'O3: Marketing Interdep', key: 'ops-inter-mkt' },
+        { label: 'O3: Finance Interdep', key: 'ops-inter-fin' },
+        { label: 'O3: HR Interdep', key: 'ops-inter-hr' }
+      ]
+    },
+    {
+      title: '💰 Financial Management',
+      fields: [
+        { label: 'F1: Debt Financing Pros/Cons', key: 'fin-debt' },
+        { label: 'F1: Equity Financing Pros/Cons', key: 'fin-equity' },
+        { label: 'F2: Current Ratio Calculation', key: 'ratio-curr-ans' },
+        { label: 'F2: Current Ratio Assessment', key: 'ratio-curr-state' },
+        { label: 'F2: Current Ratio Explanation', key: 'ratio-curr-expl' },
+        { label: 'F2: Gearing Ratio Calculation', key: 'ratio-gear-ans' },
+        { label: 'F2: Gearing Ratio Assessment', key: 'ratio-gear-state' },
+        { label: 'F2: Gearing Ratio Explanation', key: 'ratio-gear-expl' },
+        { label: 'F2: Gross Profit Ratio Calculation', key: 'ratio-prof-ans' },
+        { label: 'F2: Gross Profit Ratio Assessment', key: 'ratio-prof-state' },
+        { label: 'F2: Gross Profit Ratio Explanation', key: 'ratio-prof-expl' }
+      ]
+    },
+    {
+      title: '👷 Human Resources Management',
+      fields: [
+        { label: 'H1: Acquisition Stage', key: 'hr-acquisition' },
+        { label: 'H1: Development Stage', key: 'hr-development' },
+        { label: 'H1: Maintenance Stage', key: 'hr-maintenance' },
+        { label: 'H1: Separation Stage', key: 'hr-separation' },
+        { label: 'H2: Cascading Failure Scenario', key: 'hr-cascading' },
+        { label: 'H3: Grievance Procedures', key: 'hr-dispute-grievance' },
+        { label: 'H3: Mediation & Conciliation', key: 'hr-dispute-mediation' },
+        { label: 'H3: FWC Arbitration', key: 'hr-dispute-arbitration' }
       ]
     },
     {
@@ -263,15 +276,20 @@ function exportCSV() {
 
   const headers = [
     'Timestamp', 'Student Name', 'Class Code',
-    'Strategic Role Summary', 'Strategic Role Case Study',
-    'Interdependence Ops', 'Interdependence Fin', 'Interdependence HR',
-    'Resource Market', 'Industrial Market', 'Intermediate Market', 'Consumer Market', 'Mass Market', 'Niche Market',
-    'Psychological Choice', 'Psychological Example',
-    'Sociocultural Choice', 'Sociocultural Example',
-    'Economic Choice', 'Economic Example',
-    'Government Choice', 'Government Example',
-    'Deceptive Advertising Law', 'Price Discrimination Law', 'Implied Conditions Law', 'Warranties Law',
-    'Ethics Truth Accuracy', 'Ethics Good Taste', 'Ethics Health', 'Ethics Competition', 'Ethics Sugging',
+    'M1 Strategic Role Summary', 'M1 Strategic Role Case Study',
+    'Customer Choice Psychological', 'Customer Choice Sociocultural', 'Customer Choice Economic', 'Customer Choice Government',
+    'Law Deceptive Advertising', 'Law Implied Conditions',
+    'Ethics Products Health', 'Ethics Sugging',
+    'O1 Goods Features', 'O1 Service Features', 'O1 Hybrid Overlap',
+    'O2 Established Tech', 'O2 Leading-Edge Tech',
+    'O3 Marketing Interdep', 'O3 Finance Interdep', 'O3 HR Interdep',
+    'F1 Debt Pros/Cons', 'F1 Equity Pros/Cons',
+    'F2 Current Ratio Calc', 'F2 Current Ratio State', 'F2 Current Ratio Expl',
+    'F2 Gearing Ratio Calc', 'F2 Gearing Ratio State', 'F2 Gearing Ratio Expl',
+    'F2 Gross Profit Ratio Calc', 'F2 Gross Profit Ratio State', 'F2 Gross Profit Ratio Expl',
+    'H1 HR Acquisition', 'H1 HR Development', 'H1 HR Maintenance', 'H1 HR Separation',
+    'H2 HR Cascading Failure',
+    'H3 Grievance Dispute', 'H3 Mediation Dispute', 'H3 Arbitration Dispute',
     'Selected Question', 'Essay Draft Response',
     'Rubric Terminology', 'Rubric Explanation', 'Rubric Case Study', 'Rubric PEEL'
   ];
@@ -279,14 +297,19 @@ function exportCSV() {
   const keys = [
     'timestamp', 'studentName', 'classCode',
     'strategic-role-def', 'strategic-role-case',
-    'inter-ops', 'inter-fin', 'inter-hr',
-    'market-resource', 'market-industrial', 'market-intermediate', 'market-consumer', 'market-mass', 'market-niche',
-    'choice-psych', 'choice-psych-ex',
-    'choice-socio', 'choice-socio-ex',
-    'choice-econ', 'choice-econ-ex',
-    'choice-govt', 'choice-govt-ex',
-    'law-deceptive', 'law-discrimination', 'law-implied', 'law-warranties',
-    'ethics-truth', 'ethics-taste', 'ethics-health', 'ethics-competition', 'ethics-sugging',
+    'choice-psych', 'choice-socio', 'choice-econ', 'choice-govt',
+    'law-deceptive', 'law-implied',
+    'ethics-health', 'ethics-sugging',
+    'ops-hybrid-goods', 'ops-hybrid-services', 'ops-hybrid-overlap',
+    'ops-tech-est', 'ops-tech-lead',
+    'ops-inter-mkt', 'ops-inter-fin', 'ops-inter-hr',
+    'fin-debt', 'fin-equity',
+    'ratio-curr-ans', 'ratio-curr-state', 'ratio-curr-expl',
+    'ratio-gear-ans', 'ratio-gear-state', 'ratio-gear-expl',
+    'ratio-prof-ans', 'ratio-prof-state', 'ratio-prof-expl',
+    'hr-acquisition', 'hr-development', 'hr-maintenance', 'hr-separation',
+    'hr-cascading',
+    'hr-dispute-grievance', 'hr-dispute-mediation', 'hr-dispute-arbitration',
     'selected-question-text', 'partb-response',
     'rb1', 'rb2', 'rb3', 'rb4'
   ];

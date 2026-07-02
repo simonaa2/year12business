@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Year 12 Business Studies 2026 — Marketing Scaffold</title>
+  <meta name="description" content="Student login for Year 12 Business Studies marketing scaffold."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css"/>
+  <style>
+    .login-wrapper {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1.5rem;
+      background: var(--bg);
+      position: relative;
+      overflow: hidden;
+    }
+    .login-wrapper::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 70% 60% at 20% 40%, rgba(59,130,246,0.10) 0%, transparent 60%),
+        radial-gradient(ellipse 60% 70% at 80% 60%, rgba(168,85,247,0.08) 0%, transparent 60%);
+      pointer-events: none;
+    }
+    .login-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      padding: 3rem 2.5rem;
+      width: 100%;
+      max-width: 460px;
+      box-shadow: 0 24px 80px rgba(0,0,0,0.5);
+      position: relative;
+      animation: fadeInUp 0.4s ease both;
+    }
+    .login-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 2px;
+      border-radius: 24px 24px 0 0;
+      background: linear-gradient(90deg, var(--blue), var(--purple));
+    }
+    .login-badge {
+      display: inline-block;
+      background: linear-gradient(135deg, var(--blue-dim), var(--purple-dim));
+      border: 1px solid rgba(59,130,246,0.4);
+      color: #93c5fd;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 0.3rem 1rem;
+      border-radius: 100px;
+      margin-bottom: 1.2rem;
+    }
+    .login-title {
+      font-family: var(--font-head);
+      font-size: 1.9rem;
+      font-weight: 800;
+      color: #fff;
+      margin-bottom: 0.3rem;
+      letter-spacing: -0.02em;
+    }
+    .login-title .accent {
+      background: linear-gradient(135deg, #60a5fa, #a78bfa);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .login-subtitle {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      margin-bottom: 2rem;
+      line-height: 1.5;
+    }
+    .login-field {
+      margin-bottom: 1.2rem;
+    }
+    .login-field label {
+      display: block;
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      margin-bottom: 0.5rem;
+    }
+    .login-input {
+      width: 100%;
+      background: var(--bg-card2);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 0.85rem 1rem;
+      color: var(--text);
+      font-family: var(--font-body);
+      font-size: 1rem;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+    .login-input::placeholder { color: var(--text-dim); }
+    .login-input:focus {
+      outline: none;
+      border-color: var(--blue);
+      box-shadow: 0 0 0 3px rgba(59,130,246,0.15);
+    }
+    .login-btn {
+      width: 100%;
+      padding: 0.9rem;
+      background: linear-gradient(135deg, var(--blue), var(--purple));
+      border: none;
+      border-radius: 10px;
+      color: #fff;
+      font-family: var(--font-head);
+      font-size: 1rem;
+      font-weight: 700;
+      cursor: pointer;
+      margin-top: 0.5rem;
+      transition: opacity 0.2s, transform 0.15s, box-shadow 0.2s;
+      box-shadow: 0 4px 20px rgba(59,130,246,0.3);
+    }
+    .login-btn:hover { opacity: 0.92; transform: translateY(-1px); box-shadow: 0 6px 28px rgba(59,130,246,0.4); }
+    .login-btn:active { transform: translateY(0); }
+    .login-error {
+      background: rgba(239,68,68,0.1);
+      border: 1px solid rgba(239,68,68,0.3);
+      border-radius: 8px;
+      color: #fca5a5;
+      font-size: 0.85rem;
+      padding: 0.7rem 0.9rem;
+      margin-top: 0.8rem;
+      display: none;
+    }
+    .login-error.show { display: block; animation: fadeInUp 0.2s ease; }
+    .login-countdown {
+      text-align: center;
+      margin-top: 1.8rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--border);
+    }
+    .lc-label { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-dim); }
+    .lc-time {
+      font-family: var(--font-head);
+      font-size: 1.3rem;
+      font-weight: 700;
+      background: linear-gradient(135deg, #f59e0b, #ef4444);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .teacher-link {
+      text-align: center;
+      margin-top: 1.2rem;
+      font-size: 0.78rem;
+    }
+    .teacher-link a {
+      color: var(--text-dim);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .teacher-link a:hover { color: var(--blue); }
+  </style>
+</head>
+<body>
+  <div class="login-wrapper">
+    <div class="login-card">
+      <div class="login-badge">Holiday Homework · Trial Prep</div>
+      <h1 class="login-title">Year 12 Business <span class="accent">2026</span></h1>
+      <p class="login-subtitle">Marketing (Role &amp; Influences) Scaffold<br>Enter your details to begin.</p>
+
+      <div class="login-field">
+        <label for="login-name">Your Full Name</label>
+        <input type="text" id="login-name" class="login-input" placeholder="e.g. Simon Anderson" autocomplete="name" autocapitalize="words"/>
+      </div>
+      <div class="login-field">
+        <label for="login-password">Password <span style="color:var(--text-dim);font-weight:400;text-transform:none">(given by your teacher)</span></label>
+        <input type="password" id="login-password" class="login-input" placeholder="Enter your password"/>
+      </div>
+
+      <button class="login-btn" id="login-btn" onclick="attemptLogin()">
+        Start Marketing Scaffold →
+      </button>
+
+      <div class="login-error" id="login-error"></div>
+
+      <div class="login-countdown">
+        <div class="lc-label">Due in</div>
+        <div class="lc-time" id="countdown">--</div>
+        <div class="lc-label" id="due-date-label">Term 3 Week 1</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="teacher-link">
+    <a href="teacher.html">Teacher dashboard →</a>
+  </div>
+
+  <script src="config.js"></script>
+  <script>
+    // Set subtitle dynamically
+    document.getElementById('due-date-label').textContent = new Date(CONFIG.DUE_DATE).toLocaleString('en-AU', {
+      day: 'numeric', month: 'long', year: 'numeric', hour: '2-digit', minute: '2-digit'
+    });
+
+    // Countdown
+    function updateCountdown() {
+      const due = new Date(CONFIG.DUE_DATE);
+      const diff = due - new Date();
+      if (diff <= 0) { document.getElementById('countdown').textContent = 'Past due'; return; }
+      const d = Math.floor(diff / 86400000);
+      const h = Math.floor((diff % 86400000) / 3600000);
+      const m = Math.floor((diff % 3600000) / 60000);
+      document.getElementById('countdown').textContent = `${d}d ${h}h ${m}m`;
+    }
+    updateCountdown();
+    setInterval(updateCountdown, 30000);
+
+    // Login
+    function attemptLogin() {
+      const name     = document.getElementById('login-name').value.trim();
+      const password = document.getElementById('login-password').value.trim();
+
+      if (!name)     { showError('Please enter your full name.'); return; }
+      if (!password) { showError('Please enter your password.'); return; }
+
+      const useRoster = CONFIG.STUDENTS && CONFIG.STUDENTS.length > 0;
+
+      if (useRoster) {
+        // Check against student roster (case-insensitive name, exact password)
+        const match = CONFIG.STUDENTS.find(s =>
+          s.name.toLowerCase() === name.toLowerCase() &&
+          s.password === password
+        );
+        if (!match) {
+          showError('Name or password not recognised. Check your details and try again.');
+          return;
+        }
+        // Use the exact name from the roster for consistency
+        sessionStorage.setItem('studentName', match.name);
+        sessionStorage.setItem('classCode', CONFIG.CLASS_CODE || 'BUSN2026');
+      } else {
+        // Fallback: class code mode
+        const code = password.toUpperCase();
+        if (code !== CONFIG.CLASS_CODE) {
+          showError('Incorrect class code. Check with your teacher and try again.');
+          return;
+        }
+        sessionStorage.setItem('studentName', name);
+        sessionStorage.setItem('classCode', code);
+      }
+
+      window.location.href = 'scaffold.html';
+    }
+
+    function showError(msg) {
+      const el = document.getElementById('login-error');
+      el.textContent = msg;
+      el.classList.add('show');
+      setTimeout(() => el.classList.remove('show'), 4000);
+    }
+
+    // Allow Enter key
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Enter') attemptLogin();
+    });
+
+    // If already logged in, go straight to scaffold
+    if (sessionStorage.getItem('studentName') && sessionStorage.getItem('classCode') === CONFIG.CLASS_CODE) {
+      const params = new URLSearchParams(window.location.search);
+      if (!params.has('logout')) {
+        window.location.href = 'scaffold.html';
+      }
+    }
+  </script>
+</body>
+</html>

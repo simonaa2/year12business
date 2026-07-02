@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Year 12 Business Studies — Marketing Scaffold</title>
+  <meta name="description" content="Year 12 Business Studies 2026 Trial Exam Preparation: Marketing Role and Influences research scaffold."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <!-- SUBMISSION OVERLAY -->
+  <div class="submit-overlay" id="submit-overlay">
+    <div class="submit-modal" id="submit-modal">
+      <div class="submit-spinner" id="submit-spinner">
+        <div class="spinner"></div>
+        <p>Submitting your scaffold answers…</p>
+      </div>
+      <div class="submit-success" id="submit-success" style="display:none">
+        <div class="success-icon">✅</div>
+        <h2>Work Submitted!</h2>
+        <p id="submit-success-name"></p>
+        <p class="submit-ts" id="submit-ts"></p>
+        <button class="success-btn" onclick="document.getElementById('submit-overlay').style.display='none'">Keep editing</button>
+      </div>
+      <div class="submit-fail" id="submit-fail" style="display:none">
+        <div class="fail-icon">⚠️</div>
+        <h2>Submission Issue</h2>
+        <p id="submit-fail-msg"></p>
+        <button class="fail-btn" onclick="document.getElementById('submit-overlay').style.display='none'">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="header-top-row">
+        <div class="header-badge">Holiday Homework · Trial Prep</div>
+        <div class="student-chip" id="student-chip">
+          <span class="student-avatar" id="student-avatar">?</span>
+          <span id="student-name-display">Loading…</span>
+          <a href="index.html?logout=1" class="logout-link" title="Switch student">✕</a>
+        </div>
+      </div>
+      <h1 class="header-title">Year 12 Business <span class="accent">Studies</span></h1>
+      <p class="header-subtitle">Marketing Topic: Role &amp; Influences — Research Scaffold</p>
+      <div class="header-meta">
+        <div class="meta-chip"><span class="meta-icon">📅</span><span id="due-date-meta">Due: Monday Term 3</span></div>
+        <div class="meta-chip"><span class="meta-icon">⏱</span><span>Watch Atomi videos first</span></div>
+        <div class="meta-chip"><span class="meta-icon">📘</span><span>Use textbook for definitions</span></div>
+      </div>
+      <div class="countdown-wrapper">
+        <div class="countdown-label">Time Remaining</div>
+        <div id="countdown" class="countdown-display">--d --h --m --s</div>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <!-- OVERVIEW CARDS -->
+    <section class="section">
+      <h2 class="section-title">Homework Portfolio Overview</h2>
+      <div class="overview-grid">
+        <div class="overview-card card-blue">
+          <div class="ov-icon">🎥</div>
+          <div class="ov-label">Atomi Integration</div>
+          <div class="ov-marks">Role &amp; Influences</div>
+          <p class="ov-desc">Watch the recommended Atomi video lessons and complete quick quizzes to unlock the core theory.</p>
+        </div>
+        <div class="overview-card card-purple">
+          <div class="ov-icon">✍️</div>
+          <div class="ov-label">Writing Practice</div>
+          <div class="ov-marks">Section II &amp; IV Scaffold</div>
+          <p class="ov-desc">Practise structured paragraph writing using our customized business PEEL scaffold models.</p>
+        </div>
+        <div class="overview-card card-green">
+          <div class="ov-icon">💾</div>
+          <div class="ov-label">Auto-Save Protection</div>
+          <div class="ov-marks">Saves Locally</div>
+          <p class="ov-desc">Your draft response saves as you type. Submit to upload your final answers to the teacher dashboard.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- TABS -->
+    <section class="section">
+      <h2 class="section-title">Marketing Scaffold Workspace</h2>
+      <p class="section-sub">Navigate the tabs to complete your work. Hit <strong>Submit Work</strong> when ready.</p>
+
+      <div class="tabs">
+        <button class="tab-btn active" data-tab="role" id="tab-role">📢 Role of Marketing</button>
+        <button class="tab-btn" data-tab="choice" id="tab-choice">🧠 Customer Choice</button>
+        <button class="tab-btn" data-tab="laws" id="tab-laws">⚖️ Laws &amp; Ethics</button>
+        <button class="tab-btn" data-tab="writing" id="tab-writing">✍️ HSC Exam Writing</button>
+      </div>
+
+      <!-- =================== ROLE OF MARKETING =================== -->
+      <div class="tab-content active" id="tab-content-role">
+        <div class="info-banner"><strong>Focus:</strong> Strategic role of marketing, interdependence, production/selling/marketing approaches, and types of markets.</div>
+
+        <div class="scaffold-card">
+          <div class="sc-header">
+            <span class="sc-num">R1</span>
+            <div>
+              <h3 class="sc-title">Strategic Role of Marketing</h3>
+              <p class="sc-hint">What is the strategic role of marketing within a modern business? Explain how it translates business goals into reality.</p>
+            </div>
+          </div>
+          <div class="field-row">
+            <label for="strategic-role-def">Definition / Explanation (in your own words)</label>
+            <textarea id="strategic-role-def" class="field-textarea" rows="4" placeholder="Explain how marketing helps a business generate profit, grow sales, and achieve its long-term objectives..."></textarea>
+          </div>
+          <div class="field-row">
+            <label for="strategic-role-case">Application (Case Study - Apple or similar)</label>
+            <textarea id="strategic-role-case" class="field-textarea" rows="3" placeholder="How does Apple use marketing to build a strategic competitive advantage over competitors?"></textarea>
+          </div>
+        </div>
+
+        <div class="scaffold-card">
+          <div class="sc-header">
+            <span class="sc-num">R2</span>
+            <div>
+              <h3 class="sc-title">Interdependence of Business Functions</h3>
+              <p class="sc-hint">Explain how marketing interacts with Operations, Finance, and Human Resources (HR).</p>
+            </div>
+          </div>
+          <div class="institutions-list">
+            <div class="institution-row">
+              <span class="inst-label">Marketing &amp; Operations</span>
+              <textarea id="inter-ops" class="field-textarea inst-area" rows="3" placeholder="Operations transforms inputs to outputs. How does Marketing influence what Operations produces? How does Operations constrain what Marketing can promise?"></textarea>
+            </div>
+            <div class="institution-row">
+              <span class="inst-label">Marketing &amp; Finance</span>
+              <textarea id="inter-fin" class="field-textarea inst-area" rows="3" placeholder="Finance manages budgets and pricing. How does Finance determine Marketing's advertising budget? How does Marketing generate the sales revenue Finance needs?"></textarea>
+            </div>
+            <div class="institution-row">
+              <span class="inst-label">Marketing &amp; HR</span>
+              <textarea id="inter-hr" class="field-textarea inst-area" rows="3" placeholder="HR manages staff and skills. How does Marketing require specialized sales staff? How does HR recruit and train employees to deliver excellent customer service?"></textarea>
+            </div>
+          </div>
+        </div>
+
+        <div class="scaffold-card">
+          <div class="sc-header">
+            <span class="sc-num">R3</span>
+            <div>
+              <h3 class="sc-title">Types of Markets</h3>
+              <p class="sc-hint">Briefly define who the buyers are in each of these syllabus market categories.</p>
+            </div>
+          </div>
+          <div class="market-types-grid">
+            <div class="market-type-card">
+              <div class="mt-icon">🌾</div>
+              <h4>Resource Market</h4>
+              <textarea id="market-resource" class="field-textarea" rows="3" placeholder="Definition and key buyers (e.g. mining, agriculture)..."></textarea>
+            </div>
+            <div class="market-type-card">
+              <div class="mt-icon">🏭</div>
+              <h4>Industrial Market</h4>
+              <textarea id="market-industrial" class="field-textarea" rows="3" placeholder="Definition and key buyers (e.g. manufacturing, assembly)..."></textarea>
+            </div>
+            <div class="market-type-card">
+              <div class="mt-icon">🏪</div>
+              <h4>Intermediate Market</h4>
+              <textarea id="market-intermediate" class="field-textarea" rows="3" placeholder="Definition and key buyers (e.g. wholesalers, retailers)..."></textarea>
+            </div>
+            <div class="market-type-card">
+              <div class="mt-icon">👤</div>
+              <h4>Consumer Market</h4>
+              <textarea id="market-consumer" class="field-textarea" rows="3" placeholder="Definition and key buyers (individuals, households)..."></textarea>
+            </div>
+          </div>
+          <div class="market-types-grid" style="margin-top: 1rem;">
+            <div style="flex:1" class="market-type-card">
+              <div class="mt-icon">📢</div>
+              <h4>Mass Market</h4>
+              <textarea id="market-mass" class="field-textarea" rows="3" placeholder="Definition (undifferentiated products for all consumers)..."></textarea>
+            </div>
+            <div style="flex:1" class="market-type-card">
+              <div class="mt-icon">🎯</div>
+              <h4>Niche Market</h4>
+              <textarea id="market-niche" class="field-textarea" rows="3" placeholder="Definition (highly targeted, specific segment of a larger market)..."></textarea>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- =================== CUSTOMER CHOICE =================== -->
+      <div class="tab-content" id="tab-content-choice">
+        <div class="info-banner"><strong>Focus:</strong> Factors influencing customer choice (why do people buy what they buy?).</div>
+
+        <div class="scaffold-card">
+          <div class="sc-header">
+            <span class="sc-num">C1</span>
+            <div>
+              <h3 class="sc-title">Factors Influencing Choice</h3>
+              <p class="sc-hint">Analyse how each factor shapes consumer decisions. Give a real-world example for each.</p>
+            </div>
+          </div>
+          
+          <div class="trend-row">
+            <div class="trend-label">1. Psychological Influences (Perception, Motives, Attitude, Personality, Self-image)</div>
+            <textarea id="choice-psych" class="field-textarea" rows="3" placeholder="Explain the concept..."></textarea>
+            <input type="text" id="choice-psych-ex" class="field-input" placeholder="Real-world example (e.g. buying Nike to feel athletic/successful)" style="margin-top:0.5rem;"/>
+          </div>
+
+          <div class="trend-row">
+            <div class="trend-label">2. Sociocultural Influences (Social Class, Culture/Subculture, Peer/Reference Groups, Family)</div>
+            <textarea id="choice-socio" class="field-textarea" rows="3" placeholder="Explain the concept..."></textarea>
+            <input type="text" id="choice-socio-ex" class="field-input" placeholder="Real-world example (e.g. buying organic food due to family preferences)" style="margin-top:0.5rem;"/>
+          </div>
+
+          <div class="trend-row">
+            <div class="trend-label">3. Economic Influences (Boom vs. Contraction / Recession)</div>
+            <textarea id="choice-econ" class="field-textarea" rows="3" placeholder="Explain the concept..."></textarea>
+            <input type="text" id="choice-econ-ex" class="field-input" placeholder="Real-world example (e.g. switching to home brands during high inflation/recession)" style="margin-top:0.5rem;"/>
+          </div>
+
+          <div class="trend-row">
+            <div class="trend-label">4. Government Influences (Regulations, Taxes, Interest Rates)</div>
+            <textarea id="choice-govt" class="field-textarea" rows="3" placeholder="Explain the concept..."></textarea>
+            <input type="text" id="choice-govt-ex" class="field-input" placeholder="Real-world example (e.g. buying an electric vehicle due to government rebate policy)" style="margin-top:0.5rem;"/>
+          </div>
+        </div>
+      </div>
+
+      <!-- =================== LAWS & ETHICS =================== -->
+      <div class="tab-content" id="tab-content-laws">
+        <div class="info-banner warning-banner">⚠️ <strong>Laws vs. Ethics:</strong> Consumer laws are strictly legal constraints (enforced by the ACCC). Ethical influences represent moral expectations from society (truth, good taste). You must distinguish between them in exam answers.</div>
+
+        <div class="scaffold-card">
+          <div class="sc-header">
+            <span class="sc-num">L1</span>
+            <div>
+              <h3 class="sc-title">Consumer Laws (ACL)</h3>
+              <p class="sc-hint">For each legal constraint, define the concept and explain what businesses are prohibited from doing.</p>
+            </div>
+          </div>
+          
+          <div class="institutions-list">
+            <div class="institution-row">
+              <span class="inst-label">Deceptive &amp; Misleading Advertising</span>
+              <textarea id="law-deceptive" class="field-textarea inst-area" rows="3" placeholder="Explain ACL rules on deceptive claims, bait-and-switch, fine-print traps..."></textarea>
+            </div>
+            <div class="institution-row">
+              <span class="inst-label">Price Discrimination</span>
+              <textarea id="law-discrimination" class="field-textarea inst-area" rows="3" placeholder="Explain the law regarding setting different prices for the same product in different markets..."></textarea>
+            </div>
+            <div class="institution-row">
+              <span class="inst-label">Implied Conditions</span>
+              <textarea id="law-implied" class="field-textarea inst-area" rows="3" placeholder="Explain consumer guarantees (products must be of acceptable quality and fit for purpose)..."></textarea>
+            </div>
+            <div class="institution-row">
+              <span class="inst-label">Warranties</span>
+              <textarea id="law-warranties" class="field-textarea inst-area" rows="3" placeholder="Explain what obligations a business has regarding refunds, exchanges, or repairs..."></textarea>
+            </div>
+          </div>
+        </div>
+
+        <div class="scaffold-card">
+          <div class="sc-header">
+            <span class="sc-num">L2</span>
+            <div>
+              <h3 class="sc-title">Ethical Influences</h3>
+              <p class="sc-hint">Describe how ethical expectations impact marketing activities, with an example of what is considered good/bad practice.</p>
+            </div>
+          </div>
+
+          <div class="trend-row">
+            <div class="trend-label">Truth and Accuracy (Avoiding exaggeration, hidden costs, or false impressions)</div>
+            <textarea id="ethics-truth" class="field-textarea" rows="3" placeholder="Describe the ethical standard and potential issues..."></textarea>
+          </div>
+
+          <div class="trend-row">
+            <div class="trend-label">Good Taste in Advertising (Sensitivity to community standards, culture, gender roles)</div>
+            <textarea id="ethics-taste" class="field-textarea" rows="3" placeholder="Describe the ethical standard and potential issues..."></textarea>
+          </div>
+
+          <div class="trend-row">
+            <div class="trend-label">Products that Damage Health (Marketing fast food, alcohol, gaming to vulnerable groups)</div>
+            <textarea id="ethics-health" class="field-textarea" rows="3" placeholder="Describe the ethical standard and potential issues..."></textarea>
+          </div>
+
+          <div class="trend-row">
+            <div class="trend-label">Engaging in Fair Competition (Avoiding predatory practices, collusive pricing)</div>
+            <textarea id="ethics-competition" class="field-textarea" rows="3" placeholder="Describe the ethical standard and potential issues..."></textarea>
+          </div>
+
+          <div class="trend-row">
+            <div class="trend-label">Sugging (Selling Under the Guise of a Survey)</div>
+            <textarea id="ethics-sugging" class="field-textarea" rows="3" placeholder="Explain why sugging is considered unethical, even if not strictly illegal in all contexts..."></textarea>
+          </div>
+        </div>
+      </div>
+
+      <!-- =================== HSC EXAM WRITING =================== -->
+      <div class="tab-content" id="tab-content-writing">
+        <div class="info-banner">✍️ <strong>Trial Exam Preparation.</strong> Select one of the practice questions below and write a scaffolded draft using business terminology.</div>
+
+        <!-- QUESTION SELECTOR -->
+        <div class="scaffold-card" id="question-selector-card">
+          <div class="sc-header">
+            <span class="sc-num">❓</span>
+            <div>
+              <h3 class="sc-title">Select Practice Question</h3>
+              <p class="sc-hint">Choose one question to focus your writing practice. The tracker will count your key terms.</p>
+            </div>
+          </div>
+          <div class="question-list">
+            <label class="question-option" id="qopt-1">
+              <input type="radio" name="selected-question" value="1"/>
+              <div class="qopt-body">
+                <div class="qopt-num">Q1</div>
+                <div class="qopt-text">Explain the interdependence between marketing and operations. (4 Marks)</div>
+              </div>
+            </label>
+            <label class="question-option" id="qopt-2">
+              <input type="radio" name="selected-question" value="2"/>
+              <div class="qopt-body">
+                <div class="qopt-num">Q2</div>
+                <div class="qopt-text">Analyse how consumer laws influence a business's marketing activities. (6 Marks)</div>
+              </div>
+            </label>
+            <label class="question-option" id="qopt-3">
+              <input type="radio" name="selected-question" value="3"/>
+              <div class="qopt-body">
+                <div class="qopt-num">Q3</div>
+                <div class="qopt-text">Assess the impact of ethical influences on marketing strategies. (8 Marks)</div>
+              </div>
+            </label>
+          </div>
+        </div>
+
+        <!-- SELECTED QUESTION DISPLAY -->
+        <div class="selected-q-banner" id="selected-q-banner" style="display:none">
+          <div class="sq-label">Your Active Writing Task</div>
+          <div class="sq-text" id="sq-text"></div>
+          <div class="sq-marks">Aim for highly structured, syllabus-aligned paragraphs.</div>
+        </div>
+
+        <!-- WRITING SCAFFOLDS -->
+        <div class="scaffold-card">
+          <div class="sc-header">
+            <span class="sc-num">📖</span>
+            <div>
+              <h3 class="sc-title">Paragraph Structure: Business PEEL Model</h3>
+              <p class="sc-hint">To score top marks, use this structural format for your body paragraphs:</p>
+            </div>
+          </div>
+          <div class="model-answer">
+            <div class="model-para">
+              <div class="mp-label intro">Point (P)</div>
+              <div class="mp-content">
+                <div class="mp-what">Topic Sentence:</div>
+                <p>Directly state your argument answering the question, using specific syllabus terms.</p>
+              </div>
+            </div>
+            <div class="model-para">
+              <div class="mp-label body1">Explain (E)</div>
+              <div class="mp-content">
+                <div class="mp-what">Detailed Analysis:</div>
+                <p>Analyse the cause-and-effect relationship. How or why does this occur? (e.g. transmission mechanism of consumer choice, or the cost of compliance).</p>
+              </div>
+            </div>
+            <div class="model-para">
+              <div class="mp-label body2">Evidence (E)</div>
+              <div class="mp-content">
+                <div class="mp-what">Case Study Application:</div>
+                <p>Provide a concrete, real-world example of a business (e.g., Apple, McDonald's) applying this strategy or encountering this influence.</p>
+              </div>
+            </div>
+            <div class="model-para">
+              <div class="mp-label conclusion">Link (L)</div>
+              <div class="mp-content">
+                <div class="mp-what">Business Outcome:</div>
+                <p>Link back to the question and state the ultimate effect on the business's goals (profitability, competitive advantage, sales volume, market share).</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- KEY TERMS TRACKER -->
+        <div class="scaffold-card">
+          <div class="sc-header">
+            <span class="sc-num">🔑</span>
+            <div>
+              <h3 class="sc-title">Business Key Terms Tracker</h3>
+              <p class="sc-hint">These terms should appear in your writing. They will light up automatically as you type below.</p>
+            </div>
+          </div>
+          <div class="terms-grid" id="terms-grid">
+            <span class="term-chip" data-term="interdependence">interdependence</span>
+            <span class="term-chip" data-term="strategic role">strategic role</span>
+            <span class="term-chip" data-term="consumer laws">consumer laws</span>
+            <span class="term-chip" data-term="deceptive">deceptive and misleading</span>
+            <span class="term-chip" data-term="implied conditions">implied conditions</span>
+            <span class="term-chip" data-term="warranties">warranties</span>
+            <span class="term-chip" data-term="ethical">ethical influences</span>
+            <span class="term-chip" data-term="psychological">psychological</span>
+            <span class="term-chip" data-term="sociocultural">sociocultural</span>
+            <span class="term-chip" data-term="economic">economic</span>
+            <span class="term-chip" data-term="government">government</span>
+            <span class="term-chip" data-term="competitive advantage">competitive advantage</span>
+            <span class="term-chip" data-term="profitability">profitability</span>
+            <span class="term-chip" data-term="niche">niche market</span>
+            <span class="term-chip" data-term="sugging">sugging</span>
+            <span class="term-chip" data-term="brand image">brand image</span>
+          </div>
+          <div class="terms-progress">
+            <div class="tp-bar-wrap"><div class="tp-bar" id="terms-bar"></div></div>
+            <div class="tp-count" id="terms-count">0 / 16 terms used</div>
+          </div>
+        </div>
+
+        <!-- STUDENT WRITING AREA -->
+        <div class="scaffold-card">
+          <div class="sc-header">
+            <span class="sc-num">✍️</span>
+            <div>
+              <h3 class="sc-title">Your Practice Response</h3>
+              <p class="sc-hint">Type your response below. Word count and terms will update in real time.</p>
+            </div>
+          </div>
+          <div class="writing-toolbar">
+            <span class="wc-display">Words: <strong id="word-count">0</strong></span>
+            <span class="wc-target">Aim for 150 - 300 words</span>
+          </div>
+          <textarea id="partb-response" class="field-textarea writing-area" rows="18" placeholder="Start writing your paragraph here. Remember to follow the PEEL structure (Point, Explain, Evidence, Link)..."></textarea>
+        </div>
+
+        <!-- SELF-MARK RUBRIC -->
+        <div class="scaffold-card">
+          <div class="sc-header">
+            <span class="sc-num">✅</span>
+            <div>
+              <h3 class="sc-title">Self-Assessment Checklist</h3>
+              <p class="sc-hint">Evaluate your writing response before submitting it to your teacher.</p>
+            </div>
+          </div>
+          <div class="rubric-table">
+            <div class="rubric-row rubric-header">
+              <span>Syllabus Target</span><span>Not yet</span><span>Developing</span><span>Strong</span>
+            </div>
+            <div class="rubric-row">
+              <span>Uses precise Business Studies terminology</span>
+              <label class="rb"><input type="radio" name="rb1" value="1"/> Basic</label>
+              <label class="rb"><input type="radio" name="rb1" value="2"/> Good</label>
+              <label class="rb"><input type="radio" name="rb1" value="3"/> precise</label>
+            </div>
+            <div class="rubric-row">
+              <span>Explains the connection between theory and business outcomes</span>
+              <label class="rb"><input type="radio" name="rb2" value="1"/> No</label>
+              <label class="rb"><input type="radio" name="rb2" value="2"/> Partial</label>
+              <label class="rb"><input type="radio" name="rb2" value="3"/> Detailed</label>
+            </div>
+            <div class="rubric-row">
+              <span>Integrates a case study or real-world business example</span>
+              <label class="rb"><input type="radio" name="rb3" value="1"/> None</label>
+              <label class="rb"><input type="radio" name="rb3" value="2"/> Named only</label>
+              <label class="rb"><input type="radio" name="rb3" value="3"/> Detailed</label>
+            </div>
+            <div class="rubric-row">
+              <span>Follows the complete PEEL paragraph structure</span>
+              <label class="rb"><input type="radio" name="rb4" value="1"/> Jumbled</label>
+              <label class="rb"><input type="radio" name="rb4" value="2"/> Partial</label>
+              <label class="rb"><input type="radio" name="rb4" value="3"/> Exact</label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MARKING CRITERIA -->
+    <section class="section">
+      <h2 class="section-title">Marking Criteria &amp; Final Checklist</h2>
+      <p class="section-sub">Ensure you meet all expectations before submitting.</p>
+      <div class="checklist">
+        <label class="check-item"><input type="checkbox" id="chk1"/><span class="check-box"></span><div><strong>Syllabus Knowledge (Marketing)</strong><p>I have accurately defined the strategic role of marketing, interdependence, and types of markets.</p></div></label>
+        <label class="check-item"><input type="checkbox" id="chk2"/><span class="check-box"></span><div><strong>Influences Mastery</strong><p>I can clearly explain the 4 factors of customer choice, consumer laws, and ethical issues.</p></div></label>
+        <label class="check-item"><input type="checkbox" id="chk3"/><span class="check-box"></span><div><strong>Case Study Integration</strong><p>I have applied real-world business examples (like Apple) to explain the syllabus concepts.</p></div></label>
+        <label class="check-item"><input type="checkbox" id="chk4"/><span class="check-box"></span><div><strong>PEEL Paragraphing</strong><p>My practice writing response uses clear Topic Sentences (P), economic reasoning (E), facts/data (E), and a business link (L).</p></div></label>
+        <label class="check-item"><input type="checkbox" id="chk5"/><span class="check-box"></span><div><strong>Atomi Watch Target</strong><p>I have watched the designated Marketing videos on Atomi to back up my written answers.</p></div></label>
+      </div>
+    </section>
+
+    <!-- SUBMIT SECTION -->
+    <section class="section submit-section">
+      <div class="submit-card">
+        <div class="submit-card-left">
+          <h2 class="submit-heading">Submit to Teacher</h2>
+          <p class="submit-desc">Clicking submit will upload all of your answers to your teacher's dashboard on **LearnStudio.com.au**.</p>
+          <div class="submit-save-note" id="save-indicator">💾 Auto-saved to this device</div>
+        </div>
+        <div class="submit-card-right">
+          <button class="submit-btn" id="submit-btn" onclick="submitResearch()">
+            <span class="submit-btn-icon">📤</span>
+            Submit Work
+          </button>
+          <div class="submit-status" id="submit-status"></div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p>Year 12 Business Studies 2026 · Holiday Homework · Marketing Topic</p>
+      <p class="footer-sub" id="footer-due-date-sub">Due: Monday Term 3 · Weighting: Trial Prep</p>
+    </div>
+  </footer>
+
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

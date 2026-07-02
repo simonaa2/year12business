@@ -180,6 +180,7 @@ async function submitResearch() {
     // We use text/plain content-type to avoid CORS preflight issues with Apps Script
     await fetch(CONFIG.SCRIPT_URL, {
       method: 'POST',
+      mode: 'no-cors',
       headers: { 'Content-Type': 'text/plain' },
       body: JSON.stringify(data),
     });

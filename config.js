@@ -4,7 +4,7 @@
 
 const CONFIG = {
   // Google Apps Script Web App URL (from your setup):
-  SCRIPT_URL: 'YOUR_APPS_SCRIPT_URL_HERE',
+  SCRIPT_URL: 'https://script.google.com/macros/s/AKfycbyw9A5ebny_YKLG0YC0IibSMV-lc44hyJh8j1aT8AW9T9rLhaolQCItEOPU-XQZ7I0iXA/exec',
 
   // App details:
   APP_TITLE:    'Year 12 Business Studies 2026',
@@ -20,10 +20,13 @@ const CONFIG = {
   // -----------------------------------------------
   STUDENTS: [
     { name: 'Simon Anderson',            password: 'simon12'   },
-    { name: 'Student A',                 password: 'studenta'  },
-    { name: 'Student B',                 password: 'studentb'  },
-    { name: 'Student C',                 password: 'studentc'  },
-    { name: 'Student D',                 password: 'studentd'  },
+    { name: 'Austin Crump',              password: 'austin12'  },
+    { name: 'Aidan Tresister',           password: 'aidan12'   },
+    { name: 'Adam Avdalis',              password: 'adam12'    },
+    { name: 'Zach Hull',                 password: 'zach12'    },
+    { name: 'Lucas Helacas',             password: 'lucas12'   },
+    { name: 'Seb Sacilotto',             password: 'seb12'     },
+    { name: 'William Rebel',             password: 'william12' },
   ],
 
   // Fallback class code (only used if STUDENTS list is empty):

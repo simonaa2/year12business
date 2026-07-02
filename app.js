@@ -188,7 +188,7 @@ async function submitResearch() {
     spinner.style.display = 'none';
     successEl.style.display = 'flex';
     document.getElementById('submit-success-name').textContent =
-      `${data.studentName} — your marketing scaffold has been received.`;
+      `${data.studentName} — your trial prep portfolio has been received.`;
     document.getElementById('submit-ts').textContent =
       'Submitted: ' + new Date().toLocaleString('en-AU');
 
@@ -273,7 +273,7 @@ if (writingArea) {
 const QUESTIONS = {
   '1': 'Explain the interdependence between marketing and operations. (4 Marks)',
   '2': 'Analyse how consumer laws influence a business\'s marketing activities. (6 Marks)',
-  '3': 'Assess the impact of ethical influences on marketing strategies. (8 Marks)'
+  '3': 'Assess how McDonald\'s utilizes operations strategies (such as technology) to gain a competitive advantage. (8 Marks)'
 };
 
 function selectQuestion(val) {

@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Year 12 Business Studies — Comprehensive HSC Trial RIPS Workbook</title>
-  <meta name="description" content="Year 12 Business Studies 2026 Trial Exam Preparation: RIPS (Role, Influences, Processes, Strategies) syllabus checklist and McDonald's case study scaffold."/>
+  <meta name="description" content="Year 12 Business Studies 2026 Trial Exam Preparation: RIPS syllabus notes and McDonald's case study scaffold."/>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
@@ -124,7 +124,7 @@
       display: flex;
       align-items: center;
       gap: 0.5rem;
-      margin: 2rem 0 1rem 0;
+      margin: 2.5rem 0 1.2rem 0;
       border-bottom: 2px solid var(--border);
       padding-bottom: 0.5rem;
     }
@@ -132,7 +132,7 @@
       background: #4f46e5;
       color: #fff;
       font-weight: 800;
-      font-size: 0.9rem;
+      font-size: 0.95rem;
       padding: 0.2rem 0.6rem;
       border-radius: 6px;
       text-transform: uppercase;
@@ -140,47 +140,38 @@
     .rips-title {
       font-family: var(--font-head);
       font-weight: 700;
-      font-size: 1.2rem;
+      font-size: 1.3rem;
       color: #fff;
     }
 
-    /* Syllabus Checklist Grid */
-    .syllabus-checklist {
-      background: rgba(255,255,255,0.02);
+    /* Syllabus Point Card */
+    .syl-point-card {
+      background: var(--bg-card);
       border: 1px solid var(--border-light);
       border-radius: var(--radius);
       padding: 1.2rem;
-      margin-bottom: 1.5rem;
+      margin-bottom: 1.2rem;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
     }
-    .syllabus-checklist-title {
-      font-size: 0.85rem;
-      text-transform: uppercase;
+    .syl-point-title {
+      font-family: var(--font-head);
       font-weight: 700;
-      letter-spacing: 0.05em;
-      color: var(--text-dim);
-      margin-bottom: 0.8rem;
-      border-bottom: 1px solid var(--border-light);
-      padding-bottom: 0.4rem;
-    }
-    .syl-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 0.5rem 1rem;
-    }
-    @media (max-width: 768px) {
-      .syl-grid { grid-template-columns: 1fr; }
-    }
-    .syl-item {
+      font-size: 0.9rem;
+      color: #93c5fd;
+      margin-bottom: 0.6rem;
       display: flex;
       align-items: flex-start;
       gap: 0.5rem;
-      font-size: 0.8rem;
-      color: var(--text);
-      cursor: pointer;
-      line-height: 1.4;
     }
-    .syl-item input[type="checkbox"] {
-      margin-top: 0.15rem;
+    .syl-point-bullet {
+      background: rgba(147, 197, 253, 0.15);
+      color: #93c5fd;
+      font-weight: bold;
+      font-size: 0.75rem;
+      padding: 0.1rem 0.4rem;
+      border-radius: 4px;
+      text-transform: uppercase;
+      flex-shrink: 0;
     }
   </style>
 </head>
@@ -224,7 +215,7 @@
       <p class="header-subtitle">HSC Trial Preparation — Complete Core RIPS Workbook</p>
       <div class="header-meta">
         <div class="meta-chip"><span class="meta-icon">📅</span><span id="due-date-meta">Due: Mon 20 Jul (Marketing) &amp; Mon 10 Aug (Full Revision)</span></div>
-        <div class="meta-chip"><span class="meta-icon">⏱</span><span>RIPS (Role, Influences, Processes, Strategies)</span></div>
+        <div class="meta-chip"><span class="meta-icon">⏱</span><span>RIPS Syllabus Framework</span></div>
         <div class="meta-chip"><span class="meta-icon">🍟</span><span>Case Study: McDonald's</span></div>
         <div class="meta-chip"><span class="meta-icon">📱</span><span>Atomi, Textbook &amp; LearnStudio App</span></div>
       </div>
@@ -250,8 +241,8 @@
         <div class="overview-card card-blue">
           <div class="ov-icon">📘</div>
           <div class="ov-label">Complete Core Syllabus</div>
-          <div class="ov-marks">RIPS Acronym Structure</div>
-          <p class="ov-desc">Integrates Operations, Marketing, Finance, and Human Resources structured by Role, Influences, Processes, and Strategies.</p>
+          <div class="ov-marks">70+ Syllabus Point Notes</div>
+          <p class="ov-desc">Syllabus-aligned cards to summarize theory, case studies, and practical ratio applications.</p>
         </div>
         <div class="overview-card card-purple">
           <div class="ov-icon">✍️</div>
@@ -271,7 +262,7 @@
     <!-- TABS -->
     <section class="section">
       <h2 class="section-title">Study Workspace</h2>
-      <p class="section-sub">Navigate the tabs to complete each unit. Use your Atomi notes, textbook, and the **LearnStudio App** resources to answer the questions. Click <strong>Submit Work</strong> at the bottom when done.</p>
+      <p class="section-sub">Navigate the tabs to complete each unit. Use your Atomi notes, textbook, and the **LearnStudio App** resources to write summaries under each official syllabus dot point.</p>
 
       <div class="tabs">
         <button class="tab-btn active" data-tab="marketing" id="tab-marketing">📢 Marketing</button>
@@ -283,15 +274,9 @@
 
       <!-- =================== MARKETING TAB =================== -->
       <div class="tab-content active" id="tab-content-marketing">
-        <!-- WALT & WILF -->
         <div class="goals-banner">
           <div class="goals-title">💡 Marketing Syllabus Goals</div>
-          <ul class="goals-list">
-            <li><strong>Role:</strong> Strategic role of marketing, interdependence, production/selling/marketing approaches, and types of markets.</li>
-            <li><strong>Influences:</strong> Choice factors (PEGS), Consumer laws, and ethical issues.</li>
-            <li><strong>Processes:</strong> Situational analysis (SWOT/PLC), target markets, and implementation/monitoring.</li>
-            <li><strong>Strategies:</strong> Product, Price, Promotion, Place (4 Ps), 3 additional Ps (People/Process/Physical Evidence), and Global marketing.</li>
-          </ul>
+          <p class="goals-list" style="margin-left: 0;">Explain how McDonald's manages its marketing. Focus on global branding campaigns, target markets, consumer laws, and pricing strategies.</p>
         </div>
 
         <!-- ROLE -->
@@ -299,29 +284,22 @@
           <span class="rips-badge">R</span>
           <span class="rips-title">Role of Marketing</span>
         </div>
-        
-        <div class="syllabus-checklist">
-          <div class="syllabus-checklist-title">Syllabus Check: Role of Marketing</div>
-          <div class="syl-grid">
-            <label class="syl-item"><input type="checkbox" id="mcc-role-1"/> <span>strategic role of marketing goods and services</span></label>
-            <label class="syl-item"><input type="checkbox" id="mcc-role-2"/> <span>interdependence with other key business functions</span></label>
-            <label class="syl-item"><input type="checkbox" id="mcc-role-3"/> <span>production, selling, marketing approaches</span></label>
-            <label class="syl-item"><input type="checkbox" id="mcc-role-4"/> <span>types of markets — resource, industrial, intermediate, consumer, mass, niche</span></label>
-          </div>
-        </div>
 
-        <div class="scaffold-card">
-          <div class="sc-header">
-            <span class="sc-num">M1</span>
-            <div>
-              <h3 class="sc-title">Strategic Role &amp; Interdependence</h3>
-              <p class="sc-hint">How does marketing assist a business to generate sales, grow market share, and develop a strategic competitive advantage?</p>
-            </div>
-          </div>
-          <div class="field-row">
-            <label for="mkt-role-strategic">Strategic Role &amp; Approaches (Case Study: McDonald's)</label>
-            <textarea id="mkt-role-strategic" class="field-textarea" rows="3" placeholder="Explain how McDonald's marketing approaches (customer orientation) protect its ~$191B brand value and maximize profits."></textarea>
-          </div>
+        <div class="syl-point-card">
+          <div class="syl-point-title"><span class="syl-point-bullet">Role 1</span> strategic role of marketing goods and services</div>
+          <textarea id="syl-mkt-role-1" class="field-textarea" rows="2" placeholder="Explain the long-term goal of profit maximization, customer loyalty, and how the marketing plan supports the business..."></textarea>
+        </div>
+        <div class="syl-point-card">
+          <div class="syl-point-title"><span class="syl-point-bullet">Role 2</span> interdependence with other key business functions</div>
+          <textarea id="syl-mkt-role-2" class="field-textarea" rows="2" placeholder="How does Marketing depend on Operations to produce quality food on time? How does it depend on Finance &amp; HR?"></textarea>
+        </div>
+        <div class="syl-point-card">
+          <div class="syl-point-title"><span class="syl-point-bullet">Role 3</span> production, selling, marketing approaches</div>
+          <textarea id="syl-mkt-role-3" class="field-textarea" rows="2" placeholder="Trace the evolution: production approach (standard goods), selling approach (advertising), to marketing approach (customer-centric)."></textarea>
+        </div>
+        <div class="syl-point-card">
+          <div class="syl-point-title"><span class="syl-point-bullet">Role 4</span> types of markets — resource, industrial, intermediate, consumer, mass, niche</div>
+          <textarea id="syl-mkt-role-4" class="field-textarea" rows="2" placeholder="Define each market. Identify which types of markets McDonald's operates in (e.g. consumer mass market, intermediate franchisor)."></textarea>
         </div>
 
         <!-- INFLUENCES -->
@@ -330,35 +308,17 @@
           <span class="rips-title">Influences on Marketing</span>
         </div>
 
-        <div class="syllabus-checklist">
-          <div class="syllabus-checklist-title">Syllabus Check: Influences on Marketing</div>
-          <div class="syl-grid">
-            <label class="syl-item"><input type="checkbox" id="mcc-inf-1"/> <span>factors influencing customer choice — psychological, sociocultural, economic, government</span></label>
-            <label class="syl-item"><input type="checkbox" id="mcc-inf-2"/> <span>consumer laws — deceptive and misleading advertising, price discrimination, implied conditions, warranties</span></label>
-            <label class="syl-item"><input type="checkbox" id="mcc-inf-3"/> <span>ethical — truth, accuracy and good taste, products that damage health, fair competition, sugging</span></label>
-          </div>
+        <div class="syl-point-card">
+          <div class="syl-point-title"><span class="syl-point-bullet">Influence 1</span> factors influencing customer choice — psychological, sociocultural, economic, government</div>
+          <textarea id="syl-mkt-inf-1" class="field-textarea" rows="3" placeholder="Analyze how value perception, family reference groups, economic boom/recession, and government health regulations shape food choices at McDonald's."></textarea>
         </div>
-
-        <div class="scaffold-card">
-          <div class="sc-header">
-            <span class="sc-num">M2</span>
-            <div>
-              <h3 class="sc-title">Factors Shaping Choice, Laws &amp; Ethics</h3>
-              <p class="sc-hint">Analyse what shapes buying choices and how consumer laws/ethics regulate campaigns.</p>
-            </div>
-          </div>
-          <div class="trend-row">
-            <div class="trend-label">Factors Influencing Choice (Psychological, Sociocultural, Economic, Government)</div>
-            <textarea id="choice-psych" class="field-textarea" rows="3" placeholder="How do value perception, reference groups, inflation (Loose Change Menu), and government policies influence buyers?"></textarea>
-          </div>
-          <div class="trend-row">
-            <div class="trend-label">Consumer Laws (Deceptive Advertising, Implied Conditions, Warranties, Price Discrimination)</div>
-            <textarea id="law-deceptive" class="field-textarea" rows="3" placeholder="Explain requirements regarding misleading pricing, product descriptions, and fitness for consumption."></textarea>
-          </div>
-          <div class="trend-row">
-            <div class="trend-label">Ethical Influences (Sugging, Truth, Children's Health)</div>
-            <textarea id="ethics-health" class="field-textarea" rows="3" placeholder="Discuss ethical concerns (e.g., targeting children with high-sugar meals, disguised market research)."></textarea>
-          </div>
+        <div class="syl-point-card">
+          <div class="syl-point-title"><span class="syl-point-bullet">Influence 2</span> consumer laws — deceptive and misleading advertising, price discrimination, implied conditions, warranties</div>
+          <textarea id="syl-mkt-inf-2" class="field-textarea" rows="3" placeholder="Explain obligations under the Australian Consumer Law (ACL) regarding deceptive pictures/pricing, fit for purpose food, and refunds."></textarea>
+        </div>
+        <div class="syl-point-card">
+          <div class="syl-point-title"><span class="syl-point-bullet">Influence 3</span> ethical — truth, accuracy and good taste, products that damage health, fair competition, sugging</div>
+          <textarea id="syl-mkt-inf-3" class="field-textarea" rows="3" placeholder="Discuss ethical criticisms: advertising high-fat/sugar meals to kids, fair competition, and sugging (disguised research)."></textarea>
         </div>
 
         <!-- PROCESSES -->
@@ -367,34 +327,29 @@
           <span class="rips-title">Marketing Processes</span>
         </div>
 
-        <div class="syllabus-checklist">
-          <div class="syllabus-checklist-title">Syllabus Check: Marketing Process</div>
-          <div class="syl-grid">
-            <label class="syl-item"><input type="checkbox" id="mcc-proc-1"/> <span>situational analysis — SWOT, product life cycle</span></label>
-            <label class="syl-item"><input type="checkbox" id="mcc-proc-2"/> <span>market research (primary &amp; secondary sources)</span></label>
-            <label class="syl-item"><input type="checkbox" id="mcc-proc-3"/> <span>establishing marketing objectives</span></label>
-            <label class="syl-item"><input type="checkbox" id="mcc-proc-4"/> <span>identifying target markets (primary &amp; secondary)</span></label>
-            <label class="syl-item"><input type="checkbox" id="mcc-proc-5"/> <span>developing marketing strategies</span></label>
-            <label class="syl-item"><input type="checkbox" id="mcc-proc-6"/> <span>implementation, monitoring and controlling (financial forecasts, actual/planned results)</span></label>
-          </div>
+        <div class="syl-point-card">
+          <div class="syl-point-title"><span class="syl-point-bullet">Process 1</span> situational analysis — SWOT, product life cycle</div>
+          <textarea id="syl-mkt-proc-1" class="field-textarea" rows="3" placeholder="Analyze SWOT elements (Strengths, Weaknesses, Opportunities, Threats) and map menu items to their stage in the Product Life Cycle (PLC)."></textarea>
         </div>
-
-        <div class="scaffold-card">
-          <div class="sc-header">
-            <span class="sc-num">M3</span>
-            <div>
-              <h3 class="sc-title">Situational Analysis, Research &amp; Target Markets</h3>
-              <p class="sc-hint">How does a firm map its environment and identify who to sell to?</p>
-            </div>
-          </div>
-          <div class="field-row">
-            <label for="mkt-proc-swot">Situational Analysis &amp; SWOT</label>
-            <textarea id="mkt-proc-swot" class="field-textarea" rows="3" placeholder="Analyze McDonald's SWOT (Strengths: brand scale; Weaknesses: health image; Opportunities: delivery apps; Threats: labor shortages)."></textarea>
-          </div>
-          <div class="field-row">
-            <label for="mkt-proc-research">Market Research &amp; Target Markets</label>
-            <textarea id="mkt-proc-research" class="field-textarea" rows="3" placeholder="Explain how McDonald's uses primary/secondary research to select target markets (e.g. busy parents for Happy Meals vs youth for late-night menu)."></textarea>
-          </div>
+        <div class="syl-point-card">
+          <div class="syl-point-title"><span class="syl-point-bullet">Process 2</span> market research (primary &amp; secondary sources)</div>
+          <textarea id="syl-mkt-proc-2" class="field-textarea" rows="2" placeholder="How does McDonald's collect primary data (surveys, app usage) vs secondary data (demographic trends)?"></textarea>
+        </div>
+        <div class="syl-point-card">
+          <div class="syl-point-title"><span class="syl-point-bullet">Process 3</span> establishing marketing objectives</div>
+          <textarea id="syl-mkt-proc-3" class="field-textarea" rows="2" placeholder="Detail standard objectives: increasing market share, expanding product range, and maximizing customer service."></textarea>
+        </div>
+        <div class="syl-point-card">
+          <div class="syl-point-title"><span class="syl-point-bullet">Process 4</span> identifying target markets</div>
+          <textarea id="syl-mkt-proc-4" class="field-textarea" rows="2" placeholder="Distinguish between primary target market (busy families) and secondary target markets (young adults, commuters)."></textarea>
+        </div>
+        <div class="syl-point-card">
+          <div class="syl-point-title"><span class="syl-point-bullet">Process 5</span> developing marketing strategies</div>
+          <textarea id="syl-mkt-proc-5" class="field-textarea" rows="2" placeholder="Explain the formulation of a marketing mix designed to reach the chosen target markets."></textarea>
+        </div>
+        <div class="syl-point-card">
+          <div class="syl-point-title"><span class="syl-point-bullet">Process 6</span> implementation, monitoring and controlling</div>
+          <textarea id="syl-mkt-proc-6" class="field-textarea" rows="3" placeholder="Explain sales analysis, market share analysis, and marketing profitability analysis. How is the marketing budget controlled?"></textarea>
         </div>
 
         <!-- STRATEGIES -->
@@ -403,50 +358,45 @@
           <span class="rips-title">Marketing Strategies</span>
         </div>
 
-        <div class="syllabus-checklist">
-          <div class="syllabus-checklist-title">Syllabus Check: Marketing Strategies</div>
-          <div class="syl-grid">
-            <label class="syl-item"><input type="checkbox" id="mcc-strat-1"/> <span>market segmentation, product/service differentiation and positioning</span></label>
-            <label class="syl-item"><input type="checkbox" id="mcc-strat-2"/> <span>products — goods and/or services (branding, packaging)</span></label>
-            <label class="syl-item"><input type="checkbox" id="mcc-strat-3"/> <span>price — pricing methods (cost, market, competition) and pricing strategies</span></label>
-            <label class="syl-item"><input type="checkbox" id="mcc-strat-4"/> <span>promotion — promotion mix, opinion leaders, word of mouth</span></label>
-            <label class="syl-item"><input type="checkbox" id="mcc-strat-5"/> <span>place/distribution — channels, channel choice, physical distribution issues</span></label>
-            <label class="syl-item"><input type="checkbox" id="mcc-strat-6"/> <span>people, processes, physical evidence (3 additional Ps)</span></label>
-            <label class="syl-item"><input type="checkbox" id="mcc-strat-7"/> <span>e-marketing</span></label>
-            <label class="syl-item"><input type="checkbox" id="mcc-strat-8"/> <span>global marketing — global branding, standardisation, customisation, global pricing</span></label>
-          </div>
+        <div class="syl-point-card">
+          <div class="syl-point-title"><span class="syl-point-bullet">Strategy 1</span> market segmentation, product/service differentiation and positioning</div>
+          <textarea id="syl-mkt-strat-1" class="field-textarea" rows="3" placeholder="How does McDonald's segment (demographic, geographic, behavioral) and position its brand as convenient value vs McCafé premium?"></textarea>
         </div>
-
-        <div class="scaffold-card">
-          <div class="sc-header">
-            <span class="sc-num">M4</span>
-            <div>
-              <h3 class="sc-title">Marketing Mix &amp; Global Marketing</h3>
-              <p class="sc-hint">The tactical elements used to reach the target market.</p>
-            </div>
-          </div>
-          <div class="field-row">
-            <label for="mkt-strat-mix">The 7 Ps Mix (Product, Price, Promotion, Place, People, Processes, Physical Evidence)</label>
-            <textarea id="mkt-strat-mix" class="field-textarea" rows="3" placeholder="Explain standard branding/packaging (Product), pricing methods (Price), campaigns/social media (Promotion), distribution channels (Place), physical evidence (layout), and people (customer service)."></textarea>
-          </div>
-          <div class="field-row">
-            <label for="mkt-strat-global">Global Marketing (Standardisation vs. Differentiation)</label>
-            <textarea id="mkt-strat-global" class="field-textarea" rows="3" placeholder="How does McDonald's standardise the main menu (Big Mac) but differentiate locally (McSpicy, McCafé) in global markets?"></textarea>
-          </div>
+        <div class="syl-point-card">
+          <div class="syl-point-title"><span class="syl-point-bullet">Strategy 2</span> products — goods and/or services (branding, packaging)</div>
+          <textarea id="syl-mkt-strat-2" class="field-textarea" rows="2" placeholder="Analyze the importance of the Golden Arches brand, packaging design, and product quality consistency."></textarea>
+        </div>
+        <div class="syl-point-card">
+          <div class="syl-point-title"><span class="syl-point-bullet">Strategy 3</span> price including pricing methods and strategies</div>
+          <textarea id="syl-mkt-strat-3" class="field-textarea" rows="3" placeholder="Explain Pricing Methods (Cost, Market, Competition) and Strategies (Skimming, Penetration, Loss Leaders, Price Points) at McDonald's."></textarea>
+        </div>
+        <div class="syl-point-card">
+          <div class="syl-point-title"><span class="syl-point-bullet">Strategy 4</span> promotion — mix, opinion leaders, word of mouth</div>
+          <textarea id="syl-mkt-strat-4" class="field-textarea" rows="3" placeholder="Outline the Mix (advertising, personal selling, relationship marketing, sales promotion, PR) and viral communication channels."></textarea>
+        </div>
+        <div class="syl-point-card">
+          <div class="syl-point-title"><span class="syl-point-bullet">Strategy 5</span> place/distribution — channels, channel choice, physical distribution</div>
+          <textarea id="syl-mkt-strat-5" class="field-textarea" rows="3" placeholder="Contrast direct channels vs delivery intermediaries (UberEats). Detail physical distribution issues (transport, warehousing)."></textarea>
+        </div>
+        <div class="syl-point-card">
+          <div class="syl-point-title"><span class="syl-point-bullet">Strategy 6</span> 3 additional Ps — people, processes, physical evidence</div>
+          <textarea id="syl-mkt-strat-6" class="field-textarea" rows="3" placeholder="Explain the role of staff service (People), standardization loops (Processes), and restaurant design/signage (Physical Evidence)."></textarea>
+        </div>
+        <div class="syl-point-card">
+          <div class="syl-point-title"><span class="syl-point-bullet">Strategy 7</span> e-marketing</div>
+          <textarea id="syl-mkt-strat-7" class="field-textarea" rows="2" placeholder="Analyze the role of the MyMaccas app, loyalty push notifications, and social media marketing."></textarea>
+        </div>
+        <div class="syl-point-card">
+          <div class="syl-point-title"><span class="syl-point-bullet">Strategy 8</span> global marketing — global branding, standardisation, customisation, pricing</div>
+          <textarea id="syl-mkt-strat-8" class="field-textarea" rows="3" placeholder="Explain global branding standardization (Big Mac) vs local customisation (McSpicy, Halal items) and global competitive positioning."></textarea>
         </div>
       </div>
 
       <!-- =================== OPERATIONS TAB =================== -->
       <div class="tab-content" id="tab-content-operations">
-        <!-- WALT & WILF -->
         <div class="goals-banner">
           <div class="goals-title">💡 Operations Syllabus Goals</div>
-          <ul class="goals-list">
-            <li><strong>Role:</strong> Cost Leadership vs. Good/Service Differentiation in tertiary models.</li>
-            <li><strong>Influences:</strong> Globalization, technology, quality expectations, cost-based competition, and CSR.</li>
-            <li><strong>Processes:</strong> Transformed/transforming inputs, the V4 influences, sequencing, scheduling, and outputs.</li>
-            <li><strong>Strategies:</strong> Performance objectives, inventory models (JIT), technology, and quality.</li>
-          </ul>
+          <p class="goals-list" style="margin-left: 0;">Examine how raw ingredients are transformed into finished fast-food meals under strict sequencing, scheduling, quality, and technology parameters.</p>
         </div>
 
         <!-- ROLE -->
@@ -455,27 +405,17 @@
           <span class="rips-title">Role of Operations</span>
         </div>
 
-        <div class="syllabus-checklist">
-          <div class="syllabus-checklist-title">Syllabus Check: Role of Operations</div>
-          <div class="syl-grid">
-            <label class="syl-item"><input type="checkbox" id="opc-role-1"/> <span>strategic role of operations management — cost leadership, good/service differentiation</span></label>
-            <label class="syl-item"><input type="checkbox" id="opc-role-2"/> <span>goods and/or services in different industries</span></label>
-            <label class="syl-item"><input type="checkbox" id="opc-role-3"/> <span>interdependence with other key business functions</span></label>
-          </div>
+        <div class="syl-point-card">
+          <div class="syl-point-title"><span class="syl-point-bullet">Role 1</span> strategic role of operations management — cost leadership, good/service differentiation</div>
+          <textarea id="syl-ops-role-1" class="field-textarea" rows="3" placeholder="Explain how operations strives for Cost Leadership (standardized kitchens, bulk buying) while supporting Differentiation (menu customization)."></textarea>
         </div>
-
-        <div class="scaffold-card">
-          <div class="sc-header">
-            <span class="sc-num">O1</span>
-            <div>
-              <h3 class="sc-title">Strategic Role &amp; Hybrid Models</h3>
-              <p class="sc-hint">The strategic focus on Cost Leadership and Differentiation in a tertiary industry.</p>
-            </div>
-          </div>
-          <div class="field-row">
-            <label for="ops-role-hybrid">Goods vs. Services Overlap (Case Study: McDonald's)</label>
-            <textarea id="ops-role-hybrid" class="field-textarea" rows="3" placeholder="Explain the hybrid model: managing tangible standardized goods (burgers) alongside perishable customer services (speed, table service)."></textarea>
-          </div>
+        <div class="syl-point-card">
+          <div class="syl-point-title"><span class="syl-point-bullet">Role 2</span> goods and/or services in different industries</div>
+          <textarea id="syl-ops-role-2" class="field-textarea" rows="2" placeholder="Explain the hybrid features: tangible standardized fast-food items alongside perishable, immediate customer service."></textarea>
+        </div>
+        <div class="syl-point-card">
+          <div class="syl-point-title"><span class="syl-point-bullet">Role 3</span> interdependence with other key business functions</div>
+          <textarea id="syl-ops-role-3" class="field-textarea" rows="2" placeholder="Explain how Operations relies on Marketing for sales, Finance for equipment funding, and HR for kitchen staffing."></textarea>
         </div>
 
         <!-- INFLUENCES -->
@@ -484,28 +424,13 @@
           <span class="rips-title">Influences on Operations</span>
         </div>
 
-        <div class="syllabus-checklist">
-          <div class="syllabus-checklist-title">Syllabus Check: Influences on Operations</div>
-          <div class="syl-grid">
-            <label class="syl-item"><input type="checkbox" id="opc-inf-1"/> <span>globalisation &amp; technology</span></label>
-            <label class="syl-item"><input type="checkbox" id="opc-inf-2"/> <span>quality expectations &amp; cost-based competition</span></label>
-            <label class="syl-item"><input type="checkbox" id="opc-inf-3"/> <span>government policies &amp; legal regulation</span></label>
-            <label class="syl-item"><input type="checkbox" id="opc-inf-4"/> <span>environmental sustainability &amp; CSR (social responsibility)</span></label>
-          </div>
+        <div class="syl-point-card">
+          <div class="syl-point-title"><span class="syl-point-bullet">Influence 1</span> globalisation, technology, quality expectations, cost-based competition, government policies, legal regulation, environmental sustainability</div>
+          <textarea id="syl-ops-inf-1" class="field-textarea" rows="3" placeholder="Detail how globalization (supply lines), technology (kiosks), quality expectations, cost competition, and food hygiene laws shape kitchen processes."></textarea>
         </div>
-
-        <div class="scaffold-card">
-          <div class="sc-header">
-            <span class="sc-num">O2</span>
-            <div>
-              <h3 class="sc-title">Influences (Globalization, Tech, Regulations, CSR)</h3>
-              <p class="sc-hint">The external factors forcing operations to adapt.</p>
-            </div>
-          </div>
-          <div class="field-row">
-            <label for="ops-inf-csr">Corporate Social Responsibility (CSR) &amp; Environmental Sustainability</label>
-            <textarea id="ops-inf-csr" class="field-textarea" rows="3" placeholder="Explain how McDonald's operations respond to sustainability pressures (e.g. sourcing cage-free eggs, reducing packaging plastic)."></textarea>
-          </div>
+        <div class="syl-point-card">
+          <div class="syl-point-title"><span class="syl-point-bullet">Influence 2</span> corporate social responsibility (CSR) — legal compliance vs ethical responsibility</div>
+          <textarea id="syl-ops-inf-2" class="field-textarea" rows="3" placeholder="Contrast basic legal safety compliance with proactive ethical responsibility (environmental sourcing, cage-free eggs, paper straws)."></textarea>
         </div>
 
         <!-- PROCESSES -->
@@ -514,29 +439,17 @@
           <span class="rips-title">Operations Processes</span>
         </div>
 
-        <div class="syllabus-checklist">
-          <div class="syllabus-checklist-title">Syllabus Check: Operations Processes</div>
-          <div class="syl-grid">
-            <label class="syl-item"><input type="checkbox" id="opc-proc-1"/> <span>inputs — transformed resources (materials, info, customers) and transforming resources (HR, facilities)</span></label>
-            <label class="syl-item"><input type="checkbox" id="opc-proc-2"/> <span>transformation processes — volume, variety, variation in demand, visibility (V4)</span></label>
-            <label class="syl-item"><input type="checkbox" id="opc-proc-3"/> <span>sequencing and scheduling — Gantt charts, critical path analysis</span></label>
-            <label class="syl-item"><input type="checkbox" id="opc-proc-4"/> <span>technology, task design, process layout, monitoring, control, improvement</span></label>
-            <label class="syl-item"><input type="checkbox" id="opc-proc-5"/> <span>outputs — customer service, warranties</span></label>
-          </div>
+        <div class="syl-point-card">
+          <div class="syl-point-title"><span class="syl-point-bullet">Process 1</span> inputs — transformed resources &amp; transforming resources</div>
+          <textarea id="syl-ops-proc-1" class="field-textarea" rows="3" placeholder="Identify Transformed inputs (ingredients, customer data) vs Transforming inputs (crew labor, kitchen facilities)."></textarea>
         </div>
-
-        <div class="scaffold-card">
-          <div class="sc-header">
-            <span class="sc-num">O3</span>
-            <div>
-              <h3 class="sc-title">Inputs, Transformation &amp; Outputs</h3>
-              <p class="sc-hint">The physical process of converting inputs into finished products.</p>
-            </div>
-          </div>
-          <div class="field-row">
-            <label for="ops-proc-trans">The Transformation Pipeline (Inputs, V4s, Scheduling)</label>
-            <textarea id="ops-proc-trans" class="field-textarea" rows="3" placeholder="Identify transformed inputs (ingredients) vs transforming inputs (crew, kitchens). Explain how volume and scheduling affect the process."></textarea>
-          </div>
+        <div class="syl-point-card">
+          <div class="syl-point-title"><span class="syl-point-bullet">Process 2</span> transformation processes — V4, sequencing &amp; scheduling, layout, monitoring</div>
+          <textarea id="syl-ops-proc-2" class="field-textarea" rows="4" placeholder="Explain V4s (volume, variety, variation, visibility). Explain sequencing (Gantt, Critical Path) and kitchen layout optimization (Assembly line)."></textarea>
+        </div>
+        <div class="syl-point-card">
+          <div class="syl-point-title"><span class="syl-point-bullet">Process 3</span> outputs — customer service, warranties</div>
+          <textarea id="syl-ops-proc-3" class="field-textarea" rows="2" placeholder="Explain how outputs shape customer expectations (refund policy, order accuracy guarantee)."></textarea>
         </div>
 
         <!-- STRATEGIES -->
@@ -545,28 +458,20 @@
           <span class="rips-title">Operations Strategies</span>
         </div>
 
-        <div class="syllabus-checklist">
-          <div class="syllabus-checklist-title">Syllabus Check: Operations Strategies</div>
-          <div class="syl-grid">
-            <label class="syl-item"><input type="checkbox" id="opc-strat-1"/> <span>performance objectives — quality, speed, dependability, flexibility, customisation, cost</span></label>
-            <label class="syl-item"><input type="checkbox" id="opc-strat-2"/> <span>new product/service design and development</span></label>
-            <label class="syl-item"><input type="checkbox" id="opc-strat-3"/> <span>supply chain management — logistics, e-commerce, global sourcing</span></label>
-            <label class="syl-item"><input type="checkbox" id="opc-strat-4"/> <span>technology — leading-edge, established</span></label>
-            <label class="syl-item"><input type="checkbox" id="opc-strat-5"/> <span>inventory management — LIFO, FIFO, JIT</span></label>
-            <label class="syl-item"><input type="checkbox" id="opc-strat-6"/> <span>quality management — control, assurance, improvement</span></label>
-            <label class="syl-item"><input type="checkbox" id="opc-strat-7"/> <span>overcoming resistance to change — financial costs, redundancy, retraining</span></label>
-            <label class="syl-item"><input type="checkbox" id="opc-strat-8"/> <span>global factors — global sourcing, economies of scale, scanning &amp; learning, R&amp;D</span></label>
-          </div>
+        <div class="syl-point-card">
+          <div class="syl-point-title"><span class="syl-point-bullet">Strategy 1</span> performance objectives — quality, speed, dependability, flexibility, customisation, cost</div>
+          <textarea id="syl-ops-strat-1" class="field-textarea" rows="3" placeholder="Evaluate McDonald's performance objectives: cost minimisation, delivery speed, and standardized consistency (dependability)."></textarea>
         </div>
-
-        <div class="scaffold-card">
-          <div class="sc-header">
-            <span class="sc-num">O4</span>
-            <div>
-              <h3 class="sc-title">Operational Strategies</h3>
-              <p class="sc-hint">Strategies used to improve operational objectives.</p>
-            </div>
-          </div>
+        <div class="syl-point-card">
+          <div class="syl-point-title"><span class="syl-point-bullet">Strategy 2</span> new product/service design and development</div>
+          <textarea id="syl-ops-strat-2" class="field-textarea" rows="2" placeholder="Detail the launch process for new menu items (researching, trial testing, supply chain verification)."></textarea>
+        </div>
+        <div class="syl-point-card">
+          <div class="syl-point-title"><span class="syl-point-bullet">Strategy 3</span> supply chain management — logistics, e-commerce, global sourcing</div>
+          <textarea id="syl-ops-strat-3" class="field-textarea" rows="3" placeholder="Explain how McDonald's manages cold supply chains, bulk distribution hubs, and global sourcing."></textarea>
+        </div>
+        <div class="syl-point-card">
+          <div class="syl-point-title"><span class="syl-point-bullet">Strategy 4</span> technology — leading-edge, established</div>
           <div class="tchart">
             <div class="tchart-col">
               <div class="tchart-header">Established Technology</div>
@@ -577,29 +482,30 @@
               <textarea id="ops-tech-lead" class="field-textarea" rows="4" placeholder="Advanced tech (self-service kiosks, MyMaccas mobile ordering app, AI drive-thru menu boards)..."></textarea>
             </div>
           </div>
-          <div class="field-row">
-            <label for="ops-strat-quality">Quality Management &amp; Inventory Strategies (e.g. JIT)</label>
-            <textarea id="ops-strat-quality" class="field-textarea" rows="3" placeholder="Explain JIT inventory controls and quality management (quality control, assurance, improvement) at McDonald's."></textarea>
-          </div>
-          <!-- INTERDEPENDENCE -->
-          <div class="trend-row">
-            <div class="trend-label">Interdependence Scenario: Launching the McPlant Burger</div>
-            <textarea id="ops-inter-mkt" class="field-textarea" rows="3" placeholder="Describe the coordination needed across Operations (sourcing plant patties), Marketing (ads), Finance (grill budget), and HR (staff training)."></textarea>
-          </div>
+        </div>
+        <div class="syl-point-card">
+          <div class="syl-point-title"><span class="syl-point-bullet">Strategy 5</span> inventory management — LIFO, FIFO, JIT</div>
+          <textarea id="syl-ops-strat-5" class="field-textarea" rows="2" placeholder="How does McDonald's apply FIFO (First-In, First-Out) and Just-in-Time (JIT) storage to prevent perishability waste?"></textarea>
+        </div>
+        <div class="syl-point-card">
+          <div class="syl-point-title"><span class="syl-point-bullet">Strategy 6</span> quality management — control, assurance, improvement</div>
+          <textarea id="syl-ops-strat-6" class="field-textarea" rows="3" placeholder="Explain quality control (food holding times), quality assurance (certified suppliers), and continuous improvement checks."></textarea>
+        </div>
+        <div class="syl-point-card">
+          <div class="syl-point-title"><span class="syl-point-bullet">Strategy 7</span> overcoming resistance to change — financial costs, retraining, layout</div>
+          <textarea id="syl-ops-strat-7" class="field-textarea" rows="3" placeholder="Analyze the friction of change (costs of new kitchen equipment like plant-grills, staff retraining resistance, structural layouts)."></textarea>
+        </div>
+        <div class="syl-point-card">
+          <div class="syl-point-title"><span class="syl-point-bullet">Strategy 8</span> global factors — global sourcing, economies of scale, scanning &amp; learning, R&amp;D</div>
+          <textarea id="syl-ops-strat-8" class="field-textarea" rows="3" placeholder="Evaluate sourcing advantages, worldwide economies of scale, and scanning international store networks for innovations."></textarea>
         </div>
       </div>
 
       <!-- =================== FINANCE TAB =================== -->
       <div class="tab-content" id="tab-content-finance">
-        <!-- WALT & WILF -->
         <div class="goals-banner">
           <div class="goals-title">💡 Financial Management Goals</div>
-          <ul class="goals-list">
-            <li><strong>Role:</strong> Profitability, Liquidity, solvency, efficiency, and growth objectives.</li>
-            <li><strong>Influences:</strong> Internal vs. External Debt &amp; Equity funding, and Global influences.</li>
-            <li><strong>Processes:</strong> Accounting reports (cash flow, income, balance sheet) and ratios.</li>
-            <li><strong>Strategies:</strong> Cash flow (factoring), Working Capital, and Global pricing.</li>
-          </ul>
+          <p class="goals-list" style="margin-left: 0;">Analyze funding acquisition (debt vs equity), perform mathematical ratio assessments, and evaluate working capital/profitability strategies.</p>
         </div>
 
         <!-- ROLE -->
@@ -608,54 +514,31 @@
           <span class="rips-title">Role of Financial Management</span>
         </div>
 
-        <div class="syllabus-checklist">
-          <div class="syllabus-checklist-title">Syllabus Check: Role of Financial Management</div>
-          <div class="syl-grid">
-            <label class="syl-item"><input type="checkbox" id="fcc-role-1"/> <span>strategic role of financial management</span></label>
-            <label class="syl-item"><input type="checkbox" id="fcc-role-2"/> <span>objectives of financial management — profitability, liquidity, efficiency, growth, solvency</span></label>
-            <label class="syl-item"><input type="checkbox" id="fcc-role-3"/> <span>interdependence with other key business functions</span></label>
-          </div>
+        <div class="syl-point-card">
+          <div class="syl-point-title"><span class="syl-point-bullet">Role 1</span> strategic role of financial management</div>
+          <textarea id="syl-fin-role-1" class="field-textarea" rows="2" placeholder="Explain the strategic role: allocating budgets, tracking ROI, and ensuring solvency."></textarea>
         </div>
-
-        <div class="scaffold-card">
-          <div class="sc-header">
-            <span class="sc-num">F1</span>
-            <div>
-              <h3 class="sc-title">Strategic Objectives</h3>
-              <p class="sc-hint">The main long-term goals of the financial function.</p>
-            </div>
-          </div>
-          <div class="field-row">
-            <label for="fin-role-obj">Financial Objectives (PLEGS)</label>
-            <textarea id="fin-role-obj" class="field-textarea" rows="3" placeholder="Explain the conflict and balance between Profitability, Liquidity, Efficiency, Growth, and Solvency in a franchise."></textarea>
-          </div>
+        <div class="syl-point-card">
+          <div class="syl-point-title"><span class="syl-point-bullet">Role 2</span> objectives of financial management — profitability, liquidity, efficiency, growth, solvency</div>
+          <textarea id="syl-fin-role-2" class="field-textarea" rows="3" placeholder="Detail the strategic tension (PLEGS). Why does expanding rapidly (growth) threaten short-term cash flow (liquidity)?"></textarea>
+        </div>
+        <div class="syl-point-card">
+          <div class="syl-point-title"><span class="syl-point-bullet">Role 3</span> interdependence with other key business functions</div>
+          <textarea id="syl-fin-role-3" class="field-textarea" rows="2" placeholder="Explain how Finance allocates budgets to HR and Operations, and tracks sales output from Marketing."></textarea>
         </div>
 
         <!-- INFLUENCES -->
         <div class="rips-header">
           <span class="rips-badge">I</span>
-          <span class="rips-title">Influences on Finance</span>
+          <span class="rips-title">Influences on Financial Management</span>
         </div>
 
-        <div class="syllabus-checklist">
-          <div class="syllabus-checklist-title">Syllabus Check: Influences on Finance</div>
-          <div class="syl-grid">
-            <label class="syl-item"><input type="checkbox" id="fcc-inf-1"/> <span>internal sources of finance — retained profits</span></label>
-            <label class="syl-item"><input type="checkbox" id="fcc-inf-2"/> <span>external sources of finance — debt (short-term &amp; long-term) and equity (ordinary shares, private equity)</span></label>
-            <label class="syl-item"><input type="checkbox" id="fcc-inf-3"/> <span>financial institutions &amp; ASX</span></label>
-            <label class="syl-item"><input type="checkbox" id="fcc-inf-4"/> <span>influence of government — ASIC &amp; company tax</span></label>
-            <label class="syl-item"><input type="checkbox" id="fcc-inf-5"/> <span>global market influences — economic outlook, availability of funds, interest rates</span></label>
-          </div>
+        <div class="syl-point-card">
+          <div class="syl-point-title"><span class="syl-point-bullet">Influence 1</span> internal sources of finance — retained profits</div>
+          <textarea id="syl-fin-inf-1" class="field-textarea" rows="2" placeholder="Describe the use of corporate retained profits to fund expansion without gearing risk."></textarea>
         </div>
-
-        <div class="scaffold-card">
-          <div class="sc-header">
-            <span class="sc-num">F2</span>
-            <div>
-              <h3 class="sc-title">Sourcing Funds: Debt vs. Equity</h3>
-              <p class="sc-hint">Compare the advantages and disadvantages of using borrowed funds (debt) vs. using owner's funds (equity) to expand.</p>
-            </div>
-          </div>
+        <div class="syl-point-card">
+          <div class="syl-point-title"><span class="syl-point-bullet">Influence 2</span> external sources of finance — debt and equity</div>
           <div class="two-col">
             <div class="two-col-item">
               <h4 class="mini-heading">Debt Financing (Overdrafts, Mortgages, Debentures, Leasing)</h4>
@@ -667,6 +550,18 @@
             </div>
           </div>
         </div>
+        <div class="syl-point-card">
+          <div class="syl-point-title"><span class="syl-point-bullet">Influence 3</span> financial institutions — banks, investment banks, superannuation funds, life insurance companies, unit trusts, ASX</div>
+          <textarea id="syl-fin-inf-3" class="field-textarea" rows="2" placeholder="Outline where a franchisee or corporation secures funding (banks, ASX share lists, investment trusts)."></textarea>
+        </div>
+        <div class="syl-point-card">
+          <div class="syl-point-title"><span class="syl-point-bullet">Influence 4</span> influence of government — ASIC, company tax</div>
+          <textarea id="syl-fin-inf-4" class="field-textarea" rows="2" placeholder="Explain how corporate tax rates (company tax) and corporate transparency audits (ASIC) influence finance decisions."></textarea>
+        </div>
+        <div class="syl-point-card">
+          <div class="syl-point-title"><span class="syl-point-bullet">Influence 5</span> global market influences — economic outlook, availability of funds, interest rates</div>
+          <textarea id="syl-fin-inf-5" class="field-textarea" rows="2" placeholder="How do global interest rates and currency shifts affect a multinational's cost of borrowing?"></textarea>
+        </div>
 
         <!-- PROCESSES -->
         <div class="rips-header">
@@ -674,27 +569,17 @@
           <span class="rips-title">Financial Processes</span>
         </div>
 
-        <div class="syllabus-checklist">
-          <div class="syllabus-checklist-title">Syllabus Check: Financial Processes</div>
-          <div class="syl-grid">
-            <label class="syl-item"><input type="checkbox" id="fcc-proc-1"/> <span>planning and implementing — financial needs, budgets, controls (debt vs equity)</span></label>
-            <label class="syl-item"><input type="checkbox" id="fcc-proc-2"/> <span>monitoring and controlling — cash flow statement, income statement, balance sheet</span></label>
-            <label class="syl-item"><input type="checkbox" id="fcc-proc-3"/> <span>financial ratios — liquidity, gearing, profitability, efficiency</span></label>
-            <label class="syl-item"><input type="checkbox" id="fcc-proc-4"/> <span>comparative ratio analysis — over time, benchmarks</span></label>
-            <label class="syl-item"><input type="checkbox" id="fcc-proc-5"/> <span>limitations of financial reports — normalized earnings, valuing assets, notes to sheets</span></label>
-            <label class="syl-item"><input type="checkbox" id="fcc-proc-6"/> <span>ethical issues related to financial reports</span></label>
-          </div>
+        <div class="syl-point-card">
+          <div class="syl-point-title"><span class="syl-point-bullet">Process 1</span> planning and implementing — financial needs, budgets, record systems, risks, controls</div>
+          <textarea id="syl-fin-proc-1" class="field-textarea" rows="3" placeholder="Detail the implementation steps: estimating capital needs, setting budgets, accounting software, and mitigating financial risks."></textarea>
         </div>
-
-        <div class="scaffold-card">
-          <div class="sc-header">
-            <span class="sc-num">F3</span>
-            <div>
-              <h3 class="sc-title">Interactive Ratio Practice</h3>
-              <p class="sc-hint">Calculate the three key ratios using the mock statement below. Enter answers to check your result.</p>
-            </div>
-          </div>
-
+        <div class="syl-point-card">
+          <div class="syl-point-title"><span class="syl-point-bullet">Process 2</span> monitoring and controlling — cash flow statement, income statement, balance sheet</div>
+          <textarea id="syl-fin-proc-2" class="field-textarea" rows="3" placeholder="Contrast the purpose of the Cash Flow Statement (liquidity), Income Statement (profits), and Balance Sheet (assets/liabilities)."></textarea>
+        </div>
+        <div class="syl-point-card">
+          <div class="syl-point-title"><span class="syl-point-bullet">Process 3</span> financial ratios &amp; Interactive Calculations</div>
+          
           <div class="finance-statement">
             <div class="fs-row bold"><span>MCDONALD'S FRANCHISE MOCK STATEMENT</span><span>$ AUD</span></div>
             <div class="fs-row"><span>Total Sales Revenue</span><span>$1,000,000</span></div>
@@ -721,7 +606,7 @@
                 <input type="text" id="ratio-curr-state" class="field-input" placeholder="Is it safe?"/>
               </div>
             </div>
-            <textarea id="ratio-curr-expl" class="field-textarea" rows="2" placeholder="Explain the result..."></textarea>
+            <textarea id="ratio-curr-expl" class="field-textarea" rows="2" placeholder="Explain what this indicates about short-term debt recovery capacity..."></textarea>
           </div>
 
           <!-- RATIO 2 -->
@@ -739,7 +624,7 @@
                 <input type="text" id="ratio-gear-state" class="field-input" placeholder="Low, Medium, or High?"/>
               </div>
             </div>
-            <textarea id="ratio-gear-expl" class="field-textarea" rows="2" placeholder="Explain gearing risk..."></textarea>
+            <textarea id="ratio-gear-expl" class="field-textarea" rows="2" placeholder="Explain long-term solvency risk..."></textarea>
           </div>
 
           <!-- RATIO 3 -->
@@ -757,8 +642,20 @@
                 <input type="text" id="ratio-prof-state" class="field-input" placeholder="Strong or Weak?"/>
               </div>
             </div>
-            <textarea id="ratio-prof-expl" class="field-textarea" rows="2" placeholder="Explain profit performance..."></textarea>
+            <textarea id="ratio-prof-expl" class="field-textarea" rows="2" placeholder="Explain cost and markup pricing efficiency..."></textarea>
           </div>
+        </div>
+        <div class="syl-point-card">
+          <div class="syl-point-title"><span class="syl-point-bullet">Process 4</span> comparative ratio analysis — over time, with similar businesses, against standards</div>
+          <textarea id="syl-fin-proc-4" class="field-textarea" rows="2" placeholder="Explain how comparing current ratios against historical stats and industry benchmarks helps assess franchise performance."></textarea>
+        </div>
+        <div class="syl-point-card">
+          <div class="syl-point-title"><span class="syl-point-bullet">Process 5</span> limitations of financial reports — normalised earnings, capitalising expenses, asset valuation, timing, debt notes</div>
+          <textarea id="syl-fin-proc-5" class="field-textarea" rows="3" placeholder="Outline accounting limitations (normalising one-off earnings, capitalising expenses, asset depreciation estimates, off-balance-sheet notes)."></textarea>
+        </div>
+        <div class="syl-point-card">
+          <div class="syl-point-title"><span class="syl-point-bullet">Process 6</span> ethical issues related to financial reports</div>
+          <textarea id="syl-fin-proc-6" class="field-textarea" rows="2" placeholder="Detail ethical obligations in accounting (preventing tax evasion, auditing disclosures, and accurate profit reporting)."></textarea>
         </div>
 
         <!-- STRATEGIES -->
@@ -767,42 +664,29 @@
           <span class="rips-title">Financial Strategies</span>
         </div>
 
-        <div class="syllabus-checklist">
-          <div class="syllabus-checklist-title">Syllabus Check: Financial Strategies</div>
-          <div class="syl-grid">
-            <label class="syl-item"><input type="checkbox" id="fcc-strat-1"/> <span>cash flow management — payments distribution, discounts, factoring</span></label>
-            <label class="syl-item"><input type="checkbox" id="fcc-strat-2"/> <span>working capital management — control of current assets/liabilities, leasing, factoring</span></label>
-            <label class="syl-item"><input type="checkbox" id="fcc-strat-3"/> <span>profitability management — cost controls (fixed/variable, centre minimisation) &amp; revenue controls</span></label>
-            <label class="syl-item"><input type="checkbox" id="fcc-strat-4"/> <span>global financial management — exchange/interest rates, methods of payment, hedging, derivatives</span></label>
-          </div>
+        <div class="syl-point-card">
+          <div class="syl-point-title"><span class="syl-point-bullet">Strategy 1</span> cash flow management — statements, payment distribution, discounts, factoring</div>
+          <textarea id="syl-fin-strat-1" class="field-textarea" rows="2" placeholder="Describe cash flow strategies (delaying payables, early payment incentives, accounts receivable factoring)."></textarea>
         </div>
-
-        <div class="scaffold-card">
-          <div class="sc-header">
-            <span class="sc-num">F4</span>
-            <div>
-              <h3 class="sc-title">Cash Flow, Working Capital &amp; Profitability Strategies</h3>
-              <p class="sc-hint">Strategies to ensure day-to-day operations remain solvent and profitable.</p>
-            </div>
-          </div>
-          <div class="field-row">
-            <label for="fin-strat-cash">Working Capital &amp; Profitability Strategies</label>
-            <textarea id="fin-strat-cash" class="field-textarea" rows="3" placeholder="Explain working capital controls (leasing, factoring) and profitability strategies (cost controls, revenue/marketing objectives)."></textarea>
-          </div>
+        <div class="syl-point-card">
+          <div class="syl-point-title"><span class="syl-point-bullet">Strategy 2</span> working capital management — control of current assets/liabilities, leasing, sale &amp; leaseback</div>
+          <textarea id="syl-fin-strat-2" class="field-textarea" rows="3" placeholder="Explain working capital management: controlling cash/receivables, leasing ovens vs buying, and sale-and-leaseback of restaurant properties."></textarea>
+        </div>
+        <div class="syl-point-card">
+          <div class="syl-point-title"><span class="syl-point-bullet">Strategy 3</span> profitability management — cost controls &amp; revenue controls</div>
+          <textarea id="syl-fin-strat-3" class="field-textarea" rows="2" placeholder="Detail fixed/variable cost minimisation, cost centres, and managing sales revenue."></textarea>
+        </div>
+        <div class="syl-point-card">
+          <div class="syl-point-title"><span class="syl-point-bullet">Strategy 4</span> global financial management — exchange rates, payment methods, hedging, derivatives</div>
+          <textarea id="syl-fin-strat-4" class="field-textarea" rows="3" placeholder="How does McDonald's hedge exchange rate fluctuations when importing ingredients? Detail payment methods (letters of credit)."></textarea>
         </div>
       </div>
 
       <!-- =================== HUMAN RESOURCES TAB =================== -->
       <div class="tab-content" id="tab-content-hr">
-        <!-- WALT & WILF -->
         <div class="goals-banner">
           <div class="goals-title">💡 Human Resources Syllabus Goals</div>
-          <ul class="goals-list">
-            <li><strong>Role:</strong> Strategic role of HR, interdependence, and outsourcing (domestic/global).</li>
-            <li><strong>Influences:</strong> Stakeholders (unions), Legal (Award, contract, WHS, EEO), and Technological shifts.</li>
-            <li><strong>Processes:</strong> The complete HR Cycle (Acquisition, Development, Maintenance, Separation).</li>
-            <li><strong>Strategies:</strong> Leadership, recruitment, performance, rewards, and disputes.</li>
-          </ul>
+          <p class="goals-list" style="margin-left: 0;">Analyze how McDonald's recruits, trains, maintains, and separates crew members under legal award frameworks (WHS/EEO) and resolves workplace disputes.</p>
         </div>
 
         <!-- ROLE -->
@@ -811,27 +695,17 @@
           <span class="rips-title">Role of Human Resources</span>
         </div>
 
-        <div class="syllabus-checklist">
-          <div class="syllabus-checklist-title">Syllabus Check: Role of HR</div>
-          <div class="syl-grid">
-            <label class="syl-item"><input type="checkbox" id="hcc-role-1"/> <span>strategic role of human resources</span></label>
-            <label class="syl-item"><input type="checkbox" id="hcc-role-2"/> <span>interdependence with other key business functions</span></label>
-            <label class="syl-item"><input type="checkbox" id="hcc-role-3"/> <span>outsourcing — domestic, global</span></label>
-          </div>
+        <div class="syl-point-card">
+          <div class="syl-point-title"><span class="syl-point-bullet">Role 1</span> strategic role of human resources</div>
+          <textarea id="syl-hr-role-1" class="field-textarea" rows="2" placeholder="How does strategic HR management contribute to McDonald's growth objectives and brand consistency?"></textarea>
         </div>
-
-        <div class="scaffold-card">
-          <div class="sc-header">
-            <span class="sc-num">H1</span>
-            <div>
-              <h3 class="sc-title">Strategic Role &amp; Outsourcing</h3>
-              <p class="sc-hint">How HR aligns human capital with business expansion goals.</p>
-            </div>
-          </div>
-          <div class="field-row">
-            <label for="hr-role-strategic">Strategic Role of Human Resources</label>
-            <textarea id="hr-role-strategic" class="field-textarea" rows="3" placeholder="How does McDonald's HR function help maintain consistency across thousands of franchises through standardized training programs?"></textarea>
-          </div>
+        <div class="syl-point-card">
+          <div class="syl-point-title"><span class="syl-point-bullet">Role 2</span> interdependence with other key business functions</div>
+          <textarea id="syl-hr-role-2" class="field-textarea" rows="2" placeholder="Explain the interdependence: HR trains the kitchen crew for Operations, and rosters them based on Sales forecasts from Marketing."></textarea>
+        </div>
+        <div class="syl-point-card">
+          <div class="syl-point-title"><span class="syl-point-bullet">Role 3</span> outsourcing — domestic, global</div>
+          <textarea id="syl-hr-role-3" class="field-textarea" rows="2" placeholder="Describe outsourcing: domestic cleaning contracts or global HR payroll software."></textarea>
         </div>
 
         <!-- INFLUENCES -->
@@ -840,30 +714,29 @@
           <span class="rips-title">Influences on HR</span>
         </div>
 
-        <div class="syllabus-checklist">
-          <div class="syllabus-checklist-title">Syllabus Check: Influences on HR</div>
-          <div class="syl-grid">
-            <label class="syl-item"><input type="checkbox" id="hcc-inf-1"/> <span>stakeholders — employers, employees, unions, government, society</span></label>
-            <label class="syl-item"><input type="checkbox" id="hcc-inf-2"/> <span>legal — employment contract (standards, wage, awards, enterprise agreement)</span></label>
-            <label class="syl-item"><input type="checkbox" id="hcc-inf-3"/> <span>legal — Work Health &amp; Safety (WHS) &amp; Equal Employment Opportunity (EEO)</span></label>
-            <label class="syl-item"><input type="checkbox" id="hcc-inf-4"/> <span>economic &amp; technological influences</span></label>
-            <label class="syl-item"><input type="checkbox" id="hcc-inf-5"/> <span>social — changing work patterns, living standards</span></label>
-            <label class="syl-item"><input type="checkbox" id="hcc-inf-6"/> <span>ethics &amp; corporate social responsibility</span></label>
-          </div>
+        <div class="syl-point-card">
+          <div class="syl-point-title"><span class="syl-point-bullet">Influence 1</span> stakeholders — employers, employees, unions, government, society</div>
+          <textarea id="syl-hr-inf-1" class="field-textarea" rows="3" placeholder="Identify stakeholders in the fast-food environment (FRANCHISE ASSOCIATION, SDA Union, Fair Work Ombudsman)."></textarea>
         </div>
-
-        <div class="scaffold-card">
-          <div class="sc-header">
-            <span class="sc-num">H2</span>
-            <div>
-              <h3 class="sc-title">Stakeholders, Workplace Laws &amp; EEO</h3>
-              <p class="sc-hint">The legal framework defining employer and employee responsibilities.</p>
-            </div>
-          </div>
-          <div class="field-row">
-            <label for="hr-inf-legal">Legal Influences (Work Health &amp; Safety, Equal Employment Opportunity)</label>
-            <textarea id="hr-inf-legal" class="field-textarea" rows="3" placeholder="Detail McDonald's obligations under the WHS Act (kitchen safety, slip hazards) and EEO laws in hiring crew members."></textarea>
-          </div>
+        <div class="syl-point-card">
+          <div class="syl-point-title"><span class="syl-point-bullet">Influence 2</span> legal — the employment contract (awards, enterprise agreements, standards)</div>
+          <textarea id="syl-hr-inf-2" class="field-textarea" rows="3" placeholder="Outline legal frameworks: Fast Food Industry Award 2020 vs Enterprise Agreements, and National Employment Standards (NES)."></textarea>
+        </div>
+        <div class="syl-point-card">
+          <div class="syl-point-title"><span class="syl-point-bullet">Influence 3</span> legal — Work Health &amp; Safety (WHS) &amp; Equal Employment Opportunity (EEO)</div>
+          <textarea id="syl-hr-inf-3" class="field-textarea" rows="3" placeholder="Analyze WHS compliance (anti-slip floors, heat safety) and EEO principles in franchise hiring practices."></textarea>
+        </div>
+        <div class="syl-point-card">
+          <div class="syl-point-title"><span class="syl-point-bullet">Influence 4</span> economic &amp; technological influences</div>
+          <textarea id="syl-hr-inf-4" class="field-textarea" rows="2" placeholder="Evaluate economic trends (unemployment rates) and technological impacts (app ordering replacing cashiers)."></textarea>
+        </div>
+        <div class="syl-point-card">
+          <div class="syl-point-title"><span class="syl-point-bullet">Influence 5</span> social — changing work patterns, living standards</div>
+          <textarea id="syl-hr-inf-5" class="field-textarea" rows="2" placeholder="Analyze the shift towards casualisation of the workforce, youth labor, and employee demand for flexible rosters."></textarea>
+        </div>
+        <div class="syl-point-card">
+          <div class="syl-point-title"><span class="syl-point-bullet">Influence 6</span> ethics and corporate social responsibility</div>
+          <textarea id="syl-hr-inf-6" class="field-textarea" rows="2" placeholder="Detail ethical HR concerns: underpayment audits, fast-food safety culture, and anti-bullying policies."></textarea>
         </div>
 
         <!-- PROCESSES -->
@@ -872,40 +745,21 @@
           <span class="rips-title">Human Resources Processes</span>
         </div>
 
-        <div class="syllabus-checklist">
-          <div class="syllabus-checklist-title">Syllabus Check: HR Processes</div>
-          <div class="syl-grid">
-            <label class="syl-item"><input type="checkbox" id="hcc-proc-1"/> <span>acquisition (recruitment and selection)</span></label>
-            <label class="syl-item"><input type="checkbox" id="hcc-proc-2"/> <span>development (on-the-job &amp; off-the-job training)</span></label>
-            <label class="syl-item"><input type="checkbox" id="hcc-proc-3"/> <span>maintenance (monetary and non-monetary benefits)</span></label>
-            <label class="syl-item"><input type="checkbox" id="hcc-proc-4"/> <span>separation (voluntary and involuntary separation)</span></label>
-          </div>
+        <div class="syl-point-card">
+          <div class="syl-point-title"><span class="syl-point-bullet">Process 1</span> acquisition — recruitment and selection</div>
+          <textarea id="hr-acquisition" class="field-textarea" rows="2" placeholder="Targeting school students, online hiring apps, group interviews..."></textarea>
         </div>
-
-        <div class="scaffold-card">
-          <div class="sc-header">
-            <span class="sc-num">H3</span>
-            <div>
-              <h3 class="sc-title">The Human Resources Cycle</h3>
-              <p class="sc-hint">Describe how McDonald's manages its staff at each stage of the cycle.</p>
-            </div>
-          </div>
-          <div class="trend-row">
-            <div class="trend-label">1. Acquisition (Recruiting crew members)</div>
-            <textarea id="hr-acquisition" class="field-textarea" rows="2" placeholder="Online applications, digital onboarding..."></textarea>
-          </div>
-          <div class="trend-row">
-            <div class="trend-label">2. Development (Training crew members)</div>
-            <textarea id="hr-development" class="field-textarea" rows="2" placeholder="Hamburger University, standardized station checklists..."></textarea>
-          </div>
-          <div class="trend-row">
-            <div class="trend-label">3. Maintenance (Retaining staff, benefits)</div>
-            <textarea id="hr-maintenance" class="field-textarea" rows="2" placeholder="Motivating rewards, flexible rosters..."></textarea>
-          </div>
-          <div class="trend-row">
-            <div class="trend-label">4. Separation (Departure, turnover)</div>
-            <textarea id="hr-separation" class="field-textarea" rows="2" placeholder="Managing casual resignation rates, exit reports..."></textarea>
-          </div>
+        <div class="syl-point-card">
+          <div class="syl-point-title"><span class="syl-point-bullet">Process 2</span> development — training (on-the-job &amp; off-the-job)</div>
+          <textarea id="hr-development" class="field-textarea" rows="2" placeholder="Hamburger University, assembly line training, health check certifications..."></textarea>
+        </div>
+        <div class="syl-point-card">
+          <div class="syl-point-title"><span class="syl-point-bullet">Process 3</span> maintenance — monetary and non-monetary benefits</div>
+          <textarea id="hr-maintenance" class="field-textarea" rows="2" placeholder="Motivating rewards, flexible rosters, store discounts..."></textarea>
+        </div>
+        <div class="syl-point-card">
+          <div class="syl-point-title"><span class="syl-point-bullet">Process 4</span> separation — voluntary and involuntary</div>
+          <textarea id="hr-separation" class="field-textarea" rows="2" placeholder="High casual turnover rates, voluntary departures, exit checklists..."></textarea>
         </div>
 
         <!-- STRATEGIES -->
@@ -914,36 +768,36 @@
           <span class="rips-title">Human Resources Strategies</span>
         </div>
 
-        <div class="syllabus-checklist">
-          <div class="syllabus-checklist-title">Syllabus Check: HR Strategies</div>
-          <div class="syl-grid">
-            <label class="syl-item"><input type="checkbox" id="hcc-strat-1"/> <span>leadership styles (autocratic, democratic, laissez-faire)</span></label>
-            <label class="syl-item"><input type="checkbox" id="hcc-strat-2"/> <span>job design — general or specific tasks</span></label>
-            <label class="syl-item"><input type="checkbox" id="hcc-strat-3"/> <span>recruitment — internal or external, general or specific skills</span></label>
-            <label class="syl-item"><input type="checkbox" id="hcc-strat-4"/> <span>training and development — current or future skills</span></label>
-            <label class="syl-item"><input type="checkbox" id="hcc-strat-5"/> <span>performance management — developmental or administrative</span></label>
-            <label class="syl-item"><input type="checkbox" id="hcc-strat-6"/> <span>rewards — monetary/non-monetary, individual/group, performance pay</span></label>
-            <label class="syl-item"><input type="checkbox" id="hcc-strat-7"/> <span>global — costs, skills, supply</span></label>
-            <label class="syl-item"><input type="checkbox" id="hcc-strat-8"/> <span>workplace disputes — resolution (negotiation, mediation, conciliation, arbitration)</span></label>
-          </div>
+        <div class="syl-point-card">
+          <div class="syl-point-title"><span class="syl-point-bullet">Strategy 1</span> leadership styles (autocratic, democratic, laissez-faire)</div>
+          <textarea id="syl-hr-strat-1" class="field-textarea" rows="2" placeholder="Identify the leadership style in McDonald's kitchens (highly autocratic/standardized) vs regional management (more democratic)."></textarea>
         </div>
-
-        <div class="scaffold-card">
-          <div class="sc-header">
-            <span class="sc-num">H4</span>
-            <div>
-              <h3 class="sc-title">Leadership Styles, Rewards &amp; Dispute Resolution</h3>
-              <p class="sc-hint">The tools managers use to handle conflict and drive productivity.</p>
-            </div>
-          </div>
-          <div class="field-row">
-            <label for="hr-strat-style">Leadership Style &amp; Rewards systems</label>
-            <textarea id="hr-strat-style" class="field-textarea" rows="3" placeholder="Explain the leadership style (e.g. autocratic/standardized in the kitchen) and how rewards systems motivate crew members."></textarea>
-          </div>
-          <div class="field-row">
-            <label for="hr-cascading">HR Strike Scenario (Cascading Failure Analysis)</label>
-            <textarea id="hr-cascading" class="field-textarea" rows="3" placeholder="How a major HR strike at distribution centers would cascade to affect operations, finance ratios, and current marketing campaigns..."></textarea>
-          </div>
+        <div class="syl-point-card">
+          <div class="syl-point-title"><span class="syl-point-bullet">Strategy 2</span> job design — general or specific tasks</div>
+          <textarea id="syl-hr-strat-2" class="field-textarea" rows="2" placeholder="Analyze job design: specific station tasks (fries, grill, drinks) to speed up productivity."></textarea>
+        </div>
+        <div class="syl-point-card">
+          <div class="syl-point-title"><span class="syl-point-bullet">Strategy 3</span> recruitment — internal or external, general or specific skills</div>
+          <textarea id="syl-hr-strat-3" class="field-textarea" rows="2" placeholder="Contrast external recruitment of store crew vs internal promotion of store managers."></textarea>
+        </div>
+        <div class="syl-point-card">
+          <div class="syl-point-title"><span class="syl-point-bullet">Strategy 4</span> training and development — current or future skills</div>
+          <textarea id="syl-hr-strat-4" class="field-textarea" rows="2" placeholder="Explain training programs focused on current station skills vs future corporate management skills."></textarea>
+        </div>
+        <div class="syl-point-card">
+          <div class="syl-point-title"><span class="syl-point-bullet">Strategy 5</span> performance management — developmental or administrative</div>
+          <textarea id="syl-hr-strat-5" class="field-textarea" rows="2" placeholder="Explain the use of administrative station performance checks and developmental manager feedback meetings."></textarea>
+        </div>
+        <div class="syl-point-card">
+          <div class="syl-point-title"><span class="syl-point-bullet">Strategy 6</span> rewards — monetary &amp; non-monetary, individual/group, performance pay</div>
+          <textarea id="hr-strat-style" class="field-textarea" rows="3" placeholder="Explain the reward systems (store discounts, Employee of the Month recognition, performance-based promotion tracks)."></textarea>
+        </div>
+        <div class="syl-point-card">
+          <div class="syl-point-title"><span class="syl-point-bullet">Strategy 7</span> global — costs, skills, supply</div>
+          <textarea id="syl-hr-strat-7" class="field-textarea" rows="2" placeholder="How does McDonald's manage global HR variations (local wage rates, supply constraints, overseas training standards)?"></textarea>
+        </div>
+        <div class="syl-point-card">
+          <div class="syl-point-title"><span class="syl-point-bullet">Strategy 8</span> workplace disputes — resolution (grievance, mediation, arbitration)</div>
           <div class="institutions-list">
             <div class="institution-row">
               <span class="inst-label">Grievance Procedures</span>
@@ -958,6 +812,10 @@
               <textarea id="hr-dispute-arbitration" class="field-textarea inst-area" rows="2" placeholder="Fair Work Commission, legally binding..."></textarea>
             </div>
           </div>
+        </div>
+        <div class="syl-point-card">
+          <div class="syl-point-title"><span class="syl-point-bullet">Challenge</span> HR Strike Scenario (Cascading Failure Analysis)</div>
+          <textarea id="hr-cascading" class="field-textarea" rows="3" placeholder="How a major HR strike at distribution centers would cascade to affect operations, finance ratios, and current marketing campaigns..."></textarea>
         </div>
       </div>
 

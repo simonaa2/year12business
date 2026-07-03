@@ -20,14 +20,14 @@ const CONFIG = {
   // Leave the array empty [] to use the old class-code system instead.
   // -----------------------------------------------
   STUDENTS: [
-    { name: 'Simon Anderson',            password: 'simon12'   },
-    { name: 'Austin Crump',              password: 'austin12'  },
-    { name: 'Aidan Tresister',           password: 'aidan12'   },
-    { name: 'Adam Avdalis',              password: 'adam12'    },
-    { name: 'Zach Hull',                 password: 'zach12'    },
-    { name: 'Lucas Helacas',             password: 'lucas12'   },
-    { name: 'Seb Sacilotto',             password: 'seb12'     },
-    { name: 'William Rebel',             password: 'william12' },
+    { name: 'Simon Anderson',            password: 'simon835'   },
+    { name: 'Austin Crump',              password: 'austin274'  },
+    { name: 'Aidan Tresister',           password: 'aidan619'   },
+    { name: 'Adam Avdalis',              password: 'adam482'    },
+    { name: 'Zach Hull',                 password: 'zach903'    },
+    { name: 'Lucas Helacas',             password: 'lucas516'   },
+    { name: 'Seb Sacilotto',             password: 'seb738'     },
+    { name: 'William Rebel',             password: 'william349' },
   ],
 
   // Fallback class code (only used if STUDENTS list is empty):

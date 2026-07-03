@@ -14,30 +14,32 @@ document.getElementById('student-name-display').textContent = studentName;
 document.getElementById('student-avatar').textContent = studentName.charAt(0).toUpperCase();
 
 // Set due date meta text
-document.getElementById('due-date-meta').textContent = 'Due: ' + new Date(CONFIG.DUE_DATE).toLocaleString('en-AU', {
-  day: 'numeric', month: 'short', hour: '2-digit', minute: '2-digit'
-});
-document.getElementById('footer-due-date-sub').textContent = 'Due: ' + new Date(CONFIG.DUE_DATE).toLocaleString('en-AU', {
-  day: 'numeric', month: 'long', year: 'numeric'
-});
+document.getElementById('due-date-meta').textContent = 'Due: Marketing Mon 20 Jul | Portfolio Mon 10 Aug';
+document.getElementById('footer-due-date-sub').textContent = 'Marketing due: 20 July 2026 | Full Portfolio due: 10 August 2026';
 
 // ===== COUNTDOWN =====
 function updateCountdown() {
-  const due  = new Date(CONFIG.DUE_DATE);
-  const diff = due - new Date();
-  const el   = document.getElementById('countdown');
-  if (!el) return;
-  if (diff <= 0) {
-    el.textContent = '⏰ Due Now!';
-    el.style.webkitTextFillColor = '#ef4444';
-    el.style.color = '#ef4444';
-    return;
+  const mktDue = new Date(CONFIG.DUE_DATE_MARKETING);
+  const portDue = new Date(CONFIG.DUE_DATE);
+  const now = new Date();
+
+  function formatTime(diff, el) {
+    if (!el) return;
+    if (diff <= 0) {
+      el.textContent = '⏰ Due Now!';
+      el.style.webkitTextFillColor = '#ef4444';
+      el.style.color = '#ef4444';
+      return;
+    }
+    const d = Math.floor(diff / 86400000);
+    const h = Math.floor((diff % 86400000) / 3600000);
+    const m = Math.floor((diff % 3600000) / 60000);
+    const s = Math.floor((diff % 60000) / 1000);
+    el.textContent = `${d}d ${String(h).padStart(2,'0')}h ${String(m).padStart(2,'0')}m ${String(s).padStart(2,'0')}s`;
   }
-  const d = Math.floor(diff / 86400000);
-  const h = Math.floor((diff % 86400000) / 3600000);
-  const m = Math.floor((diff % 3600000) / 60000);
-  const s = Math.floor((diff % 60000) / 1000);
-  el.textContent = `${d}d ${String(h).padStart(2,'0')}h ${String(m).padStart(2,'0')}m ${String(s).padStart(2,'0')}s`;
+
+  formatTime(mktDue - now, document.getElementById('countdown-mkt'));
+  formatTime(portDue - now, document.getElementById('countdown-portfolio'));
 }
 updateCountdown();
 setInterval(updateCountdown, 1000);

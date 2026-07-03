@@ -9,7 +9,8 @@ const CONFIG = {
   // App details:
   APP_TITLE:    'Year 12 Business Studies 2026',
   APP_SUBTITLE: 'Marketing (Role & Influences) — Research Scaffold',
-  DUE_DATE:     '2026-07-20T09:00:00+10:00', // e.g. first Monday of Term 3
+  DUE_DATE:           '2026-08-10T09:00:00+10:00', // Portfolio Due: Monday Week 4 (3 weeks into Term 3)
+  DUE_DATE_MARKETING: '2026-07-20T09:00:00+10:00', // Marketing Due: Monday Week 1 (End of holidays)
 
   // -----------------------------------------------
   // STUDENT ROSTER

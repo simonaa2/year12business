@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Year 12 Business Studies — Complete HSC Trial RIPS Scaffold</title>
-  <meta name="description" content="Year 12 Business Studies 2026 Trial Exam Preparation: RIPS (Role, Influences, Processes, Strategies) framework for all units."/>
+  <title>Year 12 Business Studies — Comprehensive HSC Trial RIPS Workbook</title>
+  <meta name="description" content="Year 12 Business Studies 2026 Trial Exam Preparation: RIPS (Role, Influences, Processes, Strategies) syllabus checklist and McDonald's case study scaffold."/>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
@@ -143,6 +143,45 @@
       font-size: 1.2rem;
       color: #fff;
     }
+
+    /* Syllabus Checklist Grid */
+    .syllabus-checklist {
+      background: rgba(255,255,255,0.02);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius);
+      padding: 1.2rem;
+      margin-bottom: 1.5rem;
+    }
+    .syllabus-checklist-title {
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      color: var(--text-dim);
+      margin-bottom: 0.8rem;
+      border-bottom: 1px solid var(--border-light);
+      padding-bottom: 0.4rem;
+    }
+    .syl-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.5rem 1rem;
+    }
+    @media (max-width: 768px) {
+      .syl-grid { grid-template-columns: 1fr; }
+    }
+    .syl-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.5rem;
+      font-size: 0.8rem;
+      color: var(--text);
+      cursor: pointer;
+      line-height: 1.4;
+    }
+    .syl-item input[type="checkbox"] {
+      margin-top: 0.15rem;
+    }
   </style>
 </head>
 <body>
@@ -186,7 +225,7 @@
       <div class="header-meta">
         <div class="meta-chip"><span class="meta-icon">📅</span><span id="due-date-meta">Due: Mon 20 Jul (Marketing) &amp; Mon 10 Aug (Full Revision)</span></div>
         <div class="meta-chip"><span class="meta-icon">⏱</span><span>RIPS (Role, Influences, Processes, Strategies)</span></div>
-        <div class="meta-chip"><span class="meta-icon">🍟</span><span>Case Study: McDonald\'s</span></div>
+        <div class="meta-chip"><span class="meta-icon">🍟</span><span>Case Study: McDonald's</span></div>
         <div class="meta-chip"><span class="meta-icon">📱</span><span>Atomi, Textbook &amp; LearnStudio App</span></div>
       </div>
       <div class="countdown-wrapper" style="display: flex; gap: 2rem; justify-content: center; flex-wrap: wrap; margin-top: 1rem;">
@@ -248,10 +287,10 @@
         <div class="goals-banner">
           <div class="goals-title">💡 Marketing Syllabus Goals</div>
           <ul class="goals-list">
-            <li><strong>Role:</strong> Understand the strategic role of marketing and interdependence.</li>
+            <li><strong>Role:</strong> Strategic role of marketing, interdependence, production/selling/marketing approaches, and types of markets.</li>
             <li><strong>Influences:</strong> Choice factors (PEGS), Consumer laws, and ethical issues.</li>
-            <li><strong>Processes:</strong> Situational analysis, target markets, and implementation/monitoring.</li>
-            <li><strong>Strategies:</strong> The 4 Ps (Product, Price, Promotion, Place) and Global marketing.</li>
+            <li><strong>Processes:</strong> Situational analysis (SWOT/PLC), target markets, and implementation/monitoring.</li>
+            <li><strong>Strategies:</strong> Product, Price, Promotion, Place (4 Ps), 3 additional Ps (People/Process/Physical Evidence), and Global marketing.</li>
           </ul>
         </div>
 
@@ -260,6 +299,17 @@
           <span class="rips-badge">R</span>
           <span class="rips-title">Role of Marketing</span>
         </div>
+        
+        <div class="syllabus-checklist">
+          <div class="syllabus-checklist-title">Syllabus Check: Role of Marketing</div>
+          <div class="syl-grid">
+            <label class="syl-item"><input type="checkbox" id="mcc-role-1"/> <span>strategic role of marketing goods and services</span></label>
+            <label class="syl-item"><input type="checkbox" id="mcc-role-2"/> <span>interdependence with other key business functions</span></label>
+            <label class="syl-item"><input type="checkbox" id="mcc-role-3"/> <span>production, selling, marketing approaches</span></label>
+            <label class="syl-item"><input type="checkbox" id="mcc-role-4"/> <span>types of markets — resource, industrial, intermediate, consumer, mass, niche</span></label>
+          </div>
+        </div>
+
         <div class="scaffold-card">
           <div class="sc-header">
             <span class="sc-num">M1</span>
@@ -269,8 +319,8 @@
             </div>
           </div>
           <div class="field-row">
-            <label for="mkt-role-strategic">Strategic Role of Marketing (Case Study: McDonald's)</label>
-            <textarea id="mkt-role-strategic" class="field-textarea" rows="3" placeholder="Explain the role of marketing plans, customer loyalty, brand value (~$191B), and profit maximization..."></textarea>
+            <label for="mkt-role-strategic">Strategic Role &amp; Approaches (Case Study: McDonald's)</label>
+            <textarea id="mkt-role-strategic" class="field-textarea" rows="3" placeholder="Explain how McDonald's marketing approaches (customer orientation) protect its ~$191B brand value and maximize profits."></textarea>
           </div>
         </div>
 
@@ -279,6 +329,16 @@
           <span class="rips-badge">I</span>
           <span class="rips-title">Influences on Marketing</span>
         </div>
+
+        <div class="syllabus-checklist">
+          <div class="syllabus-checklist-title">Syllabus Check: Influences on Marketing</div>
+          <div class="syl-grid">
+            <label class="syl-item"><input type="checkbox" id="mcc-inf-1"/> <span>factors influencing customer choice — psychological, sociocultural, economic, government</span></label>
+            <label class="syl-item"><input type="checkbox" id="mcc-inf-2"/> <span>consumer laws — deceptive and misleading advertising, price discrimination, implied conditions, warranties</span></label>
+            <label class="syl-item"><input type="checkbox" id="mcc-inf-3"/> <span>ethical — truth, accuracy and good taste, products that damage health, fair competition, sugging</span></label>
+          </div>
+        </div>
+
         <div class="scaffold-card">
           <div class="sc-header">
             <span class="sc-num">M2</span>
@@ -292,7 +352,7 @@
             <textarea id="choice-psych" class="field-textarea" rows="3" placeholder="How do value perception, reference groups, inflation (Loose Change Menu), and government policies influence buyers?"></textarea>
           </div>
           <div class="trend-row">
-            <div class="trend-label">Consumer Laws (Deceptive Advertising, Implied Conditions, Warranties)</div>
+            <div class="trend-label">Consumer Laws (Deceptive Advertising, Implied Conditions, Warranties, Price Discrimination)</div>
             <textarea id="law-deceptive" class="field-textarea" rows="3" placeholder="Explain requirements regarding misleading pricing, product descriptions, and fitness for consumption."></textarea>
           </div>
           <div class="trend-row">
@@ -306,6 +366,19 @@
           <span class="rips-badge">P</span>
           <span class="rips-title">Marketing Processes</span>
         </div>
+
+        <div class="syllabus-checklist">
+          <div class="syllabus-checklist-title">Syllabus Check: Marketing Process</div>
+          <div class="syl-grid">
+            <label class="syl-item"><input type="checkbox" id="mcc-proc-1"/> <span>situational analysis — SWOT, product life cycle</span></label>
+            <label class="syl-item"><input type="checkbox" id="mcc-proc-2"/> <span>market research (primary &amp; secondary sources)</span></label>
+            <label class="syl-item"><input type="checkbox" id="mcc-proc-3"/> <span>establishing marketing objectives</span></label>
+            <label class="syl-item"><input type="checkbox" id="mcc-proc-4"/> <span>identifying target markets (primary &amp; secondary)</span></label>
+            <label class="syl-item"><input type="checkbox" id="mcc-proc-5"/> <span>developing marketing strategies</span></label>
+            <label class="syl-item"><input type="checkbox" id="mcc-proc-6"/> <span>implementation, monitoring and controlling (financial forecasts, actual/planned results)</span></label>
+          </div>
+        </div>
+
         <div class="scaffold-card">
           <div class="sc-header">
             <span class="sc-num">M3</span>
@@ -329,17 +402,32 @@
           <span class="rips-badge">S</span>
           <span class="rips-title">Marketing Strategies</span>
         </div>
+
+        <div class="syllabus-checklist">
+          <div class="syllabus-checklist-title">Syllabus Check: Marketing Strategies</div>
+          <div class="syl-grid">
+            <label class="syl-item"><input type="checkbox" id="mcc-strat-1"/> <span>market segmentation, product/service differentiation and positioning</span></label>
+            <label class="syl-item"><input type="checkbox" id="mcc-strat-2"/> <span>products — goods and/or services (branding, packaging)</span></label>
+            <label class="syl-item"><input type="checkbox" id="mcc-strat-3"/> <span>price — pricing methods (cost, market, competition) and pricing strategies</span></label>
+            <label class="syl-item"><input type="checkbox" id="mcc-strat-4"/> <span>promotion — promotion mix, opinion leaders, word of mouth</span></label>
+            <label class="syl-item"><input type="checkbox" id="mcc-strat-5"/> <span>place/distribution — channels, channel choice, physical distribution issues</span></label>
+            <label class="syl-item"><input type="checkbox" id="mcc-strat-6"/> <span>people, processes, physical evidence (3 additional Ps)</span></label>
+            <label class="syl-item"><input type="checkbox" id="mcc-strat-7"/> <span>e-marketing</span></label>
+            <label class="syl-item"><input type="checkbox" id="mcc-strat-8"/> <span>global marketing — global branding, standardisation, customisation, global pricing</span></label>
+          </div>
+        </div>
+
         <div class="scaffold-card">
           <div class="sc-header">
             <span class="sc-num">M4</span>
             <div>
-              <h3 class="sc-title">Marketing Mix (4 Ps) &amp; Global Marketing</h3>
+              <h3 class="sc-title">Marketing Mix &amp; Global Marketing</h3>
               <p class="sc-hint">The tactical elements used to reach the target market.</p>
             </div>
           </div>
           <div class="field-row">
-            <label for="mkt-strat-mix">The 4 Ps (Product, Price, Promotion, Place) at McDonald's</label>
-            <textarea id="mkt-strat-mix" class="field-textarea" rows="3" placeholder="Explain standard branding/packaging (Product), pricing methods (Price), campaigns/social media (Promotion), and distribution channels (Place)."></textarea>
+            <label for="mkt-strat-mix">The 7 Ps Mix (Product, Price, Promotion, Place, People, Processes, Physical Evidence)</label>
+            <textarea id="mkt-strat-mix" class="field-textarea" rows="3" placeholder="Explain standard branding/packaging (Product), pricing methods (Price), campaigns/social media (Promotion), distribution channels (Place), physical evidence (layout), and people (customer service)."></textarea>
           </div>
           <div class="field-row">
             <label for="mkt-strat-global">Global Marketing (Standardisation vs. Differentiation)</label>
@@ -355,9 +443,9 @@
           <div class="goals-title">💡 Operations Syllabus Goals</div>
           <ul class="goals-list">
             <li><strong>Role:</strong> Cost Leadership vs. Good/Service Differentiation in tertiary models.</li>
-            <li><strong>Influences:</strong> Globalization, technology, quality expectations, and CSR.</li>
-            <li><strong>Processes:</strong> Transformed/transforming inputs and the transformation pipeline.</li>
-            <li><strong>Strategies:</strong> Technology (Established/Leading-edge) and Quality management.</li>
+            <li><strong>Influences:</strong> Globalization, technology, quality expectations, cost-based competition, and CSR.</li>
+            <li><strong>Processes:</strong> Transformed/transforming inputs, the V4 influences, sequencing, scheduling, and outputs.</li>
+            <li><strong>Strategies:</strong> Performance objectives, inventory models (JIT), technology, and quality.</li>
           </ul>
         </div>
 
@@ -366,6 +454,16 @@
           <span class="rips-badge">R</span>
           <span class="rips-title">Role of Operations</span>
         </div>
+
+        <div class="syllabus-checklist">
+          <div class="syllabus-checklist-title">Syllabus Check: Role of Operations</div>
+          <div class="syl-grid">
+            <label class="syl-item"><input type="checkbox" id="opc-role-1"/> <span>strategic role of operations management — cost leadership, good/service differentiation</span></label>
+            <label class="syl-item"><input type="checkbox" id="opc-role-2"/> <span>goods and/or services in different industries</span></label>
+            <label class="syl-item"><input type="checkbox" id="opc-role-3"/> <span>interdependence with other key business functions</span></label>
+          </div>
+        </div>
+
         <div class="scaffold-card">
           <div class="sc-header">
             <span class="sc-num">O1</span>
@@ -385,11 +483,22 @@
           <span class="rips-badge">I</span>
           <span class="rips-title">Influences on Operations</span>
         </div>
+
+        <div class="syllabus-checklist">
+          <div class="syllabus-checklist-title">Syllabus Check: Influences on Operations</div>
+          <div class="syl-grid">
+            <label class="syl-item"><input type="checkbox" id="opc-inf-1"/> <span>globalisation &amp; technology</span></label>
+            <label class="syl-item"><input type="checkbox" id="opc-inf-2"/> <span>quality expectations &amp; cost-based competition</span></label>
+            <label class="syl-item"><input type="checkbox" id="opc-inf-3"/> <span>government policies &amp; legal regulation</span></label>
+            <label class="syl-item"><input type="checkbox" id="opc-inf-4"/> <span>environmental sustainability &amp; CSR (social responsibility)</span></label>
+          </div>
+        </div>
+
         <div class="scaffold-card">
           <div class="sc-header">
             <span class="sc-num">O2</span>
             <div>
-              <h3 class="sc-title">Globalization, Quality Expectations &amp; CSR</h3>
+              <h3 class="sc-title">Influences (Globalization, Tech, Regulations, CSR)</h3>
               <p class="sc-hint">The external factors forcing operations to adapt.</p>
             </div>
           </div>
@@ -404,6 +513,18 @@
           <span class="rips-badge">P</span>
           <span class="rips-title">Operations Processes</span>
         </div>
+
+        <div class="syllabus-checklist">
+          <div class="syllabus-checklist-title">Syllabus Check: Operations Processes</div>
+          <div class="syl-grid">
+            <label class="syl-item"><input type="checkbox" id="opc-proc-1"/> <span>inputs — transformed resources (materials, info, customers) and transforming resources (HR, facilities)</span></label>
+            <label class="syl-item"><input type="checkbox" id="opc-proc-2"/> <span>transformation processes — volume, variety, variation in demand, visibility (V4)</span></label>
+            <label class="syl-item"><input type="checkbox" id="opc-proc-3"/> <span>sequencing and scheduling — Gantt charts, critical path analysis</span></label>
+            <label class="syl-item"><input type="checkbox" id="opc-proc-4"/> <span>technology, task design, process layout, monitoring, control, improvement</span></label>
+            <label class="syl-item"><input type="checkbox" id="opc-proc-5"/> <span>outputs — customer service, warranties</span></label>
+          </div>
+        </div>
+
         <div class="scaffold-card">
           <div class="sc-header">
             <span class="sc-num">O3</span>
@@ -413,8 +534,8 @@
             </div>
           </div>
           <div class="field-row">
-            <label for="ops-proc-trans">The Transformation Pipeline</label>
-            <textarea id="ops-proc-trans" class="field-textarea" rows="3" placeholder="Identify Transformed inputs (ingredients) vs Transforming inputs (kitchen equipment, casual staff). Detail the transformation stage."></textarea>
+            <label for="ops-proc-trans">The Transformation Pipeline (Inputs, V4s, Scheduling)</label>
+            <textarea id="ops-proc-trans" class="field-textarea" rows="3" placeholder="Identify transformed inputs (ingredients) vs transforming inputs (crew, kitchens). Explain how volume and scheduling affect the process."></textarea>
           </div>
         </div>
 
@@ -423,11 +544,26 @@
           <span class="rips-badge">S</span>
           <span class="rips-title">Operations Strategies</span>
         </div>
+
+        <div class="syllabus-checklist">
+          <div class="syllabus-checklist-title">Syllabus Check: Operations Strategies</div>
+          <div class="syl-grid">
+            <label class="syl-item"><input type="checkbox" id="opc-strat-1"/> <span>performance objectives — quality, speed, dependability, flexibility, customisation, cost</span></label>
+            <label class="syl-item"><input type="checkbox" id="opc-strat-2"/> <span>new product/service design and development</span></label>
+            <label class="syl-item"><input type="checkbox" id="opc-strat-3"/> <span>supply chain management — logistics, e-commerce, global sourcing</span></label>
+            <label class="syl-item"><input type="checkbox" id="opc-strat-4"/> <span>technology — leading-edge, established</span></label>
+            <label class="syl-item"><input type="checkbox" id="opc-strat-5"/> <span>inventory management — LIFO, FIFO, JIT</span></label>
+            <label class="syl-item"><input type="checkbox" id="opc-strat-6"/> <span>quality management — control, assurance, improvement</span></label>
+            <label class="syl-item"><input type="checkbox" id="opc-strat-7"/> <span>overcoming resistance to change — financial costs, redundancy, retraining</span></label>
+            <label class="syl-item"><input type="checkbox" id="opc-strat-8"/> <span>global factors — global sourcing, economies of scale, scanning &amp; learning, R&amp;D</span></label>
+          </div>
+        </div>
+
         <div class="scaffold-card">
           <div class="sc-header">
             <span class="sc-num">O4</span>
             <div>
-              <h3 class="sc-title">Technology (Established vs. Leading-Edge) &amp; Quality Management</h3>
+              <h3 class="sc-title">Operational Strategies</h3>
               <p class="sc-hint">Strategies used to improve operational objectives.</p>
             </div>
           </div>
@@ -442,8 +578,8 @@
             </div>
           </div>
           <div class="field-row">
-            <label for="ops-strat-quality">Quality Management (Control, Assurance, and Improvement)</label>
-            <textarea id="ops-strat-quality" class="field-textarea" rows="3" placeholder="Explain how quality control (holding times) and quality assurance (supplier HACCP standards) are implemented."></textarea>
+            <label for="ops-strat-quality">Quality Management &amp; Inventory Strategies (e.g. JIT)</label>
+            <textarea id="ops-strat-quality" class="field-textarea" rows="3" placeholder="Explain JIT inventory controls and quality management (quality control, assurance, improvement) at McDonald's."></textarea>
           </div>
           <!-- INTERDEPENDENCE -->
           <div class="trend-row">
@@ -459,10 +595,10 @@
         <div class="goals-banner">
           <div class="goals-title">💡 Financial Management Goals</div>
           <ul class="goals-list">
-            <li><strong>Role:</strong> Profitability, Liquidity, solveny, efficiency, and growth.</li>
-            <li><strong>Influences:</strong> Debt vs. Equity financing and external markets.</li>
-            <li><strong>Processes:</strong> Accounting sheets, calculations, and ratio tracking.</li>
-            <li><strong>Strategies:</strong> Cash flow management and working capital controls.</li>
+            <li><strong>Role:</strong> Profitability, Liquidity, solvency, efficiency, and growth objectives.</li>
+            <li><strong>Influences:</strong> Internal vs. External Debt &amp; Equity funding, and Global influences.</li>
+            <li><strong>Processes:</strong> Accounting reports (cash flow, income, balance sheet) and ratios.</li>
+            <li><strong>Strategies:</strong> Cash flow (factoring), Working Capital, and Global pricing.</li>
           </ul>
         </div>
 
@@ -471,6 +607,16 @@
           <span class="rips-badge">R</span>
           <span class="rips-title">Role of Financial Management</span>
         </div>
+
+        <div class="syllabus-checklist">
+          <div class="syllabus-checklist-title">Syllabus Check: Role of Financial Management</div>
+          <div class="syl-grid">
+            <label class="syl-item"><input type="checkbox" id="fcc-role-1"/> <span>strategic role of financial management</span></label>
+            <label class="syl-item"><input type="checkbox" id="fcc-role-2"/> <span>objectives of financial management — profitability, liquidity, efficiency, growth, solvency</span></label>
+            <label class="syl-item"><input type="checkbox" id="fcc-role-3"/> <span>interdependence with other key business functions</span></label>
+          </div>
+        </div>
+
         <div class="scaffold-card">
           <div class="sc-header">
             <span class="sc-num">F1</span>
@@ -490,6 +636,18 @@
           <span class="rips-badge">I</span>
           <span class="rips-title">Influences on Finance</span>
         </div>
+
+        <div class="syllabus-checklist">
+          <div class="syllabus-checklist-title">Syllabus Check: Influences on Finance</div>
+          <div class="syl-grid">
+            <label class="syl-item"><input type="checkbox" id="fcc-inf-1"/> <span>internal sources of finance — retained profits</span></label>
+            <label class="syl-item"><input type="checkbox" id="fcc-inf-2"/> <span>external sources of finance — debt (short-term &amp; long-term) and equity (ordinary shares, private equity)</span></label>
+            <label class="syl-item"><input type="checkbox" id="fcc-inf-3"/> <span>financial institutions &amp; ASX</span></label>
+            <label class="syl-item"><input type="checkbox" id="fcc-inf-4"/> <span>influence of government — ASIC &amp; company tax</span></label>
+            <label class="syl-item"><input type="checkbox" id="fcc-inf-5"/> <span>global market influences — economic outlook, availability of funds, interest rates</span></label>
+          </div>
+        </div>
+
         <div class="scaffold-card">
           <div class="sc-header">
             <span class="sc-num">F2</span>
@@ -500,11 +658,11 @@
           </div>
           <div class="two-col">
             <div class="two-col-item">
-              <h4 class="mini-heading">Debt Financing (Loans, Mortgages)</h4>
+              <h4 class="mini-heading">Debt Financing (Overdrafts, Mortgages, Debentures, Leasing)</h4>
               <textarea id="fin-debt" class="field-textarea" rows="4" placeholder="Pros & Cons (mandatory interest, gearing risk)..."></textarea>
             </div>
             <div class="two-col-item">
-              <h4 class="mini-heading">Equity Financing (Retained Profits, Shares)</h4>
+              <h4 class="mini-heading">Equity Financing (Retained Profits, Share Issues)</h4>
               <textarea id="fin-equity" class="field-textarea" rows="4" placeholder="Pros & Cons (ownership dilution, no mandatory payments)..."></textarea>
             </div>
           </div>
@@ -515,6 +673,19 @@
           <span class="rips-badge">P</span>
           <span class="rips-title">Financial Processes</span>
         </div>
+
+        <div class="syllabus-checklist">
+          <div class="syllabus-checklist-title">Syllabus Check: Financial Processes</div>
+          <div class="syl-grid">
+            <label class="syl-item"><input type="checkbox" id="fcc-proc-1"/> <span>planning and implementing — financial needs, budgets, controls (debt vs equity)</span></label>
+            <label class="syl-item"><input type="checkbox" id="fcc-proc-2"/> <span>monitoring and controlling — cash flow statement, income statement, balance sheet</span></label>
+            <label class="syl-item"><input type="checkbox" id="fcc-proc-3"/> <span>financial ratios — liquidity, gearing, profitability, efficiency</span></label>
+            <label class="syl-item"><input type="checkbox" id="fcc-proc-4"/> <span>comparative ratio analysis — over time, benchmarks</span></label>
+            <label class="syl-item"><input type="checkbox" id="fcc-proc-5"/> <span>limitations of financial reports — normalized earnings, valuing assets, notes to sheets</span></label>
+            <label class="syl-item"><input type="checkbox" id="fcc-proc-6"/> <span>ethical issues related to financial reports</span></label>
+          </div>
+        </div>
+
         <div class="scaffold-card">
           <div class="sc-header">
             <span class="sc-num">F3</span>
@@ -595,17 +766,28 @@
           <span class="rips-badge">S</span>
           <span class="rips-title">Financial Strategies</span>
         </div>
+
+        <div class="syllabus-checklist">
+          <div class="syllabus-checklist-title">Syllabus Check: Financial Strategies</div>
+          <div class="syl-grid">
+            <label class="syl-item"><input type="checkbox" id="fcc-strat-1"/> <span>cash flow management — payments distribution, discounts, factoring</span></label>
+            <label class="syl-item"><input type="checkbox" id="fcc-strat-2"/> <span>working capital management — control of current assets/liabilities, leasing, factoring</span></label>
+            <label class="syl-item"><input type="checkbox" id="fcc-strat-3"/> <span>profitability management — cost controls (fixed/variable, centre minimisation) &amp; revenue controls</span></label>
+            <label class="syl-item"><input type="checkbox" id="fcc-strat-4"/> <span>global financial management — exchange/interest rates, methods of payment, hedging, derivatives</span></label>
+          </div>
+        </div>
+
         <div class="scaffold-card">
           <div class="sc-header">
             <span class="sc-num">F4</span>
             <div>
-              <h3 class="sc-title">Cash Flow &amp; Working Capital Management</h3>
-              <p class="sc-hint">Strategies to ensure day-to-day operations remain solvent.</p>
+              <h3 class="sc-title">Cash Flow, Working Capital &amp; Profitability Strategies</h3>
+              <p class="sc-hint">Strategies to ensure day-to-day operations remain solvent and profitable.</p>
             </div>
           </div>
           <div class="field-row">
-            <label for="fin-strat-cash">Cash Flow and Working Capital Strategies</label>
-            <textarea id="fin-strat-cash" class="field-textarea" rows="3" placeholder="Explain working capital management strategies (leasing equipment, sale and leaseback, factoring, or cash flow monitoring)."></textarea>
+            <label for="fin-strat-cash">Working Capital &amp; Profitability Strategies</label>
+            <textarea id="fin-strat-cash" class="field-textarea" rows="3" placeholder="Explain working capital controls (leasing, factoring) and profitability strategies (cost controls, revenue/marketing objectives)."></textarea>
           </div>
         </div>
       </div>
@@ -616,10 +798,10 @@
         <div class="goals-banner">
           <div class="goals-title">💡 Human Resources Syllabus Goals</div>
           <ul class="goals-list">
-            <li><strong>Role:</strong> Outsourcing and strategic workforce management.</li>
-            <li><strong>Influences:</strong> Workplace laws (WHS, EEO), unions, and social shifts.</li>
-            <li><strong>Processes:</strong> The HR Cycle (Acquisition, Development, Maintenance, Separation).</li>
-            <li><strong>Strategies:</strong> Leadership styles, dispute resolution, and rewards.</li>
+            <li><strong>Role:</strong> Strategic role of HR, interdependence, and outsourcing (domestic/global).</li>
+            <li><strong>Influences:</strong> Stakeholders (unions), Legal (Award, contract, WHS, EEO), and Technological shifts.</li>
+            <li><strong>Processes:</strong> The complete HR Cycle (Acquisition, Development, Maintenance, Separation).</li>
+            <li><strong>Strategies:</strong> Leadership, recruitment, performance, rewards, and disputes.</li>
           </ul>
         </div>
 
@@ -628,6 +810,16 @@
           <span class="rips-badge">R</span>
           <span class="rips-title">Role of Human Resources</span>
         </div>
+
+        <div class="syllabus-checklist">
+          <div class="syllabus-checklist-title">Syllabus Check: Role of HR</div>
+          <div class="syl-grid">
+            <label class="syl-item"><input type="checkbox" id="hcc-role-1"/> <span>strategic role of human resources</span></label>
+            <label class="syl-item"><input type="checkbox" id="hcc-role-2"/> <span>interdependence with other key business functions</span></label>
+            <label class="syl-item"><input type="checkbox" id="hcc-role-3"/> <span>outsourcing — domestic, global</span></label>
+          </div>
+        </div>
+
         <div class="scaffold-card">
           <div class="sc-header">
             <span class="sc-num">H1</span>
@@ -647,6 +839,19 @@
           <span class="rips-badge">I</span>
           <span class="rips-title">Influences on HR</span>
         </div>
+
+        <div class="syllabus-checklist">
+          <div class="syllabus-checklist-title">Syllabus Check: Influences on HR</div>
+          <div class="syl-grid">
+            <label class="syl-item"><input type="checkbox" id="hcc-inf-1"/> <span>stakeholders — employers, employees, unions, government, society</span></label>
+            <label class="syl-item"><input type="checkbox" id="hcc-inf-2"/> <span>legal — employment contract (standards, wage, awards, enterprise agreement)</span></label>
+            <label class="syl-item"><input type="checkbox" id="hcc-inf-3"/> <span>legal — Work Health &amp; Safety (WHS) &amp; Equal Employment Opportunity (EEO)</span></label>
+            <label class="syl-item"><input type="checkbox" id="hcc-inf-4"/> <span>economic &amp; technological influences</span></label>
+            <label class="syl-item"><input type="checkbox" id="hcc-inf-5"/> <span>social — changing work patterns, living standards</span></label>
+            <label class="syl-item"><input type="checkbox" id="hcc-inf-6"/> <span>ethics &amp; corporate social responsibility</span></label>
+          </div>
+        </div>
+
         <div class="scaffold-card">
           <div class="sc-header">
             <span class="sc-num">H2</span>
@@ -666,6 +871,17 @@
           <span class="rips-badge">P</span>
           <span class="rips-title">Human Resources Processes</span>
         </div>
+
+        <div class="syllabus-checklist">
+          <div class="syllabus-checklist-title">Syllabus Check: HR Processes</div>
+          <div class="syl-grid">
+            <label class="syl-item"><input type="checkbox" id="hcc-proc-1"/> <span>acquisition (recruitment and selection)</span></label>
+            <label class="syl-item"><input type="checkbox" id="hcc-proc-2"/> <span>development (on-the-job &amp; off-the-job training)</span></label>
+            <label class="syl-item"><input type="checkbox" id="hcc-proc-3"/> <span>maintenance (monetary and non-monetary benefits)</span></label>
+            <label class="syl-item"><input type="checkbox" id="hcc-proc-4"/> <span>separation (voluntary and involuntary separation)</span></label>
+          </div>
+        </div>
+
         <div class="scaffold-card">
           <div class="sc-header">
             <span class="sc-num">H3</span>
@@ -697,6 +913,21 @@
           <span class="rips-badge">S</span>
           <span class="rips-title">Human Resources Strategies</span>
         </div>
+
+        <div class="syllabus-checklist">
+          <div class="syllabus-checklist-title">Syllabus Check: HR Strategies</div>
+          <div class="syl-grid">
+            <label class="syl-item"><input type="checkbox" id="hcc-strat-1"/> <span>leadership styles (autocratic, democratic, laissez-faire)</span></label>
+            <label class="syl-item"><input type="checkbox" id="hcc-strat-2"/> <span>job design — general or specific tasks</span></label>
+            <label class="syl-item"><input type="checkbox" id="hcc-strat-3"/> <span>recruitment — internal or external, general or specific skills</span></label>
+            <label class="syl-item"><input type="checkbox" id="hcc-strat-4"/> <span>training and development — current or future skills</span></label>
+            <label class="syl-item"><input type="checkbox" id="hcc-strat-5"/> <span>performance management — developmental or administrative</span></label>
+            <label class="syl-item"><input type="checkbox" id="hcc-strat-6"/> <span>rewards — monetary/non-monetary, individual/group, performance pay</span></label>
+            <label class="syl-item"><input type="checkbox" id="hcc-strat-7"/> <span>global — costs, skills, supply</span></label>
+            <label class="syl-item"><input type="checkbox" id="hcc-strat-8"/> <span>workplace disputes — resolution (negotiation, mediation, conciliation, arbitration)</span></label>
+          </div>
+        </div>
+
         <div class="scaffold-card">
           <div class="sc-header">
             <span class="sc-num">H4</span>

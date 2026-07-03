@@ -81,10 +81,9 @@ function collectAllData() {
     data[name] = checked ? checked.value : '';
   });
 
-  // Checkboxes for checklist (chk1 - chk5)
-  ['chk1', 'chk2', 'chk3', 'chk4', 'chk5'].forEach(id => {
-    const el = document.getElementById(id);
-    data[id] = el ? (el.checked ? 'Yes' : 'No') : 'No';
+  // All checkboxes with IDs (including chk1-chk5 and syllabus checklists)
+  document.querySelectorAll('input[type="checkbox"][id]').forEach(el => {
+    data[el.id] = el.checked ? 'Yes' : 'No';
   });
 
   return data;

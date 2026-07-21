@@ -227,7 +227,7 @@ function renderDetail(s) {
       ]
     },
     {
-      title: '👷 Human Resources Management (RIPS)',
+      title: '👷 Human Resources Management (RIPSE)',
       fields: [
         { label: 'Role: Strategic HR', key: 'hr-role-strategic' },
         { label: 'Influence: Legal Framework', key: 'hr-inf-legal' },
@@ -239,7 +239,9 @@ function renderDetail(s) {
         { label: 'Strategy: Cascading Failure', key: 'hr-cascading' },
         { label: 'Strategy: Grievance', key: 'hr-dispute-grievance' },
         { label: 'Strategy: Mediation', key: 'hr-dispute-mediation' },
-        { label: 'Strategy: Arbitration', key: 'hr-dispute-arbitration' }
+        { label: 'Strategy: Arbitration', key: 'hr-dispute-arbitration' },
+        { label: 'Effectiveness: Culture & KPIs', key: 'syl-hr-eff-culture' },
+        { label: 'Effectiveness: Turnover & Morale', key: 'syl-hr-eff-turnover' }
       ]
     },
     {

@@ -232,16 +232,19 @@
       const useRoster = CONFIG.STUDENTS && CONFIG.STUDENTS.length > 0;
 
       if (useRoster) {
-        // Check against student roster (case-insensitive name, exact password)
-        const match = CONFIG.STUDENTS.find(s =>
-          s.name.toLowerCase() === name.toLowerCase() &&
-          s.password === password
-        );
+        // Flexible match: allows full name ("Simon Anderson"), first name ("Simon"), or prefix
+        const inputName = name.toLowerCase();
+        const match = CONFIG.STUDENTS.find(s => {
+          const fullName  = s.name.toLowerCase();
+          const firstName = s.name.split(' ')[0].toLowerCase();
+          const nameMatches = (fullName === inputName || firstName === inputName || fullName.startsWith(inputName));
+          return nameMatches && s.password.trim() === password;
+        });
         if (!match) {
-          showError('Name or password not recognised. Check your details and try again.');
+          showError('Name or password not recognised. Make sure to enter your name (or first name) and password correctly.');
           return;
         }
-        // Use the exact name from the roster for consistency
+        // Use exact roster name for consistency
         sessionStorage.setItem('studentName', match.name);
         sessionStorage.setItem('classCode', CONFIG.CLASS_CODE || 'BUSN2026');
       } else {

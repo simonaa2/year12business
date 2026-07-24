@@ -149,12 +149,12 @@ function studentCard(s, idx) {
 
   // Completion tags
   const fields = [
-    { key: 'strategic-role-def', label: 'Marketing Core' },
-    { key: 'ops-tech-est',       label: 'Operations Tech' },
-    { key: 'ops-inter-mkt',      label: 'Interdependence' },
-    { key: 'ratio-curr-ans',     label: 'Finance Ratios' },
-    { key: 'hr-cascading',       label: 'HR Cascading' },
-    { key: 'partb-response',     label: 'Practice Essay' }
+    { key: 'syl-mkt-role-strategic', label: 'Marketing Core' },
+    { key: 'ops-tech-est',           label: 'Operations Tech' },
+    { key: 'syl-mkt-role-interdep',  label: 'Interdependence' },
+    { key: 'ratio-curr-ans',         label: 'Finance Ratios' },
+    { key: 'hr-cascading',           label: 'HR Cascading' },
+    { key: 'partb-response',         label: 'Practice Essay' }
   ];
 
   const tags = fields.map(f =>
@@ -186,34 +186,32 @@ function renderDetail(s) {
     {
       title: '📢 Marketing Management (RIPS)',
       fields: [
-        { label: 'Role: Strategic Role', key: 'mkt-role-strategic' },
-        { label: 'Influence: Choice Factors', key: 'choice-psych' },
-        { label: 'Influence: Consumer Laws', key: 'law-deceptive' },
-        { label: 'Influence: Ethical Influences', key: 'ethics-health' },
-        { label: 'Process: SWOT & Situational', key: 'mkt-proc-swot' },
-        { label: 'Process: Market Research', key: 'mkt-proc-research' },
-        { label: 'Strategy: Marketing Mix (4Ps)', key: 'mkt-strat-mix' },
-        { label: 'Strategy: Global Marketing', key: 'mkt-strat-global' }
+        { label: 'Role: Strategic Role', key: 'syl-mkt-role-strategic' },
+        { label: 'Role: Interdependence', key: 'syl-mkt-role-interdep' },
+        { label: 'Influence: Choice Factors', key: 'syl-mkt-inf-choice-psych' },
+        { label: 'Influence: Consumer Laws', key: 'syl-mkt-inf-law-deceptive' },
+        { label: 'Process: SWOT & Situational', key: 'syl-mkt-proc-situational' },
+        { label: 'Process: Market Research', key: 'syl-mkt-proc-research' },
+        { label: 'Strategy: Product & Price', key: 'syl-mkt-strat-product-brand' },
+        { label: 'Strategy: Place & Promotion', key: 'syl-mkt-strat-promo-mix' }
       ]
     },
     {
       title: '⚙️ Operations Management (RIPS)',
       fields: [
-        { label: 'Role: Hybrid Goods/Services', key: 'ops-role-hybrid' },
-        { label: 'Influence: CSR & Sustainability', key: 'ops-inf-csr' },
-        { label: 'Process: Transformation', key: 'ops-proc-trans' },
+        { label: 'Role: Cost Leadership', key: 'syl-ops-role-cost' },
+        { label: 'Role: Interdependence', key: 'syl-ops-role-interdep' },
+        { label: 'Influence: Globalisation & CSR', key: 'syl-ops-inf-globalisation' },
+        { label: 'Process: Transformation V4', key: 'syl-ops-proc-trans-v4' },
         { label: 'Strategy: Established Tech', key: 'ops-tech-est' },
         { label: 'Strategy: Leading-Edge Tech', key: 'ops-tech-lead' },
-        { label: 'Strategy: Quality Management', key: 'ops-strat-quality' },
-        { label: 'Strategy: Interdep Scenario', key: 'ops-inter-mkt' }
+        { label: 'Strategy: Quality Management', key: 'syl-ops-strat-quality' }
       ]
     },
     {
       title: '💰 Financial Management (RIPS)',
       fields: [
-        { label: 'Role: Financial Objectives', key: 'fin-role-obj' },
-        { label: 'Influence: Debt Financing', key: 'fin-debt' },
-        { label: 'Influence: Equity Financing', key: 'fin-equity' },
+        { label: 'Role: Financial Objectives', key: 'syl-fin-role-strategic' },
         { label: 'Process: Current Ratio Calc', key: 'ratio-curr-ans' },
         { label: 'Process: Current Ratio State', key: 'ratio-curr-state' },
         { label: 'Process: Current Ratio Expl', key: 'ratio-curr-expl' },
@@ -223,23 +221,22 @@ function renderDetail(s) {
         { label: 'Process: Gross Profit Calc', key: 'ratio-prof-ans' },
         { label: 'Process: Gross Profit State', key: 'ratio-prof-state' },
         { label: 'Process: Gross Profit Expl', key: 'ratio-prof-expl' },
-        { label: 'Strategy: Working Capital & Cash', key: 'fin-strat-cash' }
+        { label: 'Strategy: Working Capital & Cash', key: 'syl-fin-strat-cash-flow' }
       ]
     },
     {
       title: '👷 Human Resources Management (RIPSE)',
       fields: [
-        { label: 'Role: Strategic HR', key: 'hr-role-strategic' },
-        { label: 'Influence: Legal Framework', key: 'hr-inf-legal' },
-        { label: 'Process: Acquisition Stage', key: 'hr-acquisition' },
-        { label: 'Process: Development Stage', key: 'hr-development' },
-        { label: 'Process: Maintenance Stage', key: 'hr-maintenance' },
-        { label: 'Process: Separation Stage', key: 'hr-separation' },
-        { label: 'Strategy: Leadership & Rewards', key: 'hr-strat-style' },
+        { label: 'Role: Strategic HR', key: 'syl-hr-role-strategic' },
+        { label: 'Role: Interdependence', key: 'syl-hr-role-interdep' },
+        { label: 'Influence: Legal Framework', key: 'syl-hr-inf-legal-framework' },
+        { label: 'Process: Acquisition Stage', key: 'syl-hr-proc-acquisition' },
+        { label: 'Process: Development Stage', key: 'syl-hr-proc-development' },
+        { label: 'Process: Maintenance Stage', key: 'syl-hr-proc-maintenance' },
+        { label: 'Process: Separation Stage', key: 'syl-hr-proc-separation' },
+        { label: 'Strategy: Leadership & Rewards', key: 'syl-hr-strat-leadership' },
+        { label: 'Strategy: Workplace Disputes', key: 'hr-dispute-grievance' },
         { label: 'Strategy: Cascading Failure', key: 'hr-cascading' },
-        { label: 'Strategy: Grievance', key: 'hr-dispute-grievance' },
-        { label: 'Strategy: Mediation', key: 'hr-dispute-mediation' },
-        { label: 'Strategy: Arbitration', key: 'hr-dispute-arbitration' },
         { label: 'Effectiveness: Culture & KPIs', key: 'syl-hr-eff-culture' },
         { label: 'Effectiveness: Turnover & Morale', key: 'syl-hr-eff-turnover' }
       ]
@@ -280,38 +277,36 @@ function exportCSV() {
 
   const headers = [
     'Timestamp', 'Student Name', 'Class Code',
-    'Mkt Role Strategic', 'Mkt Influence Choice', 'Mkt Influence Laws', 'Mkt Influence Ethics',
+    'Mkt Role Strategic', 'Mkt Role Interdep', 'Mkt Influence Choice', 'Mkt Influence Laws',
     'Mkt Process SWOT', 'Mkt Process Research', 'Mkt Strategy Mix', 'Mkt Strategy Global',
-    'Ops Role Hybrid', 'Ops Influence CSR', 'Ops Process Transformation',
-    'Ops Strategy Established Tech', 'Ops Strategy Leading Tech', 'Ops Strategy Quality', 'Ops Strategy Interdep Scenario',
-    'Fin Role Objectives', 'Fin Influence Debt', 'Fin Influence Equity',
-    'Fin Process Current Ratio Calc', 'Fin Process Current Ratio State', 'Fin Process Current Ratio Expl',
+    'Ops Role Cost Leadership', 'Ops Role Interdep', 'Ops Influence Globalisation', 'Ops Process Transformation V4',
+    'Ops Strategy Established Tech', 'Ops Strategy Leading Tech', 'Ops Strategy Quality',
+    'Fin Role Objectives', 'Fin Process Current Ratio Calc', 'Fin Process Current Ratio State', 'Fin Process Current Ratio Expl',
     'Fin Process Gearing Ratio Calc', 'Fin Process Gearing Ratio State', 'Fin Process Gearing Ratio Expl',
     'Fin Process Gross Profit Ratio Calc', 'Fin Process Gross Profit Ratio State', 'Fin Process Gross Profit Ratio Expl',
-    'Fin Strategy Cash Working Capital',
-    'HR Role Strategic', 'HR Influence Legal',
+    'Fin Strategy Cash Flow',
+    'HR Role Strategic', 'HR Role Interdep', 'HR Influence Legal Framework',
     'HR Process Acquisition', 'HR Process Development', 'HR Process Maintenance', 'HR Process Separation',
-    'HR Strategy Leadership Rewards', 'HR Strategy Cascading Failure',
-    'HR Strategy Grievance Dispute', 'HR Strategy Mediation Dispute', 'HR Strategy Arbitration Dispute',
+    'HR Strategy Leadership Rewards', 'HR Strategy Cascading Failure', 'HR Workplace Disputes',
+    'HR Effectiveness Culture', 'HR Effectiveness Turnover',
     'Selected Question', 'Essay Draft Response',
     'Rubric Terminology', 'Rubric Explanation', 'Rubric Case Study', 'Rubric PEEL'
   ];
 
   const keys = [
     'timestamp', 'studentName', 'classCode',
-    'mkt-role-strategic', 'choice-psych', 'law-deceptive', 'ethics-health',
-    'mkt-proc-swot', 'mkt-proc-research', 'mkt-strat-mix', 'mkt-strat-global',
-    'ops-role-hybrid', 'ops-inf-csr', 'ops-proc-trans',
-    'ops-tech-est', 'ops-tech-lead', 'ops-strat-quality', 'ops-inter-mkt',
-    'fin-role-obj', 'fin-debt', 'fin-equity',
-    'ratio-curr-ans', 'ratio-curr-state', 'ratio-curr-expl',
+    'syl-mkt-role-strategic', 'syl-mkt-role-interdep', 'syl-mkt-inf-choice-psych', 'syl-mkt-inf-law-deceptive',
+    'syl-mkt-proc-situational', 'syl-mkt-proc-research', 'syl-mkt-strat-promo-mix', 'syl-mkt-strat-global-standard',
+    'syl-ops-role-cost', 'syl-ops-role-interdep', 'syl-ops-inf-globalisation', 'syl-ops-proc-trans-v4',
+    'ops-tech-est', 'ops-tech-lead', 'syl-ops-strat-quality',
+    'syl-fin-role-strategic', 'ratio-curr-ans', 'ratio-curr-state', 'ratio-curr-expl',
     'ratio-gear-ans', 'ratio-gear-state', 'ratio-gear-expl',
     'ratio-prof-ans', 'ratio-prof-state', 'ratio-prof-expl',
-    'fin-strat-cash',
-    'hr-role-strategic', 'hr-inf-legal',
-    'hr-acquisition', 'hr-development', 'hr-maintenance', 'hr-separation',
-    'hr-strat-style', 'hr-cascading',
-    'hr-dispute-grievance', 'hr-dispute-mediation', 'hr-dispute-arbitration',
+    'syl-fin-strat-cash-flow',
+    'syl-hr-role-strategic', 'syl-hr-role-interdep', 'syl-hr-inf-legal-framework',
+    'syl-hr-proc-acquisition', 'syl-hr-proc-development', 'syl-hr-proc-maintenance', 'syl-hr-proc-separation',
+    'syl-hr-strat-leadership', 'hr-cascading', 'hr-dispute-grievance',
+    'syl-hr-eff-culture', 'syl-hr-eff-turnover',
     'selected-question-text', 'partb-response',
     'rb1', 'rb2', 'rb3', 'rb4'
   ];

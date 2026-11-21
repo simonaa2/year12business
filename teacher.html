@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Teacher Dashboard — Year 12 Business Studies 2026</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css"/>
+  <style>
+    /* ---- TEACHER LOGIN ---- */
+    .teacher-login-wrapper {
+      min-height: 100vh; display: flex; align-items: center; justify-content: center;
+      padding: 1.5rem; background: var(--bg);
+    }
+    .teacher-login-wrapper::before {
+      content: ''; position: fixed; inset: 0; pointer-events: none;
+      background: radial-gradient(ellipse 70% 60% at 50% 40%, rgba(168,85,247,0.10) 0%, transparent 60%);
+    }
+    .teacher-login-card {
+      background: var(--bg-card); border: 1px solid var(--border);
+      border-radius: 24px; padding: 3rem 2.5rem;
+      width: 100%; max-width: 420px;
+      box-shadow: 0 24px 80px rgba(0,0,0,0.5);
+      position: relative; animation: fadeInUp 0.4s ease both;
+    }
+    .teacher-login-card::before {
+      content: ''; position: absolute; top:0;left:0;right:0; height:2px;
+      border-radius:24px 24px 0 0;
+      background: linear-gradient(90deg, var(--purple), var(--blue));
+    }
+    .tl-badge { display:inline-block; background:rgba(168,85,247,0.15); border:1px solid rgba(168,85,247,0.35); color:#c084fc; font-size:0.75rem; font-weight:600; letter-spacing:0.1em; text-transform:uppercase; padding:0.3rem 1rem; border-radius:100px; margin-bottom:1.2rem; }
+    .tl-title { font-family:var(--font-head); font-size:1.8rem; font-weight:800; color:#fff; margin-bottom:0.4rem; }
+    .tl-sub { font-size:0.88rem; color:var(--text-muted); margin-bottom:1.8rem; }
+    .tl-field label { display:block; font-size:0.78rem; font-weight:600; color:var(--text-muted); text-transform:uppercase; letter-spacing:0.07em; margin-bottom:0.5rem; }
+    .tl-field { margin-bottom:1.2rem; }
+    .tl-input { width:100%; background:var(--bg-card2); border:1px solid var(--border); border-radius:10px; padding:0.85rem 1rem; color:var(--text); font-family:var(--font-body); font-size:1rem; transition:border-color 0.2s,box-shadow 0.2s; }
+    .tl-input:focus { outline:none; border-color:var(--purple); box-shadow:0 0 0 3px rgba(168,85,247,0.15); }
+    .tl-btn { width:100%; padding:0.9rem; background:linear-gradient(135deg,var(--purple),var(--blue)); border:none; border-radius:10px; color:#fff; font-family:var(--font-head); font-size:1rem; font-weight:700; cursor:pointer; box-shadow:0 4px 20px rgba(168,85,247,0.3); transition:opacity 0.2s,transform 0.15s; }
+    .tl-btn:hover { opacity:0.92; transform:translateY(-1px); }
+    .tl-error { background:rgba(239,68,68,0.1); border:1px solid rgba(239,68,68,0.3); border-radius:8px; color:#fca5a5; font-size:0.85rem; padding:0.7rem 0.9rem; margin-top:0.8rem; display:none; }
+    .tl-error.show { display:block; }
+    .back-link { text-align:center; margin-top:1rem; }
+    .back-link a { font-size:0.78rem; color:var(--text-dim); text-decoration:none; }
+    .back-link a:hover { color:var(--blue); }
+
+    /* ---- DASHBOARD ---- */
+    #dashboard { display:none; }
+    .dash-header { background:linear-gradient(135deg,#0d1b33,#0f0c2a); border-bottom:1px solid var(--border); padding:2rem 1.5rem; }
+    .dash-header-inner { max-width:1100px; margin:0 auto; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:1rem; }
+    .dash-title { font-family:var(--font-head); font-size:1.5rem; font-weight:800; color:#fff; }
+    .dash-title span { background:linear-gradient(135deg,#a78bfa,#60a5fa); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; }
+    .dash-actions { display:flex; gap:0.7rem; flex-wrap:wrap; }
+    .dash-btn { padding:0.55rem 1.1rem; border-radius:8px; font-family:var(--font-body); font-size:0.85rem; font-weight:600; cursor:pointer; border:none; transition:all 0.2s; }
+    .dash-btn-outline { background:transparent; border:1px solid var(--border-light); color:var(--text-muted); }
+    .dash-btn-outline:hover { border-color:var(--blue); color:var(--blue); }
+    .dash-btn-primary { background:linear-gradient(135deg,var(--purple),var(--blue)); color:#fff; }
+    .dash-btn-primary:hover { opacity:0.88; }
+
+    .dash-container { max-width:1100px; margin:0 auto; padding:2rem 1.5rem; }
+
+    /* Stats row */
+    .dash-stats { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:0.8rem; margin-bottom:2rem; }
+    .dash-stat { background:var(--bg-card); border:1px solid var(--border); border-radius:var(--radius); padding:1.2rem 1.4rem; }
+    .ds-value { font-family:var(--font-head); font-size:2rem; font-weight:800; color:#fff; }
+    .ds-label { font-size:0.78rem; color:var(--text-muted); text-transform:uppercase; letter-spacing:0.06em; margin-top:0.2rem; }
+    .ds-blue .ds-value { color:var(--blue); }
+    .ds-green .ds-value { color:var(--green); }
+    .ds-amber .ds-value { color:var(--amber); }
+
+    /* Controls */
+    .dash-controls { display:flex; gap:0.7rem; margin-bottom:1.2rem; flex-wrap:wrap; align-items:center; }
+    .dash-search { flex:1; min-width:200px; background:var(--bg-card); border:1px solid var(--border); border-radius:8px; padding:0.6rem 1rem; color:var(--text); font-family:var(--font-body); font-size:0.88rem; }
+    .dash-search:focus { outline:none; border-color:var(--blue); }
+    .sort-btn { padding:0.55rem 1rem; background:var(--bg-card); border:1px solid var(--border); border-radius:8px; color:var(--text-muted); font-size:0.82rem; cursor:pointer; }
+    .sort-btn.active { border-color:var(--blue); color:var(--blue); }
+
+    /* Student cards */
+    .students-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(300px,1fr)); gap:1rem; }
+    .student-card { background:var(--bg-card); border:1px solid var(--border); border-radius:var(--radius-lg); overflow:hidden; transition:border-color 0.2s,transform 0.2s; cursor:pointer; }
+    .student-card:hover { border-color:var(--border-light); transform:translateY(-2px); }
+    .student-card.expanded { grid-column:1/-1; border-color:var(--purple); }
+    .sc-card-header { padding:1.2rem 1.4rem; display:flex; align-items:center; gap:0.9rem; }
+    .sc-avatar { width:2.5rem; height:2.5rem; border-radius:50%; background:linear-gradient(135deg,var(--blue),var(--purple)); display:flex; align-items:center; justify-content:center; font-weight:700; font-size:1rem; color:#fff; flex-shrink:0; }
+    .sc-name { font-weight:600; font-size:0.95rem; color:#e2e8f0; }
+    .sc-meta { font-size:0.75rem; color:var(--text-muted); margin-top:0.1rem; }
+    .sc-expand-icon { margin-left:auto; color:var(--text-dim); font-size:0.9rem; transition:transform 0.2s; }
+    .student-card.expanded .sc-expand-icon { transform:rotate(180deg); }
+
+    .sc-preview { padding:0 1.4rem 1.2rem; display:flex; flex-wrap:wrap; gap:0.5rem; }
+    .sc-tag { background:var(--bg-card2); border:1px solid var(--border); border-radius:100px; padding:0.2rem 0.7rem; font-size:0.73rem; color:var(--text-muted); }
+    .sc-tag.filled { border-color:rgba(34,197,94,0.3); color:#86efac; background:rgba(34,197,94,0.07); }
+    .sc-tag.empty { border-color:rgba(239,68,68,0.2); color:#fca5a5; background:rgba(239,68,68,0.06); }
+
+    /* Expanded detail */
+    .sc-detail { display:none; border-top:1px solid var(--border); padding:1.5rem; }
+    .student-card.expanded .sc-detail { display:block; }
+    .detail-section { margin-bottom:1.5rem; }
+    .detail-section-title { font-family:var(--font-head); font-size:0.88rem; font-weight:700; color:var(--text-muted); text-transform:uppercase; letter-spacing:0.07em; margin-bottom:0.8rem; }
+    .detail-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(240px,1fr)); gap:0.7rem; }
+    .detail-field { background:var(--bg-card2); border:1px solid var(--border); border-radius:8px; padding:0.8rem 0.9rem; }
+    .df-label { font-size:0.72rem; font-weight:600; color:var(--text-dim); text-transform:uppercase; letter-spacing:0.06em; margin-bottom:0.3rem; }
+    .df-value { font-size:0.85rem; color:var(--text); white-space:pre-wrap; line-height:1.5; }
+    .df-value.empty { color:var(--text-dim); font-style:italic; }
+
+    /* Empty state */
+    .dash-empty { text-align:center; padding:4rem 2rem; color:var(--text-muted); }
+    .dash-empty-icon { font-size:3rem; margin-bottom:1rem; }
+    .dash-loading { text-align:center; padding:4rem; color:var(--text-muted); display:flex; flex-direction:column; align-items:center; gap:1rem; }
+  </style>
+</head>
+<body>
+
+  <!-- LOGIN -->
+  <div id="teacher-login">
+    <div class="teacher-login-wrapper">
+      <div class="teacher-login-card">
+        <div class="tl-badge">Teacher Only</div>
+        <h1 class="tl-title">Dashboard</h1>
+        <p class="tl-sub">Year 12 Business Studies 2026 — Submissions<br>Enter your teacher password to continue.</p>
+        <div class="tl-field">
+          <label for="teacher-pw">Password</label>
+          <input type="password" id="teacher-pw" class="tl-input" placeholder="Enter teacher password…"/>
+        </div>
+        <button class="tl-btn" onclick="teacherLogin()">View Student Submissions →</button>
+        <div class="tl-error" id="tl-error"></div>
+        <div class="back-link" style="margin-top:1.2rem;"><a href="index.html">← Back to student page</a></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- DASHBOARD -->
+  <div id="dashboard">
+    <div class="dash-header">
+      <div class="dash-header-inner">
+        <div>
+          <div class="dash-title">Teacher Dashboard — <span>Yr 12 Business</span></div>
+          <div style="font-size:0.82rem;color:var(--text-muted);margin-top:0.2rem;">Marketing (Role &amp; Influences) · Trial Preparation Scaffold</div>
+        </div>
+        <div class="dash-actions">
+          <button class="dash-btn dash-btn-outline" onclick="loadSubmissions()">🔄 Refresh</button>
+          <button class="dash-btn dash-btn-outline" onclick="exportCSV()">📥 Export CSV</button>
+          <a href="https://sheets.google.com" target="_blank" id="sheet-link" class="dash-btn dash-btn-primary" style="text-decoration:none;display:none;align-items:center;gap:0.4rem;">📊 Open Google Sheet</a>
+          <button class="dash-btn dash-btn-outline" onclick="teacherLogout()">Sign out</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="dash-container">
+      <!-- Stats -->
+      <div class="dash-stats">
+        <div class="dash-stat ds-blue"><div class="ds-value" id="stat-total">—</div><div class="ds-label">Total Submissions</div></div>
+        <div class="dash-stat ds-green"><div class="ds-value" id="stat-today">—</div><div class="ds-label">Submitted Today</div></div>
+        <div class="dash-stat ds-amber"><div class="ds-value" id="stat-complete">—</div><div class="ds-label">Essay Draft Written</div></div>
+        <div class="dash-stat"><div class="ds-value" id="stat-last">—</div><div class="ds-label">Last Submission</div></div>
+      </div>
+
+      <!-- Controls -->
+      <div class="dash-controls">
+        <input type="text" class="dash-search" id="dash-search" placeholder="🔍  Search by student name…" oninput="filterStudents()"/>
+        <button class="sort-btn active" id="sort-time" onclick="sortBy('time')">Newest first</button>
+        <button class="sort-btn" id="sort-name" onclick="sortBy('name')">A → Z</button>
+      </div>
+
+      <!-- Student list -->
+      <div id="students-container">
+        <div class="dash-loading">
+          <div class="spinner"></div>
+          <span>Loading submissions…</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="config.js"></script>
+  <script src="teacher.js"></script>
+</body>
+</html>

@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>HSC Business Studies — High-Yield Trial Revision Worksheets</title>
+  <style>
+    @page {
+      size: A4;
+      margin: 15mm;
+    }
+    body {
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      color: #1e293b;
+      line-height: 1.5;
+      font-size: 10pt;
+      background: #ffffff;
+    }
+    .header-container {
+      border-bottom: 3px double #1e3a8a;
+      padding-bottom: 12px;
+      margin-bottom: 20px;
+    }
+    .main-title {
+      font-size: 20pt;
+      font-weight: 800;
+      color: #1e3a8a;
+      text-transform: uppercase;
+      letter-spacing: -0.5px;
+      margin: 0;
+    }
+    .subtitle {
+      font-size: 11pt;
+      font-weight: 600;
+      color: #475569;
+      margin-top: 4px;
+      margin-bottom: 0;
+    }
+    .meta-box {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+    }
+    .meta-box td {
+      border: 1px solid #e2e8f0;
+      padding: 6px 12px;
+      font-size: 9pt;
+      background: #f8fafc;
+    }
+    .priority-badge {
+      display: inline-block;
+      background: #dc2626;
+      color: #ffffff;
+      font-weight: bold;
+      font-size: 8pt;
+      padding: 2px 8px;
+      border-radius: 4px;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+    .priority-badge.med {
+      background: #eab308;
+    }
+    .priority-badge.low {
+      background: #2563eb;
+    }
+    h2 {
+      font-size: 13pt;
+      color: #1e3a8a;
+      margin-top: 25px;
+      margin-bottom: 12px;
+      border-bottom: 2px solid #3b82f6;
+      padding-bottom: 4px;
+      page-break-after: avoid;
+    }
+    .section-desc {
+      font-size: 9.5pt;
+      color: #64748b;
+      margin-top: -8px;
+      margin-bottom: 15px;
+      font-style: italic;
+    }
+    .worksheet-card {
+      border: 1px solid #cbd5e1;
+      border-radius: 6px;
+      padding: 15px;
+      margin-bottom: 20px;
+      background: #ffffff;
+      page-break-inside: avoid;
+    }
+    .card-title-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 8px;
+    }
+    .card-title {
+      font-weight: bold;
+      font-size: 10.5pt;
+      color: #0f172a;
+      margin: 0;
+    }
+    .citation {
+      font-size: 8.5pt;
+      color: #ef4444;
+      font-weight: bold;
+      margin: 0;
+    }
+    .question-box {
+      font-size: 10pt;
+      font-weight: 600;
+      color: #1e293b;
+      margin-bottom: 10px;
+      background: #f8fafc;
+      padding: 8px 12px;
+      border-left: 3px solid #3b82f6;
+    }
+    .rubric-box {
+      background: #f1f5f9;
+      border-radius: 4px;
+      padding: 10px 12px;
+      font-size: 8.5pt;
+      color: #475569;
+      margin-bottom: 15px;
+      line-height: 1.4;
+    }
+    .write-area-dashed {
+      border: 1px dashed #cbd5e1;
+      background: #fafafa;
+      height: 120px;
+      border-radius: 4px;
+      margin-bottom: 15px;
+    }
+    .write-area-dashed.lg {
+      height: 180px;
+    }
+    .exemplar-box {
+      background: #f0fdf4;
+      border-left: 4px solid #16a34a;
+      padding: 12px;
+      border-radius: 4px;
+      margin-top: 15px;
+    }
+    .exemplar-header {
+      font-weight: 700;
+      color: #15803d;
+      font-size: 9pt;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 6px;
+    }
+    .exemplar-body {
+      font-size: 9pt;
+      color: #1e293b;
+      margin: 0;
+    }
+    .exemplar-body p {
+      margin-bottom: 8px;
+    }
+    .exemplar-body p:last-child {
+      margin-bottom: 0;
+    }
+    .page-break {
+      page-break-before: always;
+    }
+    .slide-outline-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 15px;
+      margin-bottom: 20px;
+    }
+    .slide-card {
+      border: 1px solid #e2e8f0;
+      background: #f8fafc;
+      padding: 12px;
+      border-radius: 6px;
+      font-size: 9pt;
+      page-break-inside: avoid;
+    }
+    .slide-num {
+      font-weight: bold;
+      color: #3b82f6;
+      text-transform: uppercase;
+      font-size: 8pt;
+      margin-bottom: 4px;
+    }
+    .slide-name {
+      font-weight: bold;
+      color: #0f172a;
+      font-size: 10pt;
+      margin-bottom: 6px;
+      border-bottom: 1px solid #e2e8f0;
+      padding-bottom: 4px;
+    }
+    .slide-script {
+      font-style: italic;
+      color: #64748b;
+      border-top: 1px dashed #cbd5e1;
+      padding-top: 6px;
+      margin-top: 8px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <div class="header-container">
+    <h1 class="main-title">HSC Trial Prep Master Class</h1>
+    <div class="subtitle">Syllabus Revision Worksheets &amp; Presentation Outline</div>
+    
+    <table class="meta-box">
+      <tr>
+        <td><strong>Student Name:</strong> ___________________________________</td>
+        <td><strong>Course:</strong> Year 12 Business Studies</td>
+      </tr>
+      <tr>
+        <td><strong>Class Teacher:</strong> Simon Anderson</td>
+        <td><strong>Target:</strong> High-Yield Trial Examination Prep</td>
+      </tr>
+    </table>
+  </div>
+
+  <!-- =================== PRIORITY 1: FINANCE =================== -->
+  <h2>💰 PRIORITY 1: FINANCIAL MANAGEMENT</h2>
+  <div class="section-desc">Key focus areas: Ratio calculations, risk interpretation, and working capital strategy.</div>
+
+  <!-- FINANCE CARD 1 -->
+  <div class="worksheet-card">
+    <div class="card-title-row">
+      <h3 class="card-title">Activity 1.1: Ratio Calculations &amp; Gearing Interpretation</h3>
+      <span class="citation">HSC 2022 Q24</span>
+    </div>
+    
+    <div class="question-box">
+      <strong>Task Statement:</strong> Use the following Franchise Co. figures to calculate: (1) Current Ratio, (2) Debt-to-Equity Gearing, and (3) Net Profit Ratio. Explain what the Gearing ratio indicates about long-term solvency risk. (6 Marks)<br>
+      <em>• Current Assets: $80,000 | Current Liabilities: $40,000 | Total Liabilities: $120,000 | Total Equity: $60,000 | Sales: $500,000 | Net Profit: $50,000</em>
+    </div>
+
+    <div style="font-size: 9pt; margin-bottom: 15px;">
+      <strong>Calculations:</strong><br>
+      1. Current Ratio (CA / CL): ____________________________________________________ Result: _________<br>
+      2. Debt-to-Equity (TL / OE): __________________________________________________ Result: _________<br>
+      3. Net Profit Ratio (NP / Sales x 100): __________________________________________ Result: _________<br>
+    </div>
+
+    <div class="write-area-dashed"></div>
+
+    <div class="exemplar-box">
+      <div class="exemplar-header">🔑 Band 6 Exemplar &amp; Working</div>
+      <div class="exemplar-body">
+        <p><strong>Calculations:</strong><br>
+        1. Current Ratio: $80,000 / $40,000 = 2:1 (Satisfactory liquidity / short-term capacity)<br>
+        2. Debt-to-Equity: $120,000 / $60,000 = 2:1 (or 200% gearing ratio)<br>
+        3. Net Profit Ratio: ($50,000 / $500,000) x 100 = 10% (10c profit per $1 of sales)</p>
+        <p><strong>Solvency Analysis:</strong><br>
+        The Debt-to-Equity ratio of 2:1 (200%) indicates Franchise Co. is highly geared, meaning it funds its operations using twice as much debt from external creditors as equity from internal owners. This exposes the business to high financial risk. If interest rates rise, interest expenses will increase, placing pressure on cash flows. While high debt can accelerate growth in boom times, it reduces solvency and increases the risk of insolvency during economic downturns, as debt interest must be paid regardless of sales performance.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- FINANCE CARD 2 -->
+  <div class="worksheet-card">
+    <div class="card-title-row">
+      <h3 class="card-title">Activity 1.2: Working Capital Liquidity Survival</h3>
+      <span class="citation">HSC 2018 Q23</span>
+    </div>
+
+    <div class="question-box">
+      <strong>Task Statement:</strong> Explain how a business can use working capital management strategies to survive a short-term liquidity crisis. (5 Marks)
+    </div>
+
+    <div class="rubric-box">
+      <strong>Marking Rubric:</strong><br>
+      • 5 Marks: Explains multiple working capital strategies (leasing, sale &amp; leaseback, factoring), showing direct connections to resolving liquidity.<br>
+      • 3-4 Marks: Explains working capital strategies with some link to liquidity.<br>
+      • 1-2 Marks: Identifies a financial strategy or defines working capital.
+    </div>
+
+    <div class="write-area-dashed"></div>
+
+    <div class="exemplar-box">
+      <div class="exemplar-header">🔑 Band 6 Exemplar</div>
+      <div class="exemplar-body">
+        <p>To survive a short-term liquidity crisis (where current liabilities exceed current assets), a business can implement three critical working capital strategies:</p>
+        <p>1. <strong>Accounts Receivable Factoring:</strong> The business can sell its outstanding customer invoices to a factoring agency at a small discount (e.g., 95% of value) to receive immediate cash. This turns slow-paying accounts receivable into liquid cash, resolving immediate debt deadlines.</p>
+        <p>2. <strong>Leasing instead of Purchasing:</strong> Rather than spending large cash sums purchasing machinery, the business can lease equipment. This keeps cash in the bank for operational expenses, replacing capital outflows with small, regular lease payments.</p>
+        <p>3. <strong>Sale and Leaseback:</strong> The business can sell a long-term asset (e.g., its store building) to an investor and lease it back immediately. This injects a large sum of cash into the business to clear current debts while retaining use of the asset.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="page-break"></div>
+
+  <!-- =================== PRIORITY 2: HUMAN RESOURCES =================== -->
+  <h2>👷 PRIORITY 2: HUMAN RESOURCES (RIPSE)</h2>
+  <div class="section-desc">Key focus areas: Dispute resolution and quantitative effectiveness indicators.</div>
+
+  <!-- HR CARD 1 -->
+  <div class="worksheet-card">
+    <div class="card-title-row">
+      <h3 class="card-title">Activity 2.1: Dispute Resolution Contrast</h3>
+      <span class="citation">HSC 2017 Q22</span>
+    </div>
+
+    <div class="question-box">
+      <strong>Task Statement:</strong> Contrast the roles of mediation and arbitration in resolving workplace disputes. (4 Marks)
+    </div>
+
+    <div class="write-area-dashed"></div>
+
+    <div class="exemplar-box">
+      <div class="exemplar-header">🔑 Band 6 Exemplar</div>
+      <div class="exemplar-body">
+        <p><strong>Mediation vs. Arbitration Contrast:</strong><br>
+        Mediation involves a neutral third party who helps disputing parties communicate and negotiate their own mutually acceptable agreement. The mediator has no authority to impose a decision, and any agreement is non-binding.</p>
+        <p>In contrast, arbitration involves a formal hearing before an independent body (such as the Fair Work Commission) where both sides present their case. The arbitrator reviews the evidence and makes a legally binding decision (an award or order) that both parties must legally follow, regardless of whether they agree with it.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- HR CARD 2 -->
+  <div class="worksheet-card">
+    <div class="card-title-row">
+      <h3 class="card-title">Activity 2.2: Effectiveness Indicators (Turnover &amp; Absenteeism)</h3>
+      <span class="citation">HSC 2022 Q21</span>
+    </div>
+
+    <div class="question-box">
+      <strong>Task Statement:</strong> Explain how staff turnover and absenteeism can indicate the effectiveness of human resource management. (4 Marks)
+    </div>
+
+    <div class="write-area-dashed"></div>
+
+    <div class="exemplar-box">
+      <div class="exemplar-header">🔑 Band 6 Exemplar</div>
+      <div class="exemplar-body">
+        <p>Staff turnover and absenteeism are quantitative indicators used to measure worker satisfaction and the health of corporate culture:</p>
+        <p>1. <strong>Staff Turnover:</strong> Staff turnover refers to the percentage of the workforce that leaves the business and must be replaced each year. High voluntary turnover indicates poor corporate culture, inadequate rewards, or bad leadership styles. High turnover damages HR effectiveness because it raises recruitment and training costs, disrupts scheduling, and reduces productivity.</p>
+        <p>2. <strong>Absenteeism:</strong> Absenteeism refers to the rate of employees failing to show up for rosters without notice. High absenteeism is a strong indicator of low morale, worker fatigue, or stressful working conditions. It indicates that HR strategies are ineffective, increases labor costs, and lowers operational consistency.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="page-break"></div>
+
+  <!-- =================== PRIORITY 3: OPERATIONS =================== -->
+  <h2>⚙️ PRIORITY 3: OPERATIONS MANAGEMENT</h2>
+  <div class="section-desc">Key focus areas: The V4 transformation parameters and operations strategies.</div>
+
+  <!-- OPERATIONS CARD 1 -->
+  <div class="worksheet-card">
+    <div class="card-title-row">
+      <h3 class="card-title">Activity 3.1: Variation in Demand (V4 Parameters)</h3>
+      <span class="citation">HSC 2021 Q21</span>
+    </div>
+
+    <div class="question-box">
+      <strong>Task Statement:</strong> Explain how the variation in demand (one of the V4s) influences the transformation processes of a fast-food business. (4 Marks)
+    </div>
+
+    <div class="write-area-dashed"></div>
+
+    <div class="exemplar-box">
+      <div class="exemplar-header">🔑 Band 6 Exemplar</div>
+      <div class="exemplar-body">
+        <p>Variation in demand refers to how customer volume fluctuates over time, requiring a business to dynamically adjust its inputs and resource allocations. For example, McDonald's experiences extreme variation in demand during daily "lunch rushes" (12:00 PM – 2:00 PM) and seasonal promotions.</p>
+        <p>To manage this, their transformation processes rely on predictive sequencing software and flexible staff rostering (transforming inputs). Grills and automated drink systems are pre-heated and scaled up during peak hours, whereas inputs are scaled down during off-peak times (e.g., late nights) to minimize food waste and optimize cost efficiency. Failure to predict and manage these variations leads to bottlenecking, long queue times, and lost sales revenue.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- OPERATIONS CARD 2 -->
+  <div class="worksheet-card">
+    <div class="card-title-row">
+      <h3 class="card-title">Activity 3.2: Operations Strategies (Technology &amp; JIT)</h3>
+      <span class="citation">HSC 2020 Q23</span>
+    </div>
+
+    <div class="question-box">
+      <strong>Task Statement:</strong> Apex Manufactured Goods is experiencing high defect rates on their assembly line and rising inventory holding costs. Write a section of a business report analyzing how two operations strategies (Technology and Inventory Management) could resolve Apex's quality and cost issues. (6 Marks)
+    </div>
+
+    <div class="write-area-dashed lg"></div>
+
+    <div class="exemplar-box">
+      <div class="exemplar-header">🔑 Band 6 Exemplar</div>
+      <div class="exemplar-body">
+        <p><strong>Operations Strategies to Address Quality and Cost Concerns:</strong></p>
+        <p>1. <em>Established &amp; Leading-Edge Technology Upgrades:</em> Apex can resolve high defect rates by incorporating advanced manufacturing technology (computer-aided manufacturing or automated sensors) on the assembly line. By replacing manual inspection with automated precision sensors (leading-edge tech), the business can immediately identify defects in real-time. This reduces waste, improves quality consistency, and lowers long-term operational costs by reducing labor expenses associated with product re-work.</p>
+        <p>2. <em>Just-In-Time (JIT) Inventory Management:</em> To resolve high holding costs, Apex should transition to a Just-In-Time (JIT) inventory management system. Under JIT, raw materials arrive only as they are needed in the production process. This eliminates storage fees, insurance costs, and the risk of inventory obsolescence, converting idle cash reserves into working capital. However, this strategy requires tight integration with reliable suppliers to prevent production shutdowns if delivery delays occur.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="page-break"></div>
+
+  <!-- =================== PRIORITY 4: MARKETING INFLUENCES =================== -->
+  <h2>📢 PRIORITY 4: MARKETING (ROLE &amp; INFLUENCES ONLY)</h2>
+  <div class="section-desc">Key focus areas: Consumer laws (Australian Consumer Law) and marketing constraints.</div>
+
+  <!-- MARKETING CARD 1 -->
+  <div class="worksheet-card">
+    <div class="card-title-row">
+      <h3 class="card-title">Activity 4.1: Consumer Laws (Implied Conditions &amp; Warranties)</h3>
+      <span class="citation">HSC 2016 Q21</span>
+    </div>
+
+    <div class="question-box">
+      <strong>Task Statement:</strong> Analyse how consumer laws relating to implied conditions or warranties influence a business's marketing activities. (6 Marks)
+    </div>
+
+    <div class="write-area-dashed lg"></div>
+
+    <div class="exemplar-box">
+      <div class="exemplar-header">🔑 Band 6 Exemplar</div>
+      <div class="exemplar-body">
+        <p>Consumer laws under the Australian Consumer Law (ACL) place strict legal requirements on how businesses construct and market their goods:</p>
+        <p>• <strong>Implied Conditions:</strong> Implied conditions are unspoken, automatic guarantees that a product is fit for purpose, matches descriptions, and is of acceptable quality. If a fast-food business sells cold or unsafe food, it violates an implied condition, which influences operations to enforce strict safety checks to avoid lawsuits and bad press.</p>
+        <p>• <strong>Warranties:</strong> A warranty is a promise by a business to repair, replace, or refund defective goods. If a product fails, the business must cover the replacement, which influences finance to allocate warranty reserve cash, and marketing to verify advertising claims do not overpromise product performance.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="page-break"></div>
+
+  <!-- =================== POWERPOINT SLIDES OUTLINE =================== -->
+  <h2>🖥️ CLASSROOM TEACHING SLIDES DRAFT (POWERPOINT OUTLINE)</h2>
+  <div class="section-desc">Structured sequence matching the priority lesson plan. Copy and paste slides straight into PowerPoint.</div>
+
+  <div class="slide-outline-container">
+    <!-- SLIDE 1 -->
+    <div class="slide-card">
+      <div class="slide-num">Slide 1: Core Strategy</div>
+      <div class="slide-name">Trial Prep Masterclass Roadmap</div>
+      <p>• <strong>Visuals:</strong> Priority timeline (Finance ➔ HR ➔ Operations ➔ Marketing).<br>
+      • <strong>Key Points:</strong><br>
+        &nbsp;&nbsp;- Gearing &amp; liquidity risks.<br>
+        &nbsp;&nbsp;- Mediation vs. Arbitration traps.<br>
+        &nbsp;&nbsp;- V4 parameters case study drill.<br>
+        &nbsp;&nbsp;- PEEL Essay speed test.</p>
+      <div class="slide-script">Teacher Script: "Welcome, class. Today we start our high-yield Trial prep. We are focusing on high-mark targets starting with Gearing solvency calculations and working capital survival strategies."</div>
+    </div>
+
+    <!-- SLIDE 2 -->
+    <div class="slide-card">
+      <div class="slide-num">Slide 2: Finance Priority</div>
+      <div class="slide-name">Balance Sheet Solvency (HSC 2022 Q24)</div>
+      <p>• <strong>Visuals:</strong> Scale comparing Debt vs. Owner's Equity.<br>
+      • <strong>Key Points:</strong><br>
+        &nbsp;&nbsp;- Gearing ratio calculation ($120k / $60k = 200%).<br>
+        &nbsp;&nbsp;- High gearing = high interest risk.<br>
+        &nbsp;&nbsp;- Low solvency = risk of default.<br>
+        &nbsp;&nbsp;- Working Capital: factoring, leasing, sale &amp; leaseback.</p>
+      <div class="slide-script">Teacher Script: "Ratios are Section II gold. Gearing shows risk. When gearing is 2:1, it means the bank owns twice as much of the assets as the business owners do. This represents high solvency risk."</div>
+    </div>
+
+    <!-- SLIDE 3 -->
+    <div class="slide-card">
+      <div class="slide-num">Slide 3: HR Priority</div>
+      <div class="slide-name">Mediation vs. Arbitration (HSC 2017 Q22)</div>
+      <p>• <strong>Visuals:</strong> Contrast table (Mediation vs. Arbitration).<br>
+      • <strong>Key Points:</strong><br>
+        &nbsp;&nbsp;- Mediation: Third party assists, non-binding.<br>
+        &nbsp;&nbsp;- Arbitration: Fair Work Commission, legally binding.<br>
+        &nbsp;&nbsp;- Indicators: Absenteeism vs. staff turnover rates.</p>
+      <div class="slide-script">Teacher Script: "Do not lose easy marks. Mediation is facilitative and non-binding. Arbitration is adversarial and results in a legally binding award. Memorize this distinction."</div>
+    </div>
+
+    <!-- SLIDE 4 -->
+    <div class="slide-card">
+      <div class="slide-num">Slide 4: Operations Priority</div>
+      <div class="slide-name">The V4 Transformation (HSC 2021 Q21)</div>
+      <p>• <strong>Visuals:</strong> Peak vs. Off-Peak kitchen charts (Maccas).<br>
+      • <strong>Key Points:</strong><br>
+        &nbsp;&nbsp;- Variation: daily lunch rush vs. off-peak.<br>
+        &nbsp;&nbsp;- High volume = high standardization.<br>
+        &nbsp;&nbsp;- Operations strategies: global sourcing &amp; technology.</p>
+      <div class="slide-script">Teacher Script: "Variation is about adjusting capacity. Think of McDonald's preparing for a Friday night rush: they scale up kitchen prep grids and rosters to handle the demand variation."</div>
+    </div>
+  </div>
+
+</body>
+</html>
